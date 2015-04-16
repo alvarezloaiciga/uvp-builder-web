@@ -8,9 +8,9 @@ angular.module('uvpBuilderWeb', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitiz
         templateUrl: 'app/home/home.html',
         controller: 'HomeController'
       })
-      .state('geoff-moores-value-positioning-statement', {
-        url: '/geoff-moores-value-positioning-statement',
-        templateUrl: 'app/forms/geoff-moores-value-positioning-statement.html',
+      .state('geoff-moores', {
+        url: '/geoff-moores',
+        templateUrl: 'app/forms/geoff-moores.html',
         controller: 'FormController',
         controllerAs: 'ctrl'
       });

@@ -13,7 +13,7 @@ module.exports = function(options) {
 
     var injectFiles = gulp.src([
       options.src + '/{app,components}/**/*.scss',
-      '!' + options.src + '/app/index.scss',
+      '!' + options.src + '/app/main.scss',
       '!' + options.src + '/app/vendor.scss'
     ], { read: false });
 
@@ -32,7 +32,7 @@ module.exports = function(options) {
     var cssFilter = $.filter('**/*.css');
 
     return gulp.src([
-      options.src + '/app/index.scss',
+      options.src + '/app/main.scss',
       options.src + '/app/vendor.scss'
     ])
     .pipe(indexFilter)

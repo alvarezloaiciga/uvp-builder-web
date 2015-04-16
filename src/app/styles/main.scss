@@ -1,3 +1,5 @@
+@import "vertical_rules";
+
 .browsehappy {
   margin: 0.2em 0;
   background: #ccc;
@@ -18,29 +20,9 @@
   }
 }
 
-.outer {
-  display: table;
-  position: absolute;
-  height: 100%;
-  width: 100%;
-}
-
-.middle {
-  display: table-cell;
-  vertical-align: middle;
-}
-
-.inner {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-
-
-
 .main-content {
   height: 100%;
-  background: #cccccc url("../assets/images/home_background.png") no-repeat center center fixed;
+  background: #cccccc url("../../assets/images/home_background.png") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;

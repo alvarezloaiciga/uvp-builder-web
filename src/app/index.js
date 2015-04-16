@@ -7,11 +7,6 @@ angular.module('uvpBuilderWeb', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitiz
         url: '/',
         templateUrl: 'app/main/main.html',
         controller: 'MainCtrl'
-      })
-      .state('builder', {
-        url: '/builder',
-        template: '<p>AAAAAAAA</p>'
-        //controller: 'MainCtrl'
       });
 
     $urlRouterProvider.otherwise('/');

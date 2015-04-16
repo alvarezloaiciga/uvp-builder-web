@@ -2,5 +2,10 @@ $primary-color: #ff6213;
 $header-font-color: white;
 $body-font-color: white;
 $header-font-weight: 600;
+$input-bg-color: rgba(0, 0, 0, 0);
+$input-focus-bg-color: rgba(0, 0, 0, 0);
+$input-font-color: white;
+$input-border-color: white;
+$input-focus-border-color: white;
 
 @import '../../bower_components/foundation/scss/foundation';

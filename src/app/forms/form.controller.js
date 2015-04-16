@@ -14,11 +14,11 @@ function FormController() {
 
     template: function() {
       return [
-        "For", this.for || "[target customer]",
-        "who", this.who || "[statement of need or opportunity]",
-        "our", this.our || "[product / service name]",
-        "is (a / an)", this.is || "[product category]",
-        "that", this.that || "[statement of benefit]"].join(' ');
+        "For", this.for,
+        "who", this.who,
+        "our", this.our,
+        "is (a / an)", this.is,
+        "that", this.that].join(' ');
     }
   };
 

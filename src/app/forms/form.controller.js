@@ -1,4 +1,3 @@
-
 'use strict';
 
 function FormController() {
@@ -6,24 +5,16 @@ function FormController() {
   vm.showUVP = false;
 
   vm.method = {
-    for: "",
-    who: "",
-    our: "",
-    is: "",
-    that: "",
+    customer: '',
+    need: '',
+    product: '',
+    category: '',
+    benefit: '',
 
     template: function() {
-      return [
-        "For", this.for,
-        "who", this.who,
-        "our", this.our,
-        "is (a / an)", this.is,
-        "that", this.that].join(' ');
+      return 'For ' + this.customer + ' who ' + this.need + ' our ' + this.product + ' is (a / an) ' + this.category + ' that ' + this.benefit;
     }
   };
-
-  vm.display = display;
-  vm.back = back;
 
   function display(){
     vm.showUVP = true;
@@ -32,6 +23,9 @@ function FormController() {
   function back(){
     vm.showUVP = false;
   }
+
+  vm.display = display;
+  vm.back = back;
 }
 
 angular

@@ -4,7 +4,6 @@
 function FormController() {
   var vm = this;
   vm.showUVP = false;
-  vm.form = ["For", "", "who", "", "our", "", "is", "", "that", ""]
 
   vm.method = {
     for: "",
@@ -23,8 +22,6 @@ function FormController() {
     }
   };
 
-  vm.uvp = "";
-
   vm.display = display;
   vm.back = back;
 
@@ -34,7 +31,6 @@ function FormController() {
 
   function back(){
     vm.showUVP = false;
-    vm.uvp = "";
   }
 }
 

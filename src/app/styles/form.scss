@@ -1,21 +1,6 @@
 $light-gray: #cfc7cd;
 
-.form {
-  height: 100vh;
-}
-
-.form-content {
-  height: 100%;
-  background: #cccccc url("../assets/images/home_background.png") no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  margin: 0;
-  padding: 0;
-}
-
-@mixin placeholder{
+@mixin placeholder {
   color: $light-gray;
   font-weight: bolder;
   font-size: 100%;

@@ -3,6 +3,8 @@
 function FormController() {
   var vm = this;
   vm.showUVP = false;
+  vm.display = display;
+  vm.back = back;
 
   vm.method = {
     customer: '',
@@ -23,9 +25,6 @@ function FormController() {
   function back(){
     vm.showUVP = false;
   }
-
-  vm.display = display;
-  vm.back = back;
 }
 
 angular

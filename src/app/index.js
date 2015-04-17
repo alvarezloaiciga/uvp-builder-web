@@ -7,6 +7,12 @@ angular.module('uvpBuilderWeb', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitiz
         url: '/',
         templateUrl: 'app/home/home.html',
         controller: 'HomeController'
+      })
+      .state('geoff-moores', {
+        url: '/geoff-moores',
+        templateUrl: 'app/forms/geoff-moores.html',
+        controller: 'FormController',
+        controllerAs: 'ctrl'
       });
 
     $urlRouterProvider.otherwise('/');

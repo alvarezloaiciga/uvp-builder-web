@@ -1,0 +1,17 @@
+.form
+  .form-content
+    .outer
+      .middle
+        .inner.text-center
+          %form{ "novalidate": true, "name": "uvpForm", "ng-hide": "ctrl.showUVP" }
+            .row
+              %input{ "type": "text", "placeholder": "For (target consumer)", "ng-model": "ctrl.method.customer", "required": true }
+              %input{ "type": "text", "placeholder": "Who (statement of need or opportunity)", "ng-model": "ctrl.method.need", "required": true }
+              %input{ "type": "text", "placeholder": "our (product/service name)", "ng-model": "ctrl.method.product", "required": true }
+              %input{ "type": "text", "placeholder": "is (product category)", "ng-model": "ctrl.method.category", "required": true }
+              %input{ "type": "text", "placeholder": "that (statement of benefit)", "ng-model": "ctrl.method.benefit", "required": true }
+              %button.button{ "ng-disabled": "!uvpForm.$valid", "ng-click": "ctrl.display()" } Go
+          .row{ "ng-show": "ctrl.showUVP" }
+            %h1 {{ctrl.method.template()}}
+            %button.button{ "ng-click": "ctrl.back()" }  Back
+            %button.button  Next

@@ -18,11 +18,11 @@ function FormController() {
     }
   };
 
-  function display(){
+  function display() {
     vm.showUVP = true;
   }
 
-  function back(){
+  function back() {
     vm.showUVP = false;
   }
 }

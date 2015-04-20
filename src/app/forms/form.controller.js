@@ -3,6 +3,7 @@
 function FormController() {
   var vm = this;
   vm.showUVP = false;
+  vm.background = {};
 
   vm.method = {
     customer: '',

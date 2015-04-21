@@ -1,6 +1,6 @@
 'use strict';
 
-function FormController() {
+function SteveBlanksController() {
   var vm = this;
   vm.showUVP = false;
   vm.display = display;
@@ -8,13 +8,11 @@ function FormController() {
 
   vm.method = {
     customer: '',
-    need: '',
     product: '',
-    category: '',
-    benefit: '',
+    objective: '',
 
     template: function() {
-      return 'For ' + this.customer + ' who ' + this.need + ' our ' + this.product + ' is (a / an) ' + this.category + ' that ' + this.benefit;
+      return 'We help ' + this.customer + ' do ' + this.objective + ' doing ' + this.product;
     }
   };
 
@@ -29,4 +27,4 @@ function FormController() {
 
 angular
   .module('uvpBuilderWeb')
-  .controller('FormController', FormController);
+  .controller('SteveBlanksController', SteveBlanksController);

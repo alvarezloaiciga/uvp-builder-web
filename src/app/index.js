@@ -11,7 +11,13 @@ angular.module('uvpBuilderWeb', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitiz
       .state('geoff-moores', {
         url: '/method/geoff-moores',
         templateUrl: 'app/forms/geoff-moores.html',
-        controller: 'FormController',
+        controller: 'GeoffMooresController',
+        controllerAs: 'ctrl'
+      })
+      .state ('steve-blanks',{
+        url: '/method/steve-blanks',
+        templateUrl: 'app/forms/steve-blanks.html',
+        controller: 'SteveBlanksController',
         controllerAs: 'ctrl'
       });
 

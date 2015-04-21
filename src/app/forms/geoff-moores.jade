@@ -4,7 +4,7 @@
 
   .outer
     .middle.text-center
-      .row.large-8
+      .inner
         form(novalidate=true, name="uvpForm", ng-hide="ctrl.showUVP")
           .row
             input(type="text", placeholder="For (target consumer)", ng-model="ctrl.method.customer", required=true)

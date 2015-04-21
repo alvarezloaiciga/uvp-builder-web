@@ -13,8 +13,18 @@ angular.module('uvpBuilderWeb', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitiz
         templateUrl: 'app/forms/geoff-moores.html',
         controller: 'FormController',
         controllerAs: 'ctrl'
+      })
+      .state ('steve-blanks',{
+        url: '/method/steve-blanks',
+        templateUrl: 'app/forms/steve-blanks.html',
+        controller: 'Form2Controller',
+        controllerAs: 'ctrl'
       });
 
+
+
     $urlRouterProvider.otherwise('/');
+
+
   })
 ;

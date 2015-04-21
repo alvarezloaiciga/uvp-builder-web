@@ -19,6 +19,18 @@ angular.module('uvpBuilderWeb', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitiz
         templateUrl: 'app/forms/steve-blanks.html',
         controller: 'SteveBlanksController',
         controllerAs: 'ctrl'
+      })
+      .state ('david-cowans',{
+        url: '/method/david-cowans',
+        templateUrl: 'app/forms/david-cowans.html',
+        controller: 'DavidCowansController',
+        controllerAs: 'ctrl'
+      })
+      .state ('elevator-pitch',{
+        url: '/method/elevator-pitch',
+        templateUrl: 'app/forms/elevator-pitch.html',
+        controller: 'TheElevatorPitchFormatController',
+        controllerAs: 'ctrl'
       });
 
     $urlRouterProvider.otherwise('/');

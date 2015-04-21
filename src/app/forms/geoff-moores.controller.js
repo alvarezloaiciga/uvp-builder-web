@@ -14,7 +14,7 @@ function GeoffMooresController() {
     benefit: '',
 
     template: function() {
-      return 'For ' + this.customer + ' who ' + this.need + ' our ' + this.product + ' is (a / an) ' + this.category + ' that ' + this.benefit;
+      return 'For ' + this.customer + ' who ' + this.need + ' our ' + this.product + ' is ' + this.category + ' that ' + this.benefit;
     }
   };
 

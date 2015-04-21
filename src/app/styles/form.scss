@@ -28,6 +28,14 @@ input {
   font-weight: bolder;
 }
 
+label {
+  height: 50px !important;
+  font-size: 150% !important;
+  font-weight: bolder !important;
+  color: white !important;
+  margin: 0px !important;
+}
+
 .footer {
   position: fixed;
   bottom: 0;

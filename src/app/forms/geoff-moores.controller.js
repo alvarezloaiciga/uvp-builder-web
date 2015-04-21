@@ -1,6 +1,6 @@
 'use strict';
 
-function FormController() {
+function GeoffMooresController() {
   var vm = this;
   vm.showUVP = false;
   vm.display = display;
@@ -29,4 +29,4 @@ function FormController() {
 
 angular
   .module('uvpBuilderWeb')
-  .controller('FormController', FormController);
+  .controller('GeoffMooresController', GeoffMooresController);

@@ -1,0 +1,22 @@
+form(novalidate=true, name="uvpForm", ng-hide="ctrl.showUVP")
+  .row
+    .small-4.columns
+      label.right.inline(for="customer") We help
+    .small-8.columns
+      input#costumer(type="text", placeholder="target consumer", ng-model="ctrl.method.customer", required=true)
+  .row
+    .small-2.columns
+      label.right.inline(for="objective") do
+    .small-10.columns
+      input#objective(type="text", placeholder="objective", ng-model="ctrl.method.objective", required=true)
+  .row
+    .small-2.columns
+      label.right.inline(for="product") doing
+    .small-10.columns
+      input#product(type="text", placeholder="product", ng-model="ctrl.method.product", required=true)
+    button.button(ui-sref="geoff-moores") Previous
+    button.button(ng-disabled="!uvpForm.$valid", ng-click="ctrl.display()") Go
+.row(ng-show="ctrl.showUVP")
+  h1 {{ctrl.method.template()}}
+  button.button(ng-click="ctrl.back()")  Back
+  button.button  Next

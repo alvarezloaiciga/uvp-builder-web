@@ -8,7 +8,9 @@
       'ngSanitize',
       'ngResource',
       'ui.router',
-      'mm.foundation'
+      'mm.foundation',
+      'uvpBuilderWeb.home',
+      'uvpBuilderWeb.forms'
   ]);
 
   app.config(function ($stateProvider, $urlRouterProvider) {
@@ -18,12 +20,14 @@
         templateUrl: 'app/home/home.html',
         controller: 'HomeController'
       })
+
       .state('geoff-moores', {
         url: '/method/geoff-moores',
         templateUrl: 'app/forms/geoff-moores.html',
         controller: 'GeoffMooresController',
         controllerAs: 'ctrl'
       })
+
       .state ('steve-blanks',{
         url: '/method/steve-blanks',
         templateUrl: 'app/forms/steve-blanks.html',

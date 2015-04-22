@@ -1,7 +1,17 @@
-'use strict';
+(function(){
+  'use strict';
 
-angular.module('uvpBuilderWeb', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ngResource', 'ui.router', 'mm.foundation'])
-  .config(function ($stateProvider, $urlRouterProvider) {
+  var app = angular.module('uvpBuilderWeb', [
+      'ngAnimate',
+      'ngCookies',
+      'ngTouch',
+      'ngSanitize',
+      'ngResource',
+      'ui.router',
+      'mm.foundation'
+  ]);
+
+  app.config(function ($stateProvider, $urlRouterProvider) {
     $stateProvider
       .state('home', {
         url: '/',
@@ -21,6 +31,6 @@ angular.module('uvpBuilderWeb', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitiz
         controllerAs: 'ctrl'
       });
 
-    $urlRouterProvider.otherwise('/');
-  })
-;
+      $urlRouterProvider.otherwise('/');
+  });
+})();

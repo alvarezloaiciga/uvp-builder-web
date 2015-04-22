@@ -1,19 +1,33 @@
-'use strict';
+(function(){
+  'use strict';
 
-angular.module('uvpBuilderWeb', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ngResource', 'ui.router', 'mm.foundation'])
-  .config(function ($stateProvider, $urlRouterProvider) {
+  var app = angular.module('uvpBuilderWeb', [
+      'ngAnimate',
+      'ngCookies',
+      'ngTouch',
+      'ngSanitize',
+      'ngResource',
+      'ui.router',
+      'mm.foundation',
+      'uvpBuilderWeb.home',
+      'uvpBuilderWeb.forms'
+  ]);
+
+  app.config(function ($stateProvider, $urlRouterProvider) {
     $stateProvider
       .state('home', {
         url: '/',
         templateUrl: 'app/home/home.html',
         controller: 'HomeController'
       })
+
       .state('geoff-moores', {
         url: '/method/geoff-moores',
         templateUrl: 'app/forms/geoff-moores.html',
         controller: 'GeoffMooresController',
         controllerAs: 'ctrl'
       })
+
       .state ('steve-blanks',{
         url: '/method/steve-blanks',
         templateUrl: 'app/forms/steve-blanks.html',
@@ -21,6 +35,6 @@ angular.module('uvpBuilderWeb', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitiz
         controllerAs: 'ctrl'
       });
 
-    $urlRouterProvider.otherwise('/');
-  })
-;
+      $urlRouterProvider.otherwise('/');
+  });
+})();

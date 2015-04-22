@@ -1,7 +1,9 @@
-'use strict';
+(function() {
+  'use strict';
 
-function HomeController() {}
+  angular
+    .module('uvpBuilderWeb.home')
+    .controller('HomeController', HomeController);
 
-angular
-  .module('uvpBuilderWeb')
-  .controller('HomeController', HomeController);
+  function HomeController() { }
+})();

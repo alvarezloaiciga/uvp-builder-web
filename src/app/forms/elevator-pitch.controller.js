@@ -1,6 +1,6 @@
 'use strict';
 
-function TheElevatorPitchFormatController() {
+function ElevatorPitchController() {
   var vm = this;
   vm.showUVP = false;
   vm.display = display;
@@ -30,4 +30,4 @@ function TheElevatorPitchFormatController() {
 
 angular
   .module('uvpBuilderWeb')
-  .controller('TheElevatorPitchFormatController', TheElevatorPitchFormatController);
+  .controller('TheElevatorPitchFormatController', ElevatorPitchController);

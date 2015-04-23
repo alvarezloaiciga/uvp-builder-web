@@ -31,6 +31,12 @@ angular.module('uvpBuilderWeb', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitiz
         templateUrl: 'app/forms/elevator-pitch.html',
         controller: 'ElevatorPitchController',
         controllerAs: 'ctrl'
+      })
+      .state ('minto-pyramid',{
+        url: '/method/minto-pyramid',
+        templateUrl: 'app/forms/minto-pyramid.html',
+        controller: 'MintoPyramidController',
+        controllerAs: 'ctrl'
       });
 
     $urlRouterProvider.otherwise('/');

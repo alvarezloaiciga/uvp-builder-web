@@ -1,0 +1,28 @@
+.form
+  .background--image
+    img(src="../../assets/images/home_background.png")
+  .outer
+    .middle.text-center
+      .inner
+        form(novalidate=true, name="uvpForm", ng-hide="ctrl.showUVP")
+          .row
+            .small-12.columns
+              input(type="text", placeholder="Describe the current situation", ng-model="ctrl.method.situation", required=true)
+          .row
+            .small-12.columns
+              input(type="text", placeholder="Describe the issue in the situation", ng-model="ctrl.method.issue", required=true)
+          .row
+            .small-12.columns
+              input(type="text", placeholder="Describe the question in response to the issue", ng-model="ctrl.method.question", required=true)
+          .row
+            .small-12.columns
+              input(type="text", placeholder="Suggest answer to ease out or mitigate the issue", ng-model="ctrl.method.answer", required=true)
+          .row
+            span.has-tip(data-tooltip, aria-haspopup=true, title= "Nowadays social networks are full of unclear information about Public Figures. Consequently, the public opinion is affected. How can social networks receive better content? Our publisher technology helps the creation of interviews for build the public opinion.") Example
+            br
+            button.button(ui-sref="elevator-pitch") Previous
+            button.button(ng-disabled="!uvpForm.$valid", ng-click="ctrl.display()") Go
+        .row(ng-show="ctrl.showUVP")
+          h1 {{ctrl.method.template()}}
+          button.button(ng-click="ctrl.back()") Back
+.footer #5 The Minto Pyramid Principle aka SCQA

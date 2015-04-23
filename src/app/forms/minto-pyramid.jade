@@ -18,9 +18,9 @@
             .small-12.columns
               input(type="text", placeholder="Suggest answer to ease out or mitigate the issue", ng-model="ctrl.method.answer", required=true)
           .row
-            button.button(ui-sref="elevator-pitch")  Previous
+            button.button(ui-sref="elevator-pitch") Previous
             button.button(ng-disabled="!uvpForm.$valid", ng-click="ctrl.display()") Go
         .row(ng-show="ctrl.showUVP")
           h1 {{ctrl.method.template()}}
-          button.button(ng-click="ctrl.back()")  Back
+          button.button(ng-click="ctrl.back()") Back
 .footer #5 The Minto Pyramid Principle aka SCQA

@@ -25,6 +25,7 @@ function GeoffMooresController() {
   function back() {
     vm.showUVP = false;
   }
+
 }
 
 angular

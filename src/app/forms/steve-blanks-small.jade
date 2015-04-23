@@ -14,6 +14,9 @@ form(novalidate=true, name="uvpForm", ng-hide="ctrl.showUVP")
       label.right.inline(for="product") doing
     .small-10.columns
       input#product(type="text", placeholder="product", ng-model="ctrl.method.product", required=true)
+  .row
+    span.has-tip(data-tooltip, aria-haspopup="true", title= "We help digital journalist to discover people questions about specific topics doing powerful interviews") Example
+    br
     button.button(ui-sref="geoff-moores") Previous
     button.button(ng-disabled="!uvpForm.$valid", ng-click="ctrl.display()") Go
     button.button(ui-sref="david-cowans") Next

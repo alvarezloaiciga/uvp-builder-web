@@ -32,6 +32,8 @@
             .small-10.columns
               input#benefit(type="text", placeholder="statement of benefit", ng-model="ctrl.method.benefit", required=true)
           .row
+            span.has-tip(data-tooltip, aria-haspopup="true", title= "For digital journalist who struggle to discover the people questions our product is a publisher tool that creates powerful interviews to collect people questions") Example
+            br
             button.button(ng-disabled="!uvpForm.$valid", ng-click="ctrl.display()") Go
             button.button(ui-sref="steve-blanks")  Next
         .row(ng-show="ctrl.showUVP")

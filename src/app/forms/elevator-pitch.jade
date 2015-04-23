@@ -34,7 +34,9 @@
           .row
             button.button(ui-sref="david-cowans") Previous
             button.button(ng-disabled="!uvpForm.$valid", ng-click="ctrl.display()") Go
+            button.button(ui-sref="minto-pyramid") Next
         .row(ng-show="ctrl.showUVP")
-          h1 {{ctrl.method.template()}}
-          button.button(ng-click="ctrl.back()")  Back
+          h1 {{ ctrl.method.template() }}
+          button.button(ng-click="ctrl.back()") Back
+          button.button(ui-sref="minto-pyramid") Next
 .footer #4 The elevator pitch format

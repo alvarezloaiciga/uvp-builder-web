@@ -16,7 +16,8 @@ form(novalidate=true, name="uvpForm", ng-hide="ctrl.showUVP")
       input#product(type="text", placeholder="product", ng-model="ctrl.method.product", required=true)
     button.button(ui-sref="geoff-moores") Previous
     button.button(ng-disabled="!uvpForm.$valid", ng-click="ctrl.display()") Go
+    button.button(ui-sref="david-cowans") Next
 .row(ng-show="ctrl.showUVP")
   h1 {{ctrl.method.template()}}
   button.button(ng-click="ctrl.back()")  Back
-  button.button  Next
+  button.button(ui-sref="david-cowans") Next

@@ -1,0 +1,40 @@
+.form
+  .background--image
+    img(src="../../assets/images/home_background.png")
+  .outer
+    .middle.text-center
+      .inner
+        form(novalidate=true, name="uvpForm", ng-hide="ctrl.showUVP")
+          .row
+            .small-2.columns
+              label.right.inline(for="customer") For
+            .small-10.columns
+              input#customer(type="text", placeholder="target customer", ng-model="ctrl.method.customer", required=true)
+          .row
+            .small-2.columns
+              label.right.inline(for="need") who
+            .small-10.columns
+              input#need(type="text", placeholder="customer need", ng-model="ctrl.method.need", required=true)
+          .row
+            .small-10.columns.right
+              input#product(type="text", placeholder="product name", ng-model="ctrl.method.product", required=true)
+          .row
+            .small-2.columns
+              label.right.inline(for="benefit") that
+            .small-10.columns
+              input#benefit(type="text", placeholder="one key benefit", ng-model="ctrl.method.benefit", required=true)
+          .row
+            .small-2.columns
+              label.right.inline(for="competition") unlike
+            .small-10.columns
+              input#competition(type="text", placeholder="competition", ng-model="ctrl.method.competition", required=true)
+          .row
+            .small-10.columns.right
+              input(type="text", placeholder="the product (unique differentiator)", ng-model="ctrl.method.differentiator", required=true)
+          .row
+            button.button(ui-sref="david-cowans") Previous
+            button.button(ng-disabled="!uvpForm.$valid", ng-click="ctrl.display()") Go
+        .row(ng-show="ctrl.showUVP")
+          h1 {{ctrl.method.template()}}
+          button.button(ng-click="ctrl.back()")  Back
+.footer #4 The elevator pitch format

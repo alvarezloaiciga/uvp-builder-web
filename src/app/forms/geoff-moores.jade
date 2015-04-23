@@ -33,6 +33,7 @@
               input#benefit(type="text", placeholder="statement of benefit", ng-model="ctrl.method.benefit", required=true)
           .row
             button.button(ng-disabled="!uvpForm.$valid", ng-click="ctrl.display()") Go
+            button.button(ui-sref="steve-blanks")  Next
         .row(ng-show="ctrl.showUVP")
           h1 {{ctrl.method.template()}}
           button.button(ng-click="ctrl.back()")  Back

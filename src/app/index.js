@@ -29,7 +29,7 @@ angular.module('uvpBuilderWeb', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitiz
       .state ('elevator-pitch',{
         url: '/method/elevator-pitch',
         templateUrl: 'app/forms/elevator-pitch.html',
-        controller: 'TheElevatorPitchFormatController',
+        controller: 'ElevatorPitchController',
         controllerAs: 'ctrl'
       });
 

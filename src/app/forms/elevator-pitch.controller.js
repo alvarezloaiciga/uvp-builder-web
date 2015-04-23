@@ -30,4 +30,4 @@ function ElevatorPitchController() {
 
 angular
   .module('uvpBuilderWeb')
-  .controller('TheElevatorPitchFormatController', ElevatorPitchController);
+  .controller('ElevatorPitchController', ElevatorPitchController);

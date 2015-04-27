@@ -1,44 +1,45 @@
-'use strict';
+(function () {
+  'use strict';
 
-angular.module('uvpBuilderWeb', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ngResource', 'ui.router', 'mm.foundation'])
-  .config(function ($stateProvider, $urlRouterProvider) {
-    $stateProvider
-      .state ('home', {
+  angular.module('uvpBuilderWeb', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ngResource', 'ui.router', 'mm.foundation'])
+    .config(function ($stateProvider, $urlRouterProvider) {
+      $stateProvider
+        .state('home', {
         url: '/',
         templateUrl: 'app/home/home.html',
         controller: 'HomeController'
       })
-      .state ('geoff-moores', {
+        .state('GeoffMoores', {
         url: '/method/geoff-moores',
-        templateUrl: 'app/forms/geoff-moores.html',
+        templateUrl: 'app/forms/geoff-moores/geoff-moores.html',
         controller: 'MethodsController',
         controllerAs: 'ctrl'
       })
-      .state ('steve-blanks',{
+        .state('SteveBlanks', {
         url: '/method/steve-blanks',
-        templateUrl: 'app/forms/steve-blanks.html',
+        templateUrl: 'app/forms/steve-blanks/steve-blanks.html',
         controller: 'MethodsController',
         controllerAs: 'ctrl'
       })
-      .state ('david-cowans',{
+        .state('DavidCowans', {
         url: '/method/david-cowans',
-        templateUrl: 'app/forms/david-cowans.html',
+        templateUrl: 'app/forms/david-cowans/david-cowans.html',
         controller: 'MethodsController',
         controllerAs: 'ctrl'
       })
-      .state ('elevator-pitch',{
+        .state('ElevatorPitch', {
         url: '/method/elevator-pitch',
-        templateUrl: 'app/forms/elevator-pitch.html',
+        templateUrl: 'app/forms/elevator-pitch/elevator-pitch.html',
         controller: 'MethodsController',
         controllerAs: 'ctrl'
       })
-      .state ('minto-pyramid',{
+        .state('MintoPyramid', {
         url: '/method/minto-pyramid',
-        templateUrl: 'app/forms/minto-pyramid.html',
+        templateUrl: 'app/forms/minto-pyramid/minto-pyramid.html',
         controller: 'MethodsController',
         controllerAs: 'ctrl'
       });
 
-    $urlRouterProvider.otherwise('/');
-  })
-;
+      $urlRouterProvider.otherwise('/');
+    });
+})();

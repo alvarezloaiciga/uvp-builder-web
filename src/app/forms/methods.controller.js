@@ -1,5 +1,11 @@
-(function(){
+(function() {
   'use strict';
+
+  angular
+    .module('uvpBuilderWeb')
+    .controller('MethodsController', MethodsController);
+
+  MethodsController.$inject = ['MethodsService', '$state'];
 
   function MethodsController(MethodsService, $state) {
     var vm = this;
@@ -18,9 +24,4 @@
       vm.showUVP = false;
     }
   }
-
-  angular
-    .module('uvpBuilderWeb')
-    .controller('MethodsController', MethodsController);
-
 })();

@@ -3,39 +3,39 @@
 angular.module('uvpBuilderWeb', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ngResource', 'ui.router', 'mm.foundation'])
   .config(function ($stateProvider, $urlRouterProvider) {
     $stateProvider
-      .state('home', {
+      .state ('home', {
         url: '/',
         templateUrl: 'app/home/home.html',
         controller: 'HomeController'
       })
-      .state('geoff-moores', {
+      .state ('geoff-moores', {
         url: '/method/geoff-moores',
         templateUrl: 'app/forms/geoff-moores.html',
-        controller: 'GeoffMooresController',
+        controller: 'MethodsController',
         controllerAs: 'ctrl'
       })
       .state ('steve-blanks',{
         url: '/method/steve-blanks',
         templateUrl: 'app/forms/steve-blanks.html',
-        controller: 'SteveBlanksController',
+        controller: 'MethodsController',
         controllerAs: 'ctrl'
       })
       .state ('david-cowans',{
         url: '/method/david-cowans',
         templateUrl: 'app/forms/david-cowans.html',
-        controller: 'DavidCowansController',
+        controller: 'MethodsController',
         controllerAs: 'ctrl'
       })
       .state ('elevator-pitch',{
         url: '/method/elevator-pitch',
         templateUrl: 'app/forms/elevator-pitch.html',
-        controller: 'ElevatorPitchController',
+        controller: 'MethodsController',
         controllerAs: 'ctrl'
       })
       .state ('minto-pyramid',{
         url: '/method/minto-pyramid',
         templateUrl: 'app/forms/minto-pyramid.html',
-        controller: 'MintoPyramidController',
+        controller: 'MethodsController',
         controllerAs: 'ctrl'
       });
 

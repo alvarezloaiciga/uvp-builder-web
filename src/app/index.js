@@ -84,6 +84,12 @@
         templateUrl: 'app/forms/just-write-it/just-write-it.html',
         controller: 'MethodsController',
         controllerAs: 'ctrl'
+      })
+      .state('TheQuestion', {
+        url: '/method/the-question',
+        templateUrl: 'app/forms/the-question/the-question.html',
+        controller: 'MethodsController',
+        controllerAs: 'ctrl'
       });
 
     $urlRouterProvider.otherwise('/');

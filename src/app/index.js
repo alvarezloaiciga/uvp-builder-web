@@ -66,6 +66,12 @@
         templateUrl: 'app/forms/eric-sinks-label/eric-sinks-label.html',
         controller: 'MethodsController',
         controllerAs: 'ctrl'
+      })
+      .state('SimonSineks', {
+        url: '/method/simon-sineks',
+        templateUrl: 'app/forms/simon-sineks/simon-sineks.html',
+        controller: 'MethodsController',
+        controllerAs: 'ctrl'
       });
 
     $urlRouterProvider.otherwise('/');

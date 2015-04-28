@@ -17,7 +17,9 @@
             br
             button.button(ui-sref="EricSinksLabel") Previous
             button.button(ng-disabled="!uvpForm.$valid", ng-click="ctrl.display()") Go
+            button.button(ui-sref="SimonSineks") Next
         .row(ng-show="ctrl.showUVP")
           h1 {{ctrl.method.template()}}
           button.button(ng-click="ctrl.back()") Back
+          button.button(ui-sref="SimonSineks") Next
 .footer #8 Clay Christensen’s Jobs-to-be-done

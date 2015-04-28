@@ -54,6 +54,12 @@
         templateUrl: 'app/forms/vlaskovits-coopers/vlaskovits-coopers.html',
         controller: 'MethodsController',
         controllerAs: 'ctrl'
+      })
+      .state('EricSinksSuperlative', {
+        url: '/method/eric-sinks-superlative',
+        templateUrl: 'app/forms/eric-sinks-superlative/eric-sinks-superlative.html',
+        controller: 'MethodsController',
+        controllerAs: 'ctrl'
       });
 
     $urlRouterProvider.otherwise('/');

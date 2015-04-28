@@ -15,7 +15,7 @@
     };
 
     ClayChristensen.prototype.template = function () {
-      return this.verb + " " + this.action + " " + this.identifier;
+      return this.verb + ' ' + this.action + ' ' + this.identifier;
     };
 
   MethodsService.add('ClayChristensen', ClayChristensen);

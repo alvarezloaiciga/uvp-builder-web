@@ -17,10 +17,10 @@ form(novalidate=true, name="uvpForm", ng-hide="ctrl.showUVP")
   .row
     span.has-tip(data-tooltip, aria-haspopup=true, title= "We help digital journalist to discover people questions about specific topics doing powerful interviews") Example
     br
-    button.button(ui-sref="geoff-moores") Previous
+    button.button(ui-sref="GeoffMoores") Previous
     button.button(ng-disabled="!uvpForm.$valid", ng-click="ctrl.display()") Go
-    button.button(ui-sref="david-cowans") Next
+    button.button(ui-sref="DavidCowans") Next
 .row(ng-show="ctrl.showUVP")
   h1 {{ctrl.method.template()}}
   button.button(ng-click="ctrl.back()") Back
-  button.button(ui-sref="david-cowans") Next
+  button.button(ui-sref="DavidCowans") Next

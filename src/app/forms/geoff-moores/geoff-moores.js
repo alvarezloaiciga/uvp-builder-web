@@ -1,8 +1,14 @@
 (function() {
   'use strict';
 
-  (function (methods) {
-    var GeoffMoores = methods.GeoffMoores = function () {
+  angular
+    .module('uvpBuilderWeb')
+    .run(addMethod);
+
+  addMethod.$inject = [ 'MethodsService' ];
+
+  function addMethod(MethodsService) {
+    var GeoffMoores = function () {
       this.customer = '';
       this.need = '';
       this.product = '';
@@ -13,6 +19,7 @@
     GeoffMoores.prototype.template = function () {
       return 'For ' + this.customer + ' who ' + this.need + ' our ' + this.product + ' is ' + this.category + ' that ' + this.benefit;
     };
-  }(window.methods = window.methods || {}));
 
+    MethodsService.add('GeoffMoores', GeoffMoores);
+  }
 })();

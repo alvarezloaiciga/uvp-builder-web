@@ -1,8 +1,14 @@
 (function() {
   'use strict';
 
-  (function (methods) {
-    var ElevatorPitch = methods.ElevatorPitch = function () {
+  angular
+    .module('uvpBuilderWeb')
+    .run(addMethod);
+
+  addMethod.$inject = [ 'MethodsService' ];
+
+  function addMethod(MethodsService) {
+    var ElevatorPitch = function () {
       this.customer = '';
       this.need = '';
       this.product = '';
@@ -14,6 +20,7 @@
     ElevatorPitch.prototype.template = function () {
       return 'For ' + this.customer + ' who ' + this.need + ' our ' + this.product + ' that ' + this.benefit + ' unlike ' + this.competition + ' ' + this.differentiator;
     };
-  }(window.methods = window.methods || {}));
 
+    MethodsService.add('ElevatorPitch', ElevatorPitch);
+  }
 })();

@@ -1,8 +1,14 @@
 (function() {
   'use strict';
 
-  (function (methods) {
-    var DavidCowans = methods.DavidCowans = function () {
+  angular
+    .module('uvpBuilderWeb')
+    .run(addMethod);
+
+  addMethod.$inject = [ 'MethodsService' ];
+
+  function addMethod(MethodsService) {
+    var DavidCowans = function () {
       this.problem = '';
       this.product = '';
       this.differentiation = '';
@@ -12,6 +18,7 @@
     DavidCowans.prototype.template = function () {
       return this.problem + ' ' + this.product + ' ' + this.differentiation + ' ' + this.pedigree;
     };
-  }(window.methods = window.methods || {}));
 
+    MethodsService.add('DavidCowans', DavidCowans);
+  }
 })();

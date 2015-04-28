@@ -1,8 +1,14 @@
 (function() {
   'use strict';
 
-  (function (methods) {
-    var SteveBlanks = methods.SteveBlanks = function () {
+  angular
+    .module('uvpBuilderWeb')
+    .run(addMethod);
+
+  addMethod.$inject = [ 'MethodsService' ];
+
+  function addMethod(MethodsService) {
+    var SteveBlanks = function () {
       this.customer = '';
       this.product = '';
       this.objective = '';
@@ -11,6 +17,7 @@
     SteveBlanks.prototype.template = function () {
       return 'We help ' + this.customer + ' do ' + this.objective + ' doing ' + this.product;
     };
-  }(window.methods = window.methods || {}));
 
+    MethodsService.add('SteveBlanks', SteveBlanks);
+  }
 })();

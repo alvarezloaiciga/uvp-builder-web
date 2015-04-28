@@ -9,7 +9,8 @@
     'ngResource',
     'ui.router',
     'mm.foundation',
-    'uvpBuilderWeb.forms']);
+    'uvpBuilderWeb.forms',
+    'uvpBuilderWeb.home']);
 
   app.config(function ($stateProvider, $urlRouterProvider) {
     $stateProvider
@@ -45,6 +46,12 @@
       .state('MintoPyramid', {
         url: '/method/minto-pyramid',
         templateUrl: 'app/forms/minto-pyramid/minto-pyramid.html',
+        controller: 'MethodsController',
+        controllerAs: 'ctrl'
+      })
+      .state('VlaskovitsCoopers', {
+        url: '/method/vlaskovits-coopers',
+        templateUrl: 'app/forms/vlaskovits-coopers/vlaskovits-coopers.html',
         controller: 'MethodsController',
         controllerAs: 'ctrl'
       });

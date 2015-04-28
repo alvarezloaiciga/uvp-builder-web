@@ -50,8 +50,8 @@
         controllerAs: 'ctrl'
       })
       .state('ClayChristensen', {
-        url: '/method/jobs-to-be-done',
-        templateUrl: 'app/forms/clay-christensen/jobs-to-be-done.html',
+        url: '/method/clay-christensen',
+        templateUrl: 'app/forms/clay-christensen/clay-christensen.html',
         controller: 'MethodsController',
         controllerAs: 'ctrl'
       })

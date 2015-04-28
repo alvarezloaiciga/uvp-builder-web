@@ -1,16 +1,23 @@
 (function() {
-
   'use strict';
 
-  (function (methods) {
-    var ClayChristensen = methods.ClayChristensen = function () {
+  angular
+    .module('uvpBuilderWeb')
+    .run(addMethod);
+
+  addMethod.$inject = [ 'MethodsService' ];
+
+  function addMethod(MethodsService) {
+    var ClayChristensen = function () {
       this.verb = '';
-      this.action= '';
+      this.action = '';
       this.identifier = '';
-      };
+    };
+
     ClayChristensen.prototype.template = function () {
       return this.verb + " " + this.action + " " + this.identifier;
     };
-  }(window.methods = window.methods || {}));
 
+  MethodsService.add('ClayChristensen', ClayChristensen);
+  }
 })();

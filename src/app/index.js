@@ -1,7 +1,7 @@
 (function () {
   'use strict';
 
-  angular.module('uvpBuilderWeb', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ngResource', 'ui.router', 'mm.foundation'])
+  angular.module('uvpBuilderWeb', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ngResource', 'ui.router', 'mm.foundation', 'uvpBuilderWeb.forms'])
     .config(function ($stateProvider, $urlRouterProvider) {
       $stateProvider
         .state('home', {

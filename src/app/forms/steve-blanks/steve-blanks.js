@@ -1,5 +1,4 @@
 (function() {
-
   'use strict';
 
   (function (methods) {
@@ -8,6 +7,7 @@
       this.product = '';
       this.objective = '';
     };
+
     SteveBlanks.prototype.template = function () {
       return 'We help ' + this.customer + ' do ' + this.objective + ' doing ' + this.product;
     };

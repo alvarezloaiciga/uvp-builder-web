@@ -1,5 +1,4 @@
 (function() {
-
   'use strict';
 
   (function (methods) {
@@ -9,6 +8,7 @@
       this.differentiation = '';
       this.pedigree = '';
     };
+
     DavidCowans.prototype.template = function () {
       return this.problem + ' ' + this.product + ' ' + this.differentiation + ' ' + this.pedigree;
     };

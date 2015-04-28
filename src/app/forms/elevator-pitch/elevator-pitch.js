@@ -1,5 +1,4 @@
 (function() {
-
   'use strict';
 
   (function (methods) {
@@ -11,6 +10,7 @@
       this.competition = '';
       this.differentiator = '';
     };
+
     ElevatorPitch.prototype.template = function () {
       return 'For ' + this.customer + ' who ' + this.need + ' our ' + this.product + ' that ' + this.benefit + ' unlike ' + this.competition + ' ' + this.differentiator;
     };

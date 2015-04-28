@@ -1,5 +1,4 @@
 (function() {
-
   'use strict';
 
   (function (methods) {
@@ -9,6 +8,7 @@
       this.question = '';
       this.answer = '';
     };
+    
     MintoPyramid.prototype.template = function () {
       return this.situation + '. ' + this.issue + '. ' + this.question + ' ' + this.answer + '.';
     };

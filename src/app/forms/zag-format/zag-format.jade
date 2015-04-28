@@ -1,0 +1,26 @@
+.form
+  .background--image
+    img(src="../../assets/images/home_background.png")
+  .outer
+    .middle.text-center
+      .inner
+        form(novalidate=true, name="uvpForm", ng-hide="ctrl.showUVP")
+          .row
+            .small-2.columns
+              label.right.inline(for="category") Our
+            .small-10.columns
+              input#category(type="text", placeholder="product category or brand", ng-model="ctrl.method.category", required=true)
+          .row
+            .small-2.columns
+              label.right.inline(for="attribute") is the only
+            .small-10.columns
+              input#attribute(type="text", placeholder="best customer attribute", ng-model="ctrl.method.attribute", required=true)
+          .row
+            span.has-tip(data-tooltip, aria-haspopup=true, title= "Our publisher network is the only one that helps digital journalists to create public interviews") Example
+            br
+            button.button(ui-sref="MintoPyramid") Previous
+            button.button(ng-disabled="!uvpForm.$valid", ng-click="ctrl.display()") Go
+        .row(ng-show="ctrl.showUVP")
+          h1 {{ctrl.method.template()}}
+          button.button(ng-click="ctrl.back()") Back
+.footer #12 The Zag format

@@ -1,4 +1,4 @@
-.form
+.form(ng-app="uvp-builder-web.forms")
   .background--image
     img(src="../../assets/images/home_background.png")
   .outer
@@ -7,15 +7,13 @@
         form(novalidate=true, name="uvpForm", ng-hide="ctrl.showUVP")
           .row
             .small-12.columns
-              textarea(placeholder="Just write it!", ng-model="ctrl.method.prose", required=true)
+              input(type="text", placeholder="Do you need/want to... ?", ng-model="ctrl.method.question", required=true)
           .row
-            span.has-tip(data-tooltip, aria-haspopup=true, title= "Avoid rummors and unclear information with a better publisher network") Example
+            span.has-tip(data-tooltip, aria-haspopup=true, title= "Do you want to experience a new way to create journalistic interviews?") Example
             br
-            button.button(ui-sref="ZagFormat") Previous
+            button.button(ui-sref="ElevatorPitch") Previous
             button.button(ng-disabled="!uvpForm.$valid", ng-click="ctrl.display()") Go
-            button.button(ui-sref="TheQuestion") Next
         .row(ng-show="ctrl.showUVP")
           h1 {{ctrl.method.template()}}
           button.button(ng-click="ctrl.back()") Back
-          button.button(ui-sref="TheQuestion") Next
-.footer #14 Just write
+.footer #15 The Question

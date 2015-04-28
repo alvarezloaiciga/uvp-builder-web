@@ -78,6 +78,12 @@
         templateUrl: 'app/forms/zag-format/zag-format.html',
         controller: 'MethodsController',
         controllerAs: 'ctrl'
+      })
+      .state('JustWriteIt', {
+        url: '/method/just-write-it',
+        templateUrl: 'app/forms/just-write-it/just-write-it.html',
+        controller: 'MethodsController',
+        controllerAs: 'ctrl'
       });
 
     $urlRouterProvider.otherwise('/');

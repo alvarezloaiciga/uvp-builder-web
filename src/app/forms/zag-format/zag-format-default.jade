@@ -14,6 +14,8 @@ form(novalidate=true, name="uvpForm", ng-hide="ctrl.showUVP")
     br
     button.button(ui-sref="MintoPyramid") Previous
     button.button(ng-disabled="!uvpForm.$valid", ng-click="ctrl.display()") Go
+    button.button(ui-sref="JustWriteIt") Next
 .row(ng-show="ctrl.showUVP")
   h1 {{ctrl.method.template()}}
   button.button(ng-click="ctrl.back()") Back
+  button.button(ui-sref="JustWriteIt") Next

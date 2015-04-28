@@ -2,7 +2,7 @@
   'use strict';
 
   angular
-    .module('uvpBuilderWeb')
+    .module('uvpBuilderWeb.forms')
     .factory('MethodsService', methodsService);
 
   function methodsService() {

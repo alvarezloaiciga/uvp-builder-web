@@ -49,9 +49,9 @@
         controller: 'MethodsController',
         controllerAs: 'ctrl'
       })
-      .state('VlaskovitsCoopers', {
-        url: '/method/vlaskovits-coopers',
-        templateUrl: 'app/forms/vlaskovits-coopers/vlaskovits-coopers.html',
+      .state('ClayChristensen', {
+        url: '/method/clay-christensen',
+        templateUrl: 'app/forms/clay-christensen/clay-christensen.html',
         controller: 'MethodsController',
         controllerAs: 'ctrl'
       })

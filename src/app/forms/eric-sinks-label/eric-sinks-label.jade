@@ -13,7 +13,9 @@
             br
             button.button(ui-sref="EricSinksSuperlative") Previous
             button.button(ng-disabled="!uvpForm.$valid", ng-click="ctrl.display()") Go
+            button.button(ui-sref = "ClayChristensen") Next
         .row(ng-show="ctrl.showUVP")
           h1 {{ctrl.method.template()}}
           button.button(ng-click="ctrl.back()") Back
+          button.button(ui-sref = "ClayChristensen") Next
 .footer #6 Eric Sink's Value Positioning Label

@@ -72,6 +72,12 @@
         templateUrl: 'app/forms/simon-sineks/simon-sineks.html',
         controller: 'MethodsController',
         controllerAs: 'ctrl'
+      })
+      .state('ZagFormat', {
+        url: '/method/zag-format',
+        templateUrl: 'app/forms/zag-format/zag-format.html',
+        controller: 'MethodsController',
+        controllerAs: 'ctrl'
       });
 
     $urlRouterProvider.otherwise('/');

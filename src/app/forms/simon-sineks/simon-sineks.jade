@@ -19,7 +19,9 @@
             br
             button.button(ui-sref="ClayChristensen") Previous
             button.button(ng-disabled="!uvpForm.$valid", ng-click="ctrl.display()") Go
+            button.button(ui-sref="ZagFormat") Next
         .row(ng-show="ctrl.showUVP")
           h1 {{ctrl.method.template()}}
           button.button(ng-click="ctrl.back()") Back
+          button.button(ui-sref="ZagFormat") Next
 .footer #9 Simon Sinek’s WHY

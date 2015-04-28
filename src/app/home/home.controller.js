@@ -3,5 +3,5 @@
 function HomeController() {}
 
 angular
-  .module('uvpBuilderWeb')
+  .module('uvpBuilderWeb.home')
   .controller('HomeController', HomeController);

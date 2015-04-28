@@ -3,7 +3,7 @@
   'use strict';
 
   angular
-    .module('uvpBuilderWeb')
+    .module('uvpBuilderWeb.forms')
     .run(addMethod);
 
   addMethod.$inject = [ 'MethodsService' ];

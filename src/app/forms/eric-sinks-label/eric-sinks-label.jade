@@ -7,15 +7,13 @@
         form(novalidate=true, name="uvpForm", ng-hide="ctrl.showUVP")
           .row
             .small-12.columns
-              input(type="text", placeholder="Why choose this product", ng-model="ctrl.method.why", required=true)
+              input(type="text", placeholder="What is this product", ng-model="ctrl.method.what", required=true)
           .row
             span.has-tip(data-tooltip, aria-haspopup=true, title= "Example unavailable") Example
             br
-            button.button(ui-sref="MintoPyramid") Previous
+            button.button(ui-sref="EricSinksSuperlative") Previous
             button.button(ng-disabled="!uvpForm.$valid", ng-click="ctrl.display()") Go
-            button.button(ui-sref="EricSinksLabel") Next
         .row(ng-show="ctrl.showUVP")
           h1 {{ctrl.method.template()}}
           button.button(ng-click="ctrl.back()") Back
-          button.button(ui-sref="EricSinksLabel") Next
-.footer #6 Eric Sink's Value Positioning Superlative
+.footer #6 Eric Sink's Value Positioning Label

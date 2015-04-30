@@ -96,6 +96,12 @@
         templateUrl: 'app/forms/dave-mcclures/dave-mcclures.html',
         controller: 'MethodsController',
         controllerAs: 'ctrl'
+      })
+      .state('VentureHacks', {
+        url: '/method/venture-hacks',
+        templateUrl: 'app/forms/venture-hacks/venture-hacks.html',
+        controller: 'MethodsController',
+        controllerAs: 'ctrl'
       });
 
     $urlRouterProvider.otherwise('/');

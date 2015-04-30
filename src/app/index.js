@@ -108,6 +108,12 @@
         templateUrl: 'app/forms/vlaskovits-and-coopers/vlaskovits-and-coopers.html',
         controller: 'MethodsController',
         controllerAs: 'ctrl'
+      })
+      .state('ThreeWords', {
+        url: '/method/3-words',
+        templateUrl: 'app/forms/3-words/3-words.html',
+        controller: 'MethodsController',
+        controllerAs: 'ctrl'
       });
 
     $urlRouterProvider.otherwise('/');

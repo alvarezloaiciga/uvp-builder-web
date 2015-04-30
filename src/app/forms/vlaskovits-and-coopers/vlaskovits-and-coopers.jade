@@ -19,7 +19,9 @@
             br
             button.button(ui-sref="VentureHacks") Previous
             button.button(ng-disabled="!uvpForm.$valid", ng-click="ctrl.display()") Go
+            button.button(ui-sref="ThreeWords") Next
         .row(ng-show="ctrl.showUVP")
           h1 {{ctrl.method.template()}}
           button.button(ng-click="ctrl.back()") Back
+          button.button(ui-sref="ThreeWords") Next
 .footer #4 Vlaskovits & Cooper's CPS

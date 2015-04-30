@@ -1,0 +1,31 @@
+.form
+  .background--image
+    img(src="../../assets/images/home_background.png")
+
+  .outer
+    .middle.text-center
+      .inner
+        form(novalidate=true, name="uvpForm", ng-hide="ctrl.showUVP")
+          .row
+            .small-10.columns.right
+              input(type="text", placeholder="Word 1", ng-model="ctrl.method.word1", required=true)
+          .row
+            .small-10.columns.right
+              input(type="text", placeholder="word 2", ng-model="ctrl.method.word2", required=true)
+          .row
+            .small-2.columns
+              label.right.inline(for="word3") and
+            .small-10.columns
+              input#word3(type="text", placeholder="word 3", ng-model="ctrl.method.word3", required=true)
+          .row
+            .small-10.columns.right
+              input(type="text", placeholder="product/service name", ng-model="ctrl.method.product", required=true)
+          .row
+            span.has-tip(data-tooltip, aria-haspopup=true, title="Unique, Popular and Truthful Interviews") Example
+            br
+            button.button(ui-sref="VlaskovitsAndCoopers") Previous
+            button.button(ng-disabled="!uvpForm.$valid", ng-click="ctrl.display()") Go
+        .row(ng-show="ctrl.showUVP")
+          h1 {{ctrl.method.template()}}
+          button.button(ng-click="ctrl.back()") Back
+.footer #13 3 words

@@ -16,7 +16,6 @@
             .small-12.columns
               input(type="text", placeholder="What is your solution for the problem", ng-model="ctrl.method.solution", required=true)
           .row
-            span.has-tip(data-tooltip, aria-haspopup=true, title="Example unavailable") Example
             br
             button.button(ui-sref="VentureHacks") Previous
             button.button(ng-disabled="!uvpForm.$valid", ng-click="ctrl.display()") Go

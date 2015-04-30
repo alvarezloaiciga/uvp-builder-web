@@ -1,0 +1,35 @@
+.form
+  .background--image
+    img(src="../../assets/images/home_background.png")
+
+  .outer
+    .middle.text-center
+      .inner
+        form(novalidate=true, name="uvpForm", ng-hide="ctrl.showUVP")
+          .row
+            .small-10.columns.right
+              input(type="text", placeholder="Product/service name", ng-model="ctrl.method.product", required=true)
+          .row
+            .small-2.columns
+              label.right.inline(for="firstAdj") is
+            .small-10.columns
+              input#firstAdj(type="text", placeholder="first adjective", ng-model="ctrl.method.firstAdjective", required=true)
+          .row
+            .small-2.columns
+              label.right.inline(for="secondAdj") and
+            .small-10.columns
+              input#secondAdj(type="text", placeholder="second adjective", ng-model="ctrl.method.secondAdjective", required=true)
+          .row
+            .small-2.columns
+              label.right.inline(for="attribute") to
+            .small-10.columns
+              input#attribute(type="text", placeholder="best attribute", ng-model="ctrl.method.attribute", required=true)
+          .row
+            span.has-tip(data-tooltip, aria-haspopup=true, title="(Publish) the Personal Opinion Answers from the source") Example
+            br
+            button.button(ui-sref="TheQuestion") Previous
+            button.button(ng-disabled="!uvpForm.$valid", ng-click="ctrl.display()") Go
+        .row(ng-show="ctrl.showUVP")
+          h1 {{ctrl.method.template()}}
+          button.button(ng-click="ctrl.back()") Back
+.footer #5 Dave McClure's Elevator Ride

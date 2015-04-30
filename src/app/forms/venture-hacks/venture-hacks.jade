@@ -19,7 +19,9 @@
             br
             button.button(ui-sref="DaveMcClures") Previous
             button.button(ng-disabled="!uvpForm.$valid", ng-click="ctrl.display()") Go
+            button.button(ui-sref="VlaskovitsAndCoopers") Next
         .row(ng-show="ctrl.showUVP")
           h1 {{ctrl.method.template()}}
           button.button(ng-click="ctrl.back()") Back
+          button.button(ui-sref="VlaskovitsAndCoopers") Next
 .footer #2 Venture Hacks' High-Concept Pitch

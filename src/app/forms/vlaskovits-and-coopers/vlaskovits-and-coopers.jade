@@ -1,0 +1,25 @@
+.form
+  .background--image
+    img(src="../../assets/images/home_background.png")
+
+  .outer
+    .middle.text-center
+      .inner
+        form(novalidate=true, name="uvpForm", ng-hide="ctrl.showUVP")
+          .row
+            .small-12.columns
+              input(type="text", placeholder="Who your customer is", ng-model="ctrl.method.customer", required=true)
+          .row
+            .small-12.columns
+              input(type="text", placeholder="What problem you're solving for the customer", ng-model="ctrl.method.problem", required=true)
+          .row
+            .small-12.columns
+              input(type="text", placeholder="What is your solution for the problem", ng-model="ctrl.method.solution", required=true)
+          .row
+            br
+            button.button(ui-sref="VentureHacks") Previous
+            button.button(ng-disabled="!uvpForm.$valid", ng-click="ctrl.display()") Go
+        .row(ng-show="ctrl.showUVP")
+          h1 {{ctrl.method.template()}}
+          button.button(ng-click="ctrl.back()") Back
+.footer #4 Vlaskovits & Cooper's CPS

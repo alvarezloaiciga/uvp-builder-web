@@ -1,6 +1,7 @@
 .form
   .background--image
-    img(src="../../assets/images/home_background.png")
+    img(ng-hide="ctrl.userBackgroundImage", ng-src="{{ctrl.backgroundImage}}")
+    img.background-dark(ng-show="ctrl.userBackgroundImage", flow-img="ctrl.userBackgroundImage")
   .outer
     .middle.text-center
       .inner(data-interchange="[app/forms/zag-format/zag-format-default.html, (default)], [app/forms/zag-format/zag-format-small.html, ((max-width: 48em))]")

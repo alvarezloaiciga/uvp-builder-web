@@ -5,10 +5,12 @@
     .module('uvpBuilderWeb.forms')
     .controller('MethodsController', MethodsController);
 
-  MethodsController.$inject = ['MethodsService', '$state'];
+  MethodsController.$inject = ['$scope', 'MethodsService', '$state', 'userBackground'];
 
-  function MethodsController(MethodsService, $state) {
+  function MethodsController($scope, MethodsService, $state, userBackground) {
     var vm = this;
+    vm.backgroundImage = '../../assets/images/home_background.png';
+    vm.userBackgroundImage = userBackground.image;
     vm.showUVP = false;
     vm.display = display;
     vm.back = back;
@@ -23,5 +25,11 @@
     function back() {
       vm.showUVP = false;
     }
+
+    $scope.$on('flow::complete', function (event, $flow) {
+      userBackground.image = $flow.files[0];
+      console.log(userBackground.image);
+      vm.userBackgroundImage = userBackground.image;
+    });
   }
 })();

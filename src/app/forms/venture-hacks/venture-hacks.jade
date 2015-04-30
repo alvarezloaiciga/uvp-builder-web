@@ -1,0 +1,25 @@
+.form
+  .background--image
+    img(src="../../assets/images/home_background.png")
+
+  .outer
+    .middle.text-center
+      .inner
+        form(novalidate=true, name="uvpForm", ng-hide="ctrl.showUVP")
+          .row
+            .small-10.columns.right
+              input(type="text", placeholder="Proven industry example", ng-model="ctrl.method.example", required=true)
+          .row
+            .small-2.columns
+              label.right.inline(for="firstAdj") for/of
+            .small-10.columns
+              input#firstAdj(type="text", placeholder="attribute", ng-model="ctrl.method.attribute", required=true)
+          .row
+            span.has-tip(data-tooltip, aria-haspopup=true, title="A smart flip of Quora") Example
+            br
+            button.button(ui-sref="DaveMcClures") Previous
+            button.button(ng-disabled="!uvpForm.$valid", ng-click="ctrl.display()") Go
+        .row(ng-show="ctrl.showUVP")
+          h1 {{ctrl.method.template()}}
+          button.button(ng-click="ctrl.back()") Back
+.footer #5 Dave McClure's Elevator Ride

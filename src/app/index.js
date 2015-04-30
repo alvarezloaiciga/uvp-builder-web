@@ -102,6 +102,12 @@
         templateUrl: 'app/forms/venture-hacks/venture-hacks.html',
         controller: 'MethodsController',
         controllerAs: 'ctrl'
+      })
+      .state('VlaskovitsAndCoopers', {
+        url: '/method/vlaskovits-and-coopers',
+        templateUrl: 'app/forms/vlaskovits-and-coopers/vlaskovits-and-coopers.html',
+        controller: 'MethodsController',
+        controllerAs: 'ctrl'
       });
 
     $urlRouterProvider.otherwise('/');

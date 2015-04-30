@@ -1,10 +1,12 @@
 .form
   .background--image
-    img(src="../../assets/images/home_background.png")
+    img(ng-hide="ctrl.userBackgroundImage", ng-src="{{ctrl.backgroundImage}}")
+    img.background-dark(ng-show="ctrl.userBackgroundImage", flow-img="ctrl.userBackgroundImage")
   .outer
     .middle.text-center
       .inner
         form(novalidate=true, name="uvpForm", ng-hide="ctrl.showUVP")
+          button.button(flow-btn, flow-attrs="{accept:'image/*'}") Change background
           .row
             .small-2.columns
               label.right.inline(for="customer") For

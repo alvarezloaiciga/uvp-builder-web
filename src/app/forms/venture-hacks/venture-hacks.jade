@@ -1,11 +1,13 @@
 .form
   .background--image
-    img(src="../../assets/images/home_background.png")
+    img(ng-hide="ctrl.userBackgroundImage", ng-src="{{ctrl.backgroundImage}}")
+    img.background-dark(ng-show="ctrl.userBackgroundImage", flow-img="ctrl.userBackgroundImage")
 
   .outer
     .middle.text-center
       .inner
         form(novalidate=true, name="uvpForm", ng-hide="ctrl.showUVP")
+          button.button(flow-btn, flow-attrs="{accept:'image/*'}") Change background
           .row
             .small-10.columns.right
               input(type="text", placeholder="Proven industry example", ng-model="ctrl.method.industryExample", required=true)

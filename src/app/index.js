@@ -90,6 +90,12 @@
         templateUrl: 'app/forms/the-question/the-question.html',
         controller: 'MethodsController',
         controllerAs: 'ctrl'
+      })
+      .state('DaveMcClures', {
+        url: '/method/dave-mcclures',
+        templateUrl: 'app/forms/dave-mcclures/dave-mcclures.html',
+        controller: 'MethodsController',
+        controllerAs: 'ctrl'
       });
 
     $urlRouterProvider.otherwise('/');

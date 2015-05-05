@@ -11,6 +11,7 @@
     var ZagFormat = function () {
       this.category = '';
       this.attribute = '';
+      this.example = 'Our publisher network is the only one that helps digital journalists to create public interviews';
     };
 
     ZagFormat.prototype.template = function () {

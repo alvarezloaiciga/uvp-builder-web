@@ -32,7 +32,7 @@
             .small-10.columns
               input#benefit(type="text", placeholder="statement of benefit", ng-model="ctrl.method.benefit", required=true)
           .row
-            a._tooltip(title="For digital journalist who struggle to discover the people questions our product is a publisher tool that creates powerful interviews to collect people questions")
+            a._tooltip(title="{{ctrl.method.example}}")
               span(title="") Example
             br
             button.button(ng-disabled="!uvpForm.$valid", ng-click="ctrl.display()") Go

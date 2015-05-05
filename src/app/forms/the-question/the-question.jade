@@ -9,7 +9,7 @@
             .small-12.columns
               input(type="text", placeholder="Do you need/want to... ?", ng-model="ctrl.method.question", required=true)
           .row
-            a._tooltip(title="Do you want to experience a new way to create journalistic interviews?")
+            a._tooltip(title="{{ctrl.method.example}}")
               span(title="") Example
             br
             button.button(ui-sref="ElevatorPitch") Previous

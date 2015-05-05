@@ -13,6 +13,7 @@
       this.firstAdjective = '';
       this.secondAdjective = '';
       this.attribute = '';
+      this.example = 'Jaskr is the powerful and human way to create public interviews';
     };
 
     DaveMcClures.prototype.template = function () {

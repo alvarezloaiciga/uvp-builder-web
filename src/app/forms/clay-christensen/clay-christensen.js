@@ -12,6 +12,7 @@
       this.verb = '';
       this.action = '';
       this.identifier = '';
+      this.example = 'Publish the Personal Opinion Answers from the source';
     };
 
     ClayChristensen.prototype.template = function () {

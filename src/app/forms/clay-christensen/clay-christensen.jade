@@ -13,7 +13,7 @@
           .row
             input(type="text", placeholder="Contextual identifier", ng-model="ctrl.method.identifier", required=true)
           .row
-            a._tooltip(title="Publish the Personal Opinion Answers from the source")
+            a._tooltip(title="{{ctrl.method.example}}")
               span(title="") Example
             br
             button.button(ui-sref="EricSinksLabel") Previous

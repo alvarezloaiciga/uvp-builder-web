@@ -9,12 +9,13 @@
 
   function addMethod(MethodsService) {
     var VentureHacks = function () {
-      this.example = '';
+      this.industryExample = '';
       this.attribute = '';
+      this.example = 'A smart flip of Quora';
     };
 
     VentureHacks.prototype.template = function () {
-      return this.example + ' for/of ' + this.attribute;
+      return this.industryExample + ' for/of ' + this.attribute;
     };
 
   MethodsService.add('VentureHacks', VentureHacks);

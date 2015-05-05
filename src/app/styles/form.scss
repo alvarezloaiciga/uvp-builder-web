@@ -57,17 +57,17 @@ label {
   font-size: 125% !important;
 }
 
-._tooltip{
+._tooltip {
   display: inline;
   position: relative;
   color: white;
 }
 
-._tooltip:hover{
+._tooltip:hover {
   cursor: help;
 }
 
-._tooltip:hover:after{
+._tooltip:hover:after {
   background: #333;
   background: rgba(0,0,0,.8);
   border-radius: 5px;

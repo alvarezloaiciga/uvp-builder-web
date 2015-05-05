@@ -63,6 +63,10 @@ label {
   color: white;
 }
 
+._tooltip:hover{
+  cursor: help;
+}
+
 ._tooltip:hover:after{
   background: #333;
   background: rgba(0,0,0,.8);
@@ -75,4 +79,5 @@ label {
   position: absolute;
   z-index: 98;
   width: 220px;
+  cursor: help;
 }

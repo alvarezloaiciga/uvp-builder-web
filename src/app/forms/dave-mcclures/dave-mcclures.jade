@@ -26,7 +26,7 @@
               input#attribute(type="text", placeholder="best attribute", ng-model="ctrl.method.attribute", required=true)
           .row
             a._tooltip(title="{{ctrl.method.example}}")
-              span(title="") Example
+              span Example
             br
             button.button(ui-sref="TheQuestion") Previous
             button.button(ng-disabled="!uvpForm.$valid", ng-click="ctrl.display()") Go

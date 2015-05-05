@@ -33,7 +33,7 @@
               input#benefit(type="text", placeholder="statement of benefit", ng-model="ctrl.method.benefit", required=true)
           .row
             a._tooltip(title="{{ctrl.method.example}}")
-              span(title="") Example
+              span Example
             br
             button.button(ng-disabled="!uvpForm.$valid", ng-click="ctrl.display()") Go
             button.button(ui-sref="SteveBlanks") Next

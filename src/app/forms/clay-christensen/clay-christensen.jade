@@ -14,7 +14,7 @@
             input(type="text", placeholder="Contextual identifier", ng-model="ctrl.method.identifier", required=true)
           .row
             a._tooltip(title="{{ctrl.method.example}}")
-              span(title="") Example
+              span Example
             br
             button.button(ui-sref="EricSinksLabel") Previous
             button.button(ng-disabled="!uvpForm.$valid", ng-click="ctrl.display()") Go

@@ -9,8 +9,7 @@
             .small-12.columns
               textarea(placeholder="Just write it!", ng-model="ctrl.method.prose", required=true)
           .row
-            a._tooltip(title="{{ctrl.method.example}}")
-              span Example
+            a._tooltip(title="{{ctrl.method.example}}") Example
             br
             button.button(ui-sref="ZagFormat") Previous
             button.button(ng-disabled="!uvpForm.$valid", ng-click="ctrl.display()") Go

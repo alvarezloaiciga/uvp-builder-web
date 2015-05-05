@@ -32,8 +32,7 @@
             .small-10.columns.right
               input(type="text", placeholder="the product (unique differentiator)", ng-model="ctrl.method.differentiator", required=true)
           .row
-            a._tooltip(title="{{ctrl.method.example}}")
-              span Example
+            a._tooltip(title="{{ctrl.method.example}}") Example
             br
             button.button(ui-sref="DavidCowans") Previous
             button.button(ng-disabled="!uvpForm.$valid", ng-click="ctrl.display()") Go

@@ -18,8 +18,7 @@
             .small-12.columns
               input(type="text", placeholder="Suggest answer to ease out or mitigate the issue", ng-model="ctrl.method.answer", required=true)
           .row
-            a._tooltip(title="{{ctrl.method.example}}")
-              span Example
+            a._tooltip(title="{{ctrl.method.example}}") Example
             br
             button.button(ui-sref="ElevatorPitch") Previous
             button.button(ng-disabled="!uvpForm.$valid", ng-click="ctrl.display()") Go

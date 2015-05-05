@@ -1,27 +1,18 @@
-.form
-  .background--image
-    img(ng-hide="ctrl.userBackgroundImage", ng-src="{{ctrl.backgroundImage}}")
-    img.background-dark(ng-show="ctrl.userBackgroundImage", flow-img="ctrl.userBackgroundImage")
-
-  .outer
-    .middle.text-center
-      .inner
-        form(novalidate=true, name="uvpForm", ng-hide="ctrl.showUVP")
-          button.button(flow-btn, flow-attrs="{accept:'image/*'}") Change background
-          .row
-            input(type="text", placeholder="Action verb", ng-model="ctrl.method.verb", required=true)
-          .row
-            input(type="text", placeholder="Object of action", ng-model="ctrl.method.action", required=true)
-          .row
-            input(type="text", placeholder="Contextual identifier", ng-model="ctrl.method.identifier", required=true)
-          .row
-            a._tooltip(title="{{ctrl.method.example}}") Example
-            br
-            button.button(ui-sref="EricSinksLabel") Previous
-            button.button(ng-disabled="!uvpForm.$valid", ng-click="ctrl.display()") Go
-            button.button(ui-sref="SimonSineks") Next
-        .row(ng-show="ctrl.showUVP")
-          h1 {{ctrl.method.template()}}
-          button.button(ng-click="ctrl.back()") Back
-          button.button(ui-sref="SimonSineks") Next
+form(novalidate=true, name="uvpForm", ng-hide="ctrl.showUVP")
+  .row
+    input(type="text", placeholder="Action verb", ng-model="ctrl.method.verb", required=true)
+  .row
+    input(type="text", placeholder="Object of action", ng-model="ctrl.method.action", required=true)
+  .row
+    input(type="text", placeholder="Contextual identifier", ng-model="ctrl.method.identifier", required=true)
+  .row
+    a._tooltip(title="{{ctrl.method.example}}") Example
+    br
+    button.button(ui-sref="EricSinksLabel") Previous
+    button.button(ng-disabled="!uvpForm.$valid", ng-click="ctrl.display()") Go
+    button.button(ui-sref="SimonSineks") Next
+.row(ng-show="ctrl.showUVP")
+  h1 {{ctrl.method.template()}}
+  button.button(ng-click="ctrl.back()") Back
+  button.button(ui-sref="SimonSineks") Next
 .footer #8 Clay Christensen’s Jobs-to-be-done

@@ -1,23 +1,15 @@
-.form(ng-app="uvp-builder-web.forms")
-  .background--image
-    img(ng-hide="ctrl.userBackgroundImage", ng-src="{{ctrl.backgroundImage}}")
-    img.background-dark(ng-show="ctrl.userBackgroundImage", flow-img="ctrl.userBackgroundImage")
-  .outer
-    .middle.text-center
-      .inner
-        form(novalidate=true, name="uvpForm", ng-hide="ctrl.showUVP")
-          button.button(flow-btn, flow-attrs="{accept:'image/*'}") Change background
-          .row
-            .small-12.columns
-              input(type="text", placeholder="Do you need/want to... ?", ng-model="ctrl.method.question", required=true)
-          .row
-            a._tooltip(title="{{ctrl.method.example}}") Example
-            br
-            button.button(ui-sref="ElevatorPitch") Previous
-            button.button(ng-disabled="!uvpForm.$valid", ng-click="ctrl.display()") Go
-            button.button(ui-sref="DaveMcClures") Next
-        .row(ng-show="ctrl.showUVP")
-          h1 {{ctrl.method.template()}}
-          button.button(ng-click="ctrl.back()") Back
-          button.button(ui-sref="DaveMcClures") Next
+form(novalidate=true, name="uvpForm", ng-hide="ctrl.showUVP")
+  .row
+    .small-12.columns
+      input(type="text", placeholder="Do you need/want to... ?", ng-model="ctrl.method.question", required=true)
+  .row
+    a._tooltip(title="{{ctrl.method.example}}") Example
+    br
+    button.button(ui-sref="ElevatorPitch") Previous
+    button.button(ng-disabled="!uvpForm.$valid", ng-click="ctrl.display()") Go
+    button.button(ui-sref="DaveMcClures") Next
+.row(ng-show="ctrl.showUVP")
+  h1 {{ctrl.method.template()}}
+  button.button(ng-click="ctrl.back()") Back
+  button.button(ui-sref="DaveMcClures") Next
 .footer #15 The Question

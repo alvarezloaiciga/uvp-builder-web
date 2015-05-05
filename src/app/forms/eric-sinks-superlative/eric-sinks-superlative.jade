@@ -1,22 +1,14 @@
-.form
-  .background--image
-    img(ng-hide="ctrl.userBackgroundImage", ng-src="{{ctrl.backgroundImage}}")
-    img.background-dark(ng-show="ctrl.userBackgroundImage", flow-img="ctrl.userBackgroundImage")
-  .outer
-    .middle.text-center
-      .inner
-        form(novalidate=true, name="uvpForm", ng-hide="ctrl.showUVP")
-          button.button(flow-btn, flow-attrs="{accept:'image/*'}") Change background
-          .row
-            .small-12.columns
-              input(type="text", placeholder="Why choose this product", ng-model="ctrl.method.why", required=true)
-          .row
-            br
-            button.button(ui-sref="MintoPyramid") Previous
-            button.button(ng-disabled="!uvpForm.$valid", ng-click="ctrl.display()") Go
-            button.button(ui-sref="EricSinksLabel") Next
-        .row(ng-show="ctrl.showUVP")
-          h1 {{ctrl.method.template()}}
-          button.button(ng-click="ctrl.back()") Back
-          button.button(ui-sref="EricSinksLabel") Next
+form(novalidate=true, name="uvpForm", ng-hide="ctrl.showUVP")
+  .row
+    .small-12.columns
+      input(type="text", placeholder="Why choose this product", ng-model="ctrl.method.why", required=true)
+  .row
+    br
+    button.button(ui-sref="MintoPyramid") Previous
+    button.button(ng-disabled="!uvpForm.$valid", ng-click="ctrl.display()") Go
+    button.button(ui-sref="EricSinksLabel") Next
+.row(ng-show="ctrl.showUVP")
+  h1 {{ctrl.method.template()}}
+  button.button(ng-click="ctrl.back()") Back
+  button.button(ui-sref="EricSinksLabel") Next
 .footer #6 Eric Sink's Value Positioning Superlative

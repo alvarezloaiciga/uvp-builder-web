@@ -1,32 +1,24 @@
-.form
-  .background--image
-    img(ng-hide="ctrl.userBackgroundImage", ng-src="{{ctrl.backgroundImage}}")
-    img.background-dark(ng-show="ctrl.userBackgroundImage", flow-img="ctrl.userBackgroundImage")
-  .outer
-    .middle.text-center
-      .inner
-        form(novalidate=true, name="uvpForm", ng-hide="ctrl.showUVP")
-          button.button(flow-btn, flow-attrs="{accept:'image/*'}") Change background
-          .row
-            .small-12.columns
-              input(type="text", placeholder="Highlight the enormity of the problem you are tackling", ng-model="ctrl.method.problem", required=true)
-          .row
-            .small-12.columns
-              input(type="text", placeholder="Tell the audience up front what your company sells", ng-model="ctrl.method.product", required=true)
-          .row
-            .small-12.columns
-              input(type="text", placeholder="Distill the differentiation down to one, easy-to-comprehend sentence", ng-model="ctrl.method.differentiation", required=true)
-          .row
-            .small-12.columns
-              textarea(placeholder="Establish credibility by sharing the pedigree of the entrepreneurs, customers, or the investors", ng-model="ctrl.method.pedigree", required=true)
-          .row
-            a._tooltip(title="{{ctrl.method.example}}") Example
-            br
-            button.button(ui-sref="SteveBlanks") Previous
-            button.button(ng-disabled="!uvpForm.$valid", ng-click="ctrl.display()") Go
-            button.button(ui-sref="ElevatorPitch") Next
-        .row(ng-show="ctrl.showUVP")
-          h1 {{ctrl.method.template()}}
-          button.button(ng-click="ctrl.back()") Back
-          button.button(ui-sref="ElevatorPitch") Next
+form(novalidate=true, name="uvpForm", ng-hide="ctrl.showUVP")
+  .row
+    .small-12.columns
+      input(type="text", placeholder="Highlight the enormity of the problem you are tackling", ng-model="ctrl.method.problem", required=true)
+  .row
+    .small-12.columns
+      input(type="text", placeholder="Tell the audience up front what your company sells", ng-model="ctrl.method.product", required=true)
+  .row
+    .small-12.columns
+      input(type="text", placeholder="Distill the differentiation down to one, easy-to-comprehend sentence", ng-model="ctrl.method.differentiation", required=true)
+  .row
+    .small-12.columns
+      textarea(placeholder="Establish credibility by sharing the pedigree of the entrepreneurs, customers, or the investors", ng-model="ctrl.method.pedigree", required=true)
+  .row
+    a._tooltip(title="{{ctrl.method.example}}") Example
+    br
+    button.button(ui-sref="SteveBlanks") Previous
+    button.button(ng-disabled="!uvpForm.$valid", ng-click="ctrl.display()") Go
+    button.button(ui-sref="ElevatorPitch") Next
+.row(ng-show="ctrl.showUVP")
+  h1 {{ctrl.method.template()}}
+  button.button(ng-click="ctrl.back()") Back
+  button.button(ui-sref="ElevatorPitch") Next
 .footer #3 David Cowan's Pitchcraft

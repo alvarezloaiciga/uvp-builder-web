@@ -10,7 +10,7 @@
   function MethodsController($scope, MethodsService, $state, userBackground) {
     var vm = this;
     vm.backgroundImage = '../../assets/images/home_background.png';
-    vm.userBackgroundImage = userBackground.image;
+    $scope.userBackground = $scope.userBackground || {};
     vm.showUVP = false;
     vm.display = display;
     vm.back = back;
@@ -29,7 +29,7 @@
     $scope.$on('flow::complete', function (event, $flow) {
       userBackground.image = $flow.files[0];
       console.log(userBackground.image);
-      vm.userBackgroundImage = userBackground.image;
+      $scope.userBackground.image = userBackground.image;
     });
   }
 })();

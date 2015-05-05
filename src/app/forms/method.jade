@@ -1,0 +1,10 @@
+div(flow-init, flow-file-added="!!{png:1,gif:1,jpg:1,jpeg:1}[$file.getExtension()]", flow-files-submitted="$flow.upload()")
+  .background--image
+    img(ng-hide="userBackground.image", ng-src="{{ctrl.backgroundImage}}")
+    img.background-dark(ng-show="userBackground.image", flow-img="userBackground.image")
+    .form
+      .outer
+        .middle.text-center
+          .inner
+            button.button(flow-btn, flow-attrs="{accept:'image/*'}") Change background
+            div(ui-view)

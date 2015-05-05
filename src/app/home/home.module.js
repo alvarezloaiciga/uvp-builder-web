@@ -2,11 +2,14 @@
   'use strict';
 
   angular.module('uvpBuilderWeb.home', ['ui.router'])
-    .config(function ($stateProvider) {
+    .config(function ($stateProvider, $urlRouterProvider) {
       $stateProvider
         .state('home', {
           url: '/',
           templateUrl: 'app/home/home.html',
-          controller: 'HomeController',
-        })});
+          controller: 'HomeController'
+        });
+
+      $urlRouterProvider.otherwise('/');
+    });
 })();

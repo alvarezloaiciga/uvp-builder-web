@@ -1,7 +1,7 @@
 (function () {
   'use strict';
 
-  var app = angular.module('uvpBuilderWeb', [
+  angular.module('uvpBuilderWeb', [
     'ngAnimate',
     'ngCookies',
     'ngTouch',

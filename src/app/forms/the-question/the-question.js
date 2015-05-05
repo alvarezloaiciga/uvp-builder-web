@@ -10,6 +10,7 @@
   function addMethod(MethodsService) {
     var TheQuestion = function () {
       this.question = '';
+      this.example = 'Do you want to experience a new way to create journalistic interviews?';
     };
 
     TheQuestion.prototype.template = function () {

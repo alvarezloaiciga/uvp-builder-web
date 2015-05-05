@@ -13,7 +13,7 @@
           .row
             input(type="text", placeholder="Contextual identifier", ng-model="ctrl.method.identifier", required=true)
           .row
-            span.has-tip(data-tooltip, aria-haspopup=true, title="(Publish) the Personal Opinion Answers from the source") Example
+            a._tooltip(title="{{ctrl.method.example}}") Example
             br
             button.button(ui-sref="EricSinksLabel") Previous
             button.button(ng-disabled="!uvpForm.$valid", ng-click="ctrl.display()") Go

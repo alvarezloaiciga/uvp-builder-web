@@ -1,7 +1,6 @@
 .form
   .background--image
     img(src="../../assets/images/home_background.png")
-
   .outer
     .middle.text-center
       .inner
@@ -21,7 +20,7 @@
             .small-10.columns.right
               input(type="text", placeholder="product/service name", ng-model="ctrl.method.product", required=true)
           .row
-            span.has-tip(data-tooltip, aria-haspopup=true, title="Unique, Popular and Truthful Interviews") Example
+            a._tooltip(title="{{ctrl.method.example}}") Example
             br
             button.button(ui-sref="VlaskovitsAndCoopers") Previous
             button.button(ng-disabled="!uvpForm.$valid", ng-click="ctrl.display()") Go

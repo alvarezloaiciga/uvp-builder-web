@@ -25,7 +25,7 @@
             .small-10.columns
               input#attribute(type="text", placeholder="best attribute", ng-model="ctrl.method.attribute", required=true)
           .row
-            span.has-tip(data-tooltip, aria-haspopup=true, title="Jaskr is the powerful and human way to create public interviews") Example
+            a._tooltip(title="{{ctrl.method.example}}") Example
             br
             button.button(ui-sref="TheQuestion") Previous
             button.button(ng-disabled="!uvpForm.$valid", ng-click="ctrl.display()") Go

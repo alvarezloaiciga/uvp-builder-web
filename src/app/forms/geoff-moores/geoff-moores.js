@@ -14,6 +14,8 @@
       this.product = '';
       this.category = '';
       this.benefit = '';
+      this.example = 'For digital journalist who struggle to discover the people questions ' +
+        'our product is a publisher tool that creates powerful interviews to collect people questions';
     };
 
     GeoffMoores.prototype.template = function () {

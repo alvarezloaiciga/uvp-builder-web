@@ -9,7 +9,8 @@
             .small-12.columns
               input(type="text", placeholder="Do you need/want to... ?", ng-model="ctrl.method.question", required=true)
           .row
-            span.has-tip(data-tooltip, aria-haspopup=true, title= "Do you want to experience a new way to create journalistic interviews?") Example
+            a._tooltip(title="Do you want to experience a new way to create journalistic interviews?")
+              span(title="") Example
             br
             button.button(ui-sref="ElevatorPitch") Previous
             button.button(ng-disabled="!uvpForm.$valid", ng-click="ctrl.display()") Go

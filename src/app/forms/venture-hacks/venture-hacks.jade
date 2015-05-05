@@ -15,7 +15,8 @@
             .small-10.columns
               input#attribute(type="text", placeholder="attribute", ng-model="ctrl.method.attribute", required=true)
           .row
-            span.has-tip(data-tooltip, aria-haspopup=true, title="A smart flip of Quora") Example
+            a._tooltip(title="A smart flip of Quora")
+              span(title="") Example
             br
             button.button(ui-sref="DaveMcClures") Previous
             button.button(ng-disabled="!uvpForm.$valid", ng-click="ctrl.display()") Go

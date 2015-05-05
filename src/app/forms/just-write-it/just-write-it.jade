@@ -9,7 +9,8 @@
             .small-12.columns
               textarea(placeholder="Just write it!", ng-model="ctrl.method.prose", required=true)
           .row
-            span.has-tip(data-tooltip, aria-haspopup=true, title= "Avoid rummors and unclear information with a better publisher network") Example
+            a._tooltip(title="Avoid rummors and unclear information with a better publisher network")
+              span(title="") Example
             br
             button.button(ui-sref="ZagFormat") Previous
             button.button(ng-disabled="!uvpForm.$valid", ng-click="ctrl.display()") Go

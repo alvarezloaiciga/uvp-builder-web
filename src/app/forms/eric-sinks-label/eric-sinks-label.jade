@@ -9,7 +9,6 @@
             .small-12.columns
               input(type="text", placeholder="What is this product", ng-model="ctrl.method.what", required=true)
           .row
-            span.has-tip(data-tooltip, aria-haspopup=true, title= "Example unavailable") Example
             br
             button.button(ui-sref="EricSinksSuperlative") Previous
             button.button(ng-disabled="!uvpForm.$valid", ng-click="ctrl.display()") Go

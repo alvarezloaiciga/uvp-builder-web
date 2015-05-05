@@ -32,7 +32,8 @@
             .small-10.columns.right
               input(type="text", placeholder="the product (unique differentiator)", ng-model="ctrl.method.differentiator", required=true)
           .row
-            span.has-tip(data-tooltip, aria-haspopup=true, title= "For digital Journalists who need to generate valuable and viral content from interviews, Jaskr is a publisher network that creates powerful interviews to collect people's questions unlike other question and answer platforms Jaskr’s technology build a unique social experience.") Example
+            a._tooltip(title="For digital Journalists who need to generate valuable and viral content from interviews, Jaskr is a publisher network that creates powerful interviews to collect people's questions unlike other question and answer platforms Jaskr’s technology build a unique social experience")
+              span(title="") Example
             br
             button.button(ui-sref="DavidCowans") Previous
             button.button(ng-disabled="!uvpForm.$valid", ng-click="ctrl.display()") Go

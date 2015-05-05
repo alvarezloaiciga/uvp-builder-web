@@ -18,7 +18,8 @@
             .small-12.columns
               input(type="text", placeholder="Suggest answer to ease out or mitigate the issue", ng-model="ctrl.method.answer", required=true)
           .row
-            span.has-tip(data-tooltip, aria-haspopup=true, title= "Nowadays social networks are full of unclear information about Public Figures. Consequently, the public opinion is affected. How can social networks receive better content? Our publisher technology helps the creation of interviews for build the public opinion.") Example
+            a._tooltip(title="Nowadays social networks are full of unclear information about Public Figures. Consequently, the public opinion is affected. How can social networks receive better content? Our publisher technology helps the creation of interviews for build the public opinion")
+              span(title="") Example
             br
             button.button(ui-sref="ElevatorPitch") Previous
             button.button(ng-disabled="!uvpForm.$valid", ng-click="ctrl.display()") Go

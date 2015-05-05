@@ -15,7 +15,6 @@
             .small-12.columns
               input(type="text", placeholder="the importance of being consistent in What you do", ng-model="ctrl.method.importance", required=true)
           .row
-            span.has-tip(data-tooltip, aria-haspopup=true, title= "Example unavailable") Example
             br
             button.button(ui-sref="ClayChristensen") Previous
             button.button(ng-disabled="!uvpForm.$valid", ng-click="ctrl.display()") Go

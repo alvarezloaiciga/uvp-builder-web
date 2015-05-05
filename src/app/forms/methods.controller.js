@@ -28,7 +28,6 @@
 
     $scope.$on('flow::complete', function (event, $flow) {
       userBackground.image = $flow.files[0];
-      console.log(userBackground.image);
       $scope.userBackground.image = userBackground.image;
     });
   }

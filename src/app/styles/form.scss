@@ -60,20 +60,7 @@ label {
 ._tooltip{
   display: inline;
   position: relative;
-}
-
-._tooltip:hover:after{
-  background: #333;
-  background: rgba(0,0,0,.8);
-  border-radius: 5px;
-  bottom: 26px;
-  color: #fff;
-  content: attr(title);
-  left: 20%;
-  padding: 5px 15px;
-  position: absolute;
-  z-index: 98;
-  width: 220px;
+  color: white;
 }
 
 ._tooltip:hover:after{

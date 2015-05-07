@@ -1,7 +1,8 @@
 (function() {
   'use strict';
 
-  angular.module('uvpBuilderWeb.forms')
+  angular
+    .module('uvpBuilderWeb.forms')
     .config(routeConfig);
 
   routeConfig.$inject = ['$stateProvider'];

@@ -1,7 +1,8 @@
 (function() {
   'use strict';
 
-  angular.module('uvpBuilderWeb.forms', ['flow', 'ui.router'])
+  angular
+    .module('uvpBuilderWeb.forms', ['flow', 'ui.router'])
     .config(flowConfig)
     .value('userBackground', {image: undefined});
 

@@ -3,7 +3,7 @@
 
   angular
     .module('uvpBuilderWeb.forms')
-    .directive('changeBackgroundButton', changeBackgroundButton);
+    .directive('uvpChangeBackgroundButton', changeBackgroundButton);
 
   function changeBackgroundButton(){
     return {

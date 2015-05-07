@@ -14,10 +14,14 @@
     };
   }
 
-  sideBarController.$inject = ['$state'];
+  sideBarController.$inject = ['$scope', '$state', '$urlRouter'];
 
-  function sideBarController($state) {
+  function sideBarController($scope, $state) {
     var vm = this;
     vm.method = $state.current.name;
+
+    $scope.$on('stateChange', function (event, args) {
+      vm.method = args.stateName;
+    });
   }
 })();

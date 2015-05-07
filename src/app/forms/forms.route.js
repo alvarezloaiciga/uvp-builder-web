@@ -10,6 +10,7 @@
   function routeConfig($stateProvider) {
     $stateProvider
       .state('method', {
+        abstract: true,
         url: '/method',
         templateUrl: 'app/forms/method.html',
         controller: 'MethodsController',

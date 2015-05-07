@@ -8,6 +8,6 @@
     'ngSanitize',
     'ngResource',
     'mm.foundation',
-    'uvpBuilderWeb.forms',
+    'uvpBuilderWeb.methods',
     'uvpBuilderWeb.home']);
 })();

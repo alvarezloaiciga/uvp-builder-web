@@ -18144,15 +18144,15 @@ function nullFormRenameControl(control, name) {
  *
  * @property {boolean} $pristine True if user has not interacted with the form yet.
  * @property {boolean} $dirty True if user has already interacted with the form.
- * @property {boolean} $valid True if all of the containing methods and controls are valid.
+ * @property {boolean} $valid True if all of the containing forms and controls are valid.
  * @property {boolean} $invalid True if at least one containing control or form is invalid.
  * @property {boolean} $submitted True if user has submitted the form even if its invalid.
  *
  * @property {Object} $error Is an object hash, containing references to controls or
- *  methods with failing validators, where:
+ *  forms with failing validators, where:
  *
  *  - keys are validation tokens (error names),
- *  - values are arrays of controls or methods that have a failing validator for given error name.
+ *  - values are arrays of controls or forms that have a failing validator for given error name.
  *
  *  Built-in validation tokens:
  *
@@ -18172,7 +18172,7 @@ function nullFormRenameControl(control, name) {
  *  - `month`
  *
  * @description
- * `FormController` keeps track of all its controls and nested methods as well as the state of them,
+ * `FormController` keeps track of all its controls and nested forms as well as the state of them,
  * such as being valid/invalid or dirty/pristine.
  *
  * Each {@link ng.directive:form form} directive creates an instance
@@ -18299,7 +18299,7 @@ function FormController(element, attrs, $scope, $animate, $interpolate) {
    * @description
    * Sets the validity of a form control.
    *
-   * This method will also propagate to parent methods.
+   * This method will also propagate to parent forms.
    */
   addSetValidityMethod({
     ctrl: this,
@@ -18337,7 +18337,7 @@ function FormController(element, attrs, $scope, $animate, $interpolate) {
    * Sets the form to a dirty state.
    *
    * This method can be called to add the 'ng-dirty' class and set the form to a dirty
-   * state (ng-dirty class). This method will also propagate to parent methods.
+   * state (ng-dirty class). This method will also propagate to parent forms.
    */
   form.$setDirty = function() {
     $animate.removeClass(element, PRISTINE_CLASS);
@@ -18411,7 +18411,7 @@ function FormController(element, attrs, $scope, $animate, $interpolate) {
  *
  * @description
  * Nestable alias of {@link ng.directive:form `form`} directive. HTML
- * does not allow nesting of form elements. It is useful to nest methods, for example if the validity of a
+ * does not allow nesting of form elements. It is useful to nest forms, for example if the validity of a
  * sub-group of controls needs to be determined.
  *
  * Note: the purpose of `ngForm` is to group controls,
@@ -18437,11 +18437,11 @@ function FormController(element, attrs, $scope, $animate, $interpolate) {
  *
  * # Alias: {@link ng.directive:ngForm `ngForm`}
  *
- * In Angular methods can be nested. This means that the outer form is valid when all of the child
- * methods are valid as well. However, browsers do not allow nesting of `<form>` elements, so
+ * In Angular forms can be nested. This means that the outer form is valid when all of the child
+ * forms are valid as well. However, browsers do not allow nesting of `<form>` elements, so
  * Angular provides the {@link ng.directive:ngForm `ngForm`} directive which behaves identically to
- * `<form>` but can be nested.  This allows you to have nested methods, which is very useful when
- * using Angular validation directives in methods that are dynamically generated using the
+ * `<form>` but can be nested.  This allows you to have nested forms, which is very useful when
+ * using Angular validation directives in forms that are dynamically generated using the
  * {@link ng.directive:ngRepeat `ngRepeat`} directive. Since you cannot dynamically generate the `name`
  * attribute of input elements using interpolation, you have to wrap each set of repeated inputs in an
  * `ngForm` directive and nest these in an outer `form` element.
@@ -18459,7 +18459,7 @@ function FormController(element, attrs, $scope, $animate, $interpolate) {
  *
  * # Submitting a form and preventing the default action
  *
- * Since the role of methods in client-side Angular applications is different than in classical
+ * Since the role of forms in client-side Angular applications is different than in classical
  * roundtrip apps, it is desirable for the browser not to translate the form submission into a full
  * page reload that sends the data to the server. Instead some javascript logic should be triggered
  * to handle the form submission in an application-specific way.
@@ -19863,7 +19863,7 @@ function badInputChecker(scope, element, attr, ctrl) {
       var validity = element.prop(VALIDITY_STATE_PROPERTY) || {};
       // Detect bug in FF35 for input[email] (https://bugzilla.mozilla.org/show_bug.cgi?id=1064430):
       // - also sets validity.badInput (should only be validity.typeMismatch).
-      // - see http://www.whatwg.org/specs/web-apps/current-work/multipage/methods.html#e-mail-state-(type=email)
+      // - see http://www.whatwg.org/specs/web-apps/current-work/multipage/forms.html#e-mail-state-(type=email)
       // - can ignore this case as we can still read out the erroneous email...
       return validity.badInput && !validity.typeMismatch ? undefined : value;
     });
@@ -23486,7 +23486,7 @@ var ngModelDirective = ['$rootScope', function($rootScope) {
 
           modelCtrl.$$setOptions(ctrls[2] && ctrls[2].$options);
 
-          // notify others, especially parent methods
+          // notify others, especially parent forms
           formCtrl.$addControl(modelCtrl);
 
           attr.$observe('name', function(newValue) {
@@ -23741,7 +23741,7 @@ function addSetValidityMethod(context) {
     }
 
     // re-read the state as the set/unset methods could have
-    // combined state in ctrl.$error[validationError] (used for methods),
+    // combined state in ctrl.$error[validationError] (used for forms),
     // where setting/unsetting only increments/decrements the value,
     // and does not replace it.
     var combinedState;
@@ -25378,7 +25378,7 @@ var ngOptionsMinErr = minErr('ngOptions');
  * @param {string=} ngRequired Adds `required` attribute and `required` validation constraint to
  *    the element when the ngRequired expression evaluates to true. Use `ngRequired` instead of
  *    `required` when you want to data-bind to the `required` attribute.
- * @param {comprehension_expression=} ngOptions in one of the following methods:
+ * @param {comprehension_expression=} ngOptions in one of the following forms:
  *
  *   * for array data sources:
  *     * `label` **`for`** `value` **`in`** `array`

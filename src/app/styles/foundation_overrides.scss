@@ -8,5 +8,9 @@ $input-font-color: white;
 $input-border-color: white;
 $input-focus-border-color: white;
 $has-tip-font-color: white;
+$side-nav-link-color: #8D8D8D;
+$side-nav-link-color-active: white;
+$side-nav-link-color-hover: scale-color($side-nav-link-color, $lightness: 30%);
+$side-nav-font-weight: bold;
 
 @import '../../bower_components/foundation/scss/foundation';

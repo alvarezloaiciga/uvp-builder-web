@@ -1,0 +1,24 @@
+form(novalidate=true, name="uvpForm", ng-hide="ctrl.showUVP")
+  .row
+    .small-12.columns
+      input(type="text", placeholder="Describe the current situation", ng-model="ctrl.method.situation", required=true)
+  .row
+    .small-12.columns
+      input(type="text", placeholder="Describe the issue in the situation", ng-model="ctrl.method.issue", required=true)
+  .row
+    .small-12.columns
+      input(type="text", placeholder="Describe the question in response to the issue", ng-model="ctrl.method.question", required=true)
+  .row
+    .small-12.columns
+      input(type="text", placeholder="Suggest answer to ease out or mitigate the issue", ng-model="ctrl.method.answer", required=true)
+  .row
+    a._tooltip(title="{{ctrl.method.example}}") Example
+    br
+    button.button(ui-sref="ElevatorPitch") Previous
+    button.button(ng-disabled="!uvpForm.$valid", ng-click="ctrl.display()") Go
+    button.button(ui-sref="EricSinksSuperlative") Next
+.row(ng-show="ctrl.showUVP")
+  h1 {{ctrl.method.template()}}
+  button.button(ng-click="ctrl.back()") Back
+  button.button(ui-sref="EricSinksSuperlative") Next
+.footer #5 The Minto Pyramid Principle aka SCQA

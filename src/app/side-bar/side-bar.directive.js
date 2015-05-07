@@ -2,8 +2,8 @@
   'use strict';
 
   angular
-    .module('uvpBuilderWeb.forms')
-    .directive('sideBar', sideBarDirective);
+    .module('uvpBuilderWeb.methods')
+    .directive('uvpSideBar', sideBarDirective);
 
   function sideBarDirective() {
     return {

@@ -2,9 +2,10 @@ div(flow-init, flow-file-added="!!{png:1,gif:1,jpg:1,jpeg:1}[$file.getExtension(
   .background--image
     img(ng-hide="userBackground.image", ng-src="{{ctrl.backgroundImage}}")
     img.background-dark(ng-show="userBackground.image", flow-img="userBackground.image")
-    .form
-      .outer
-        .middle.text-center
-          .inner
-            uvp-change-background-button
-            div(ui-view)
+  .form
+    .outer.left.large-9
+      .middle.text-center
+        .inner
+          uvp-change-background-button
+          div(ui-view)
+    uvp-side-bar.large-3

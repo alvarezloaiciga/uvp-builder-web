@@ -1,8 +1,8 @@
-
 .outer {
   display: table;
   position: absolute;
   height: 100%;
+  width: 100%;
 }
 
 .middle {
@@ -14,3 +14,10 @@
   margin-left: 10px;
   margin-right: 10px;
 }
+
+.container {
+  display: table;
+  height: 100%;
+  width: 100%;
+}
+

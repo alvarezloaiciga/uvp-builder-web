@@ -12,5 +12,10 @@ $side-nav-link-color: #8D8D8D;
 $side-nav-link-color-active: white;
 $side-nav-link-color-hover: scale-color($side-nav-link-color, $lightness: 30%);
 $side-nav-font-weight: bold;
+$off-canvas-bg: rgba(0,0.5,0.5,0.5) ;
+
+.off-canvas-wrap, .off-canvas-wrap > .inner-wrap {
+  min-height: 100vh;
+}
 
 @import '../../bower_components/foundation/scss/foundation';

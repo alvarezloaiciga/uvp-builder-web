@@ -5,11 +5,11 @@ form(novalidate=true, name="uvpForm", ng-hide="ctrl.showUVP")
   .row
     a._tooltip(title="{{ctrl.method.example}}") Example
     br
-    button.button(ui-sref="ZagFormat") Previous
-    button.button(ng-disabled="!uvpForm.$valid", ng-click="ctrl.display()") Go
-    button.button(ui-sref="TheQuestion") Next
+    button.button(ng-disabled="!uvpForm.$valid", ng-click="ctrl.display()") Watch
 .row(ng-show="ctrl.showUVP")
   h1 {{ctrl.method.template()}}
   button.button(ng-click="ctrl.back()") Back
-  button.button(ui-sref="TheQuestion") Next
+  .row
+    i.fi-arrow-right.medium-icon(ui-sref="TheQuestion")
+      .icon-subtitle Next
 .footer #14 Just write

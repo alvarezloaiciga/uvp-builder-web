@@ -16,8 +16,7 @@ form(novalidate=true, name="uvpForm", ng-hide="ctrl.showUVP")
   .row
     a._tooltip(title="{{ctrl.method.example}}") Example
     br
-    button.button(ui-sref="VlaskovitsAndCoopers") Previous
-    button.button(ng-disabled="!uvpForm.$valid", ng-click="ctrl.display()") Go
+    button.button(ng-disabled="!uvpForm.$valid", ng-click="ctrl.display()") Watch
 .row(ng-show="ctrl.showUVP")
   h1 {{ctrl.method.template()}}
   button.button(ng-click="ctrl.back()") Back

@@ -9,16 +9,21 @@
     return {
       restrict: 'E',
       templateUrl: 'app/side-bar/side-bar.html',
-      controller: sideBarController,
-      controllerAs: 'ctrl'
+      controller: SideBarController,
+      controllerAs: 'sideBar'
     };
   }
 
-  sideBarController.$inject = ['$scope', '$state', '$urlRouter'];
+  SideBarController.$inject = ['$scope', '$state', '$urlRouter'];
 
-  function sideBarController($scope, $state) {
+  function SideBarController($scope, $state) {
     var vm = this;
     vm.method = $state.current.name;
+    vm.isActive = isActive;
+
+    function isActive(option) {
+      return (vm.method === option);
+    }
 
     $scope.$on('stateChange', function (event, args) {
       vm.method = args.stateName;

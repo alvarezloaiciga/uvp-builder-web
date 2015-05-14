@@ -15,8 +15,9 @@
     vm.display = display;
     vm.back = back;
     vm.methodName = $state.current.name;
-
     vm.method = MethodsService.getMethod(vm.methodName);
+    vm.isSideBarOpen = isSideBarOpen;
+    vm.refresh = refresh;
 
     function display() {
       vm.showUVP = true;
@@ -24,6 +25,15 @@
 
     function back() {
       vm.showUVP = false;
+    }
+
+    function isSideBarOpen() {
+      return angular.element('#off-canvas').hasClass('move-left');
+    }
+
+    //This function is intended only to refresh the controller in order for the view to change from "<" to ">"
+    function refresh() {
+      return;
     }
 
     $rootScope.$on('$stateChangeSuccess',

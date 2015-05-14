@@ -1,33 +1,33 @@
 ul.side-nav
-  li(ng-class="{'side-nav-active active': ctrl.method == 'GeoffMoores'}")
+  li(ng-class="{'side-nav-active active': sideBar.isActive('GeoffMoores')}")
     a(ui-sref="GeoffMoores") 1. Geoff Moore's Value Positioning Statement
-  li(ng-class="{'side-nav-active active': ctrl.method == 'VentureHacks'}")
+  li(ng-class="{'side-nav-active active': sideBar.isActive('VentureHacks')}")
     a(ui-sref="VentureHacks") 2. Venture Hacks' High-Concept Pitch
-  li(ng-class="{'side-nav-active active': ctrl.method == 'SteveBlanks'}")
+  li(ng-class="{'side-nav-active active': sideBar.isActive('SteveBlanks')}")
     a(ui-sref="SteveBlanks") 3. Steve Blank's XYZ
-  li(ng-class="{'side-nav-active active': ctrl.method == 'VlaskovitsAndCoopers'}")
+  li(ng-class="{'side-nav-active active': sideBar.isActive('VlaskovitsAndCoopers')}")
     a(ui-sref="VlaskovitsAndCoopers") 4. Vlaskovits & Cooper's CPS
-  li(ng-class="{'side-nav-active active': ctrl.method == 'DaveMcClures'}")
+  li(ng-class="{'side-nav-active active': sideBar.isActive('DaveMcClures')}")
     a(ui-sref="DaveMcClures") 5. Dave McClure's Elevator Ride
-  li(ng-class="{'side-nav-active active': ctrl.method == 'DavidCowans'}")
+  li(ng-class="{'side-nav-active active': sideBar.isActive('DavidCowans')}")
     a(ui-sref="DavidCowans") 6. David Cowan's Pitchcraft
-  li(ng-class="{'side-nav-active active': ctrl.method == 'EricSinksSuperlative'}")
+  li(ng-class="{'side-nav-active active': sideBar.isActive('EricSinksSuperlative')}")
     a(ui-sref="EricSinksSuperlative") 7. Eric Sink's Value Positioning Superlative
-  li(ng-class="{'side-nav-active active': ctrl.method == 'EricSinksLabel'}")
+  li(ng-class="{'side-nav-active active': sideBar.isActive('EricSinksLabel')}")
     a(ui-sref="EricSinksLabel") 8. Eric Sink's Value Positioning Label
-  li(ng-class="{'side-nav-active active': ctrl.method == 'ClayChristensen'}")
+  li(ng-class="{'side-nav-active active': sideBar.isActive('ClayChristensen')}")
     a(ui-sref="ClayChristensen") 9. Clay Christensen’s Jobs-to-be-done
-  li(ng-class="{'side-nav-active active': ctrl.method == 'SimonSineks'}")
+  li(ng-class="{'side-nav-active active': sideBar.isActive('SimonSineks')}")
     a(ui-sref="SimonSineks") 10. Simon Sinek’s WHY
-  li(ng-class="{'side-nav-active active': ctrl.method == 'MintoPyramid'}")
+  li(ng-class="{'side-nav-active active': sideBar.isActive('MintoPyramid')}")
     a(ui-sref="MintoPyramid") 11. The Minto Pyramid Principle aka SCQA
-  li(ng-class="{'side-nav-active active': ctrl.method == 'ElevatorPitch'}")
+  li(ng-class="{'side-nav-active active': sideBar.isActive('ElevatorPitch')}")
     a(ui-sref="ElevatorPitch") 12. The elevator pitch format
-  li(ng-class="{'side-nav-active active': ctrl.method == 'ZagFormat'}")
+  li(ng-class="{'side-nav-active active': sideBar.isActive('ZagFormat')}")
     a(ui-sref="ZagFormat") 13. The Zag format
-  li(ng-class="{'side-nav-active active': ctrl.method == 'ThreeWords'}")
+  li(ng-class="{'side-nav-active active': sideBar.isActive('ThreeWords')}")
     a(ui-sref="ThreeWords") 14. 3 words
-  li(ng-class="{'side-nav-active active': ctrl.method == 'JustWriteIt'}")
+  li(ng-class="{'side-nav-active active': sideBar.isActive('JustWriteIt')}")
     a(ui-sref="JustWriteIt") 15. Just write ir
-  li(ng-class="{'side-nav-active active': ctrl.method == 'TheQuestion'}")
+  li(ng-class="{'side-nav-active active': sideBar.isActive('TheQuestion')}")
     a(ui-sref="TheQuestion") 16. The Question

@@ -28,11 +28,13 @@ form(novalidate=true, name="uvpForm", ng-hide="ctrl.showUVP")
   .row
     a._tooltip(title="{{ctrl.method.example}}") Example
     br
-    button.button(ng-disabled="!uvpForm.$valid", ng-click="ctrl.display()") Watch
+    button.button(ng-disabled="!uvpForm.$valid", ng-click="ctrl.display()") Build
 .row(ng-show="ctrl.showUVP")
   h1 {{ ctrl.method.template() }}
-  button.button(ng-click="ctrl.back()") Back
-  .row
-    i.fa.fa-arrow-right.fa-3x(ui-sref="ZagFormat")
-      .icon-subtitle Next
+  br
+  i.fa.fa-arrow-left.fa-3x(ng-click="ctrl.back()")
+    .icon-subtitle Back
+  = ' '
+  i.fa.fa-arrow-right.fa-3x(ui-sref="ZagFormat")
+    .icon-subtitle Next
 .footer #12 The elevator pitch format

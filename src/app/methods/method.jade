@@ -6,8 +6,8 @@ div(flow-init, flow-file-added="!!{png:1,gif:1,jpg:1,jpeg:1}[$file.getExtension(
   .off-canvas-wrap#off-canvas(data-offcanvas)
     .inner-wrap
       button.tiny.button.black-button.right.right-off-canvas-toggle(ng-click="ctrl.refresh()")
-        i.fi-plus.medium-icon(ng-hide="ctrl.isSideBarOpen()")
-        i.fi-minus.medium-icon(ng-show="ctrl.isSideBarOpen()")
+        i.fa.fa-chevron-left.medium-icon(ng-hide="ctrl.isSideBarOpen()")
+        i.fa.fa-chevron-right.medium-icon(ng-show="ctrl.isSideBarOpen()")
       aside.right-off-canvas-menu
         uvp-side-bar
 

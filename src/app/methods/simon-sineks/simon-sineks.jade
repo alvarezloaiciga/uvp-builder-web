@@ -10,11 +10,11 @@ form(novalidate=true, name="uvpForm", ng-hide="ctrl.showUVP")
       input(type="text", placeholder="the importance of being consistent in What you do", ng-model="ctrl.method.importance", required=true)
   .row
     br
-    button.button(ui-sref="ClayChristensen") Previous
-    button.button(ng-disabled="!uvpForm.$valid", ng-click="ctrl.display()") Go
-    button.button(ui-sref="ZagFormat") Next
+    button.button(ng-disabled="!uvpForm.$valid", ng-click="ctrl.display()") Watch
 .row(ng-show="ctrl.showUVP")
   h1 {{ctrl.method.template()}}
   button.button(ng-click="ctrl.back()") Back
-  button.button(ui-sref="ZagFormat") Next
+  .row
+    i.fi-arrow-right.medium-icon(ui-sref="ZagFormat")
+      .icon-subtitle Next
 .footer #9 Simon Sinek’s WHY

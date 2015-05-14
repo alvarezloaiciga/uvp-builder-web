@@ -4,11 +4,11 @@ form(novalidate=true, name="uvpForm", ng-hide="ctrl.showUVP")
       input(type="text", placeholder="Why choose this product", ng-model="ctrl.method.why", required=true)
   .row
     br
-    button.button(ui-sref="MintoPyramid") Previous
-    button.button(ng-disabled="!uvpForm.$valid", ng-click="ctrl.display()") Go
-    button.button(ui-sref="EricSinksLabel") Next
+    button.button(ng-disabled="!uvpForm.$valid", ng-click="ctrl.display()") Watch
 .row(ng-show="ctrl.showUVP")
   h1 {{ctrl.method.template()}}
   button.button(ng-click="ctrl.back()") Back
-  button.button(ui-sref="EricSinksLabel") Next
+  .row
+    i.fi-arrow-right.medium-icon(ui-sref="EricSinksLabel")
+      .icon-subtitle Next
 .footer #6 Eric Sink's Value Positioning Superlative

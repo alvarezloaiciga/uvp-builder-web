@@ -1,0 +1,25 @@
+i:hover {
+  cursor: pointer;
+  color: $light-gray !important;
+}
+
+.large-icon {
+  font-size: 450%;
+}
+
+.medium-icon {
+  font-size: 300%;
+}
+
+.change-background-icon {
+  margin-bottom: -25px !important;
+  padding-bottom: -25px !important;
+}
+
+.icon-subtitle {
+  margin-top: -25px !important;
+  padding-top: -25px !important;
+  margin-bottom: 10px !important;
+  padding-bottom: 10px !important;
+  font-size: 20% !important;
+}

@@ -10,11 +10,11 @@ form(novalidate=true, name="uvpForm", ng-hide="ctrl.showUVP")
       input(type="text", placeholder="What is your solution for the problem", ng-model="ctrl.method.solution", required=true)
   .row
     br
-    button.button(ui-sref="VentureHacks") Previous
-    button.button(ng-disabled="!uvpForm.$valid", ng-click="ctrl.display()") Go
-    button.button(ui-sref="ThreeWords") Next
+    button.button(ng-disabled="!uvpForm.$valid", ng-click="ctrl.display()") Watch
 .row(ng-show="ctrl.showUVP")
   h1 {{ctrl.method.template()}}
   button.button(ng-click="ctrl.back()") Back
-  button.button(ui-sref="ThreeWords") Next
-.footer #4 Vlaskovits & Cooper's CPS
+  .row
+    i.fi-arrow-right.medium-icon(ui-sref="ThreeWords")
+      .icon-subtitle Next
+.footer #15 Vlaskovits & Cooper's CPS

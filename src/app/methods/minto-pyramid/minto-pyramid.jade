@@ -12,7 +12,8 @@ form(novalidate=true, name="uvpForm", ng-hide="ctrl.showUVP")
     .small-12.columns
       input(type="text", placeholder="Suggest answer to ease out or mitigate the issue", ng-model="ctrl.method.answer", required=true)
   .row
-    a._tooltip(title="{{ctrl.method.example}}") Example
+    a._tooltip(title="{{ctrl.method.example}}")
+      span(title="") Example
     br
     button.button(ng-disabled="!uvpForm.$valid", ng-click="ctrl.display()") Build
 .row(ng-show="ctrl.showUVP")

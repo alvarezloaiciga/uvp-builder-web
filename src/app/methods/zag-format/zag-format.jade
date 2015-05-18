@@ -1,2 +1,10 @@
 div(data-interchange="[app/methods/zag-format/zag-format-default.html, (default)], [app/methods/zag-format/zag-format-small.html, ((max-width: 48em))]")
+
+.row(ng-show="ctrl.showUVP")
+  h1 {{ctrl.method.template()}}
+  button.button(ng-click="ctrl.back()") Back
+  .row
+    i.fa.fa-arrow-right.fa-3x(ui-sref="ThreeWords")
+      .icon-subtitle Next
+
 .footer #13 The Zag format

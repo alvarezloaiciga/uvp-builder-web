@@ -15,9 +15,12 @@
   margin-right: 10px;
 }
 
-.container {
-  display: table;
-  height: 100%;
+.centered {
+  position: absolute;
+  vertical-align: middle;
   width: 100%;
+  top: 50%;
+  transform: translate(0%, -50%);
+  z-index: 0;
 }
 

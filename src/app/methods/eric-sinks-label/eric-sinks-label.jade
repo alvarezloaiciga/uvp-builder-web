@@ -8,9 +8,9 @@ form(novalidate=true, name="uvpForm", ng-hide="ctrl.showUVP")
 .row(ng-show="ctrl.showUVP")
   h1 {{ctrl.method.template()}}
   br
-  i.fa.fa-arrow-left.fa-3x(ng-click="ctrl.back()")
+  i.fa.fa-chevron-left.fa-3x(ng-click="ctrl.back()")
     .icon-subtitle Back
   = ' '
-  i.fa.fa-arrow-right.fa-3x(ui-sref="ClayChristensen")
+  i.fa.fa-chevron-right.fa-3x(ui-sref="ClayChristensen")
     .icon-subtitle Next
 .footer #8 Eric Sink's Value Positioning Label

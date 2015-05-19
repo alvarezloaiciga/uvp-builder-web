@@ -5,8 +5,11 @@ form(novalidate=true, name="uvpForm", ng-hide="ctrl.showUVP")
   .row
     a._tooltip(title="{{ctrl.method.example}}") Example
     br
-    button.button(ng-disabled="!uvpForm.$valid", ng-click="ctrl.display()") Watch
+    button.button(ng-disabled="!uvpForm.$valid", ng-click="ctrl.display()") Build
 .row(ng-show="ctrl.showUVP")
   h1 {{ctrl.method.template()}}
-  button.button(ng-click="ctrl.back()") Back
+  br
+  i.fa.fa-arrow-left.fa-3x(ng-click="ctrl.back()")
+    .icon-subtitle Back
+  = ' '
 .footer #12 The Question

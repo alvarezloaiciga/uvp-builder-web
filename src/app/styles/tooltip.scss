@@ -1,11 +1,12 @@
 ._tooltip {
   display: inline;
   position: relative;
-  color: white;
+  color: $light-gray;
 }
 
 ._tooltip:hover {
   cursor: help;
+  color: white !important;
 }
 
 ._tooltip:hover:after {

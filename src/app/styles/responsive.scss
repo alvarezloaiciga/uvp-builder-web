@@ -1,0 +1,19 @@
+
+@media only screen and (max-width: 480px) {
+  body, button {
+    font-size: 60% !important;
+  }
+
+  input, label {
+    height: 30px !important;
+  }
+
+  .button {
+    font-size: 100% !important;
+    padding: 12px !important;
+  }
+
+  form {
+    padding-bottom: 15px;
+  }
+}

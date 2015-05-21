@@ -27,6 +27,9 @@
 
     $scope.$on('stateChange', function (event, args) {
       vm.method = args.stateName;
+      mixpanel.track('Method picked', {
+        "methodName": args.stateName
+      });
     });
   }
 })();

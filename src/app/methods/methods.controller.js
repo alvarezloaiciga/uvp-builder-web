@@ -21,6 +21,9 @@
 
     function display() {
       vm.showUVP = true;
+      mixpanel.track('Method built', {
+        methodName: vm.methodName
+      });
     }
 
     function back() {

@@ -16,7 +16,7 @@
     };
 
     SteveBlanks.prototype.template = function () {
-      return 'We help ' + this.customer + ' do ' + this.objective + ' doing ' + this.product;
+      return 'We help ' + this.customer + ' to ' + this.objective + ' doing ' + this.product;
     };
 
     MethodsService.add('SteveBlanks', SteveBlanks);

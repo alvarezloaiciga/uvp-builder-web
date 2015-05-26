@@ -1,6 +1,10 @@
+i {
+  color: $light-gray;
+}
+
 i:hover {
   cursor: pointer;
-  color: $light-gray !important;
+  color: white !important;
 }
 
 .icon-subtitle {
@@ -8,5 +12,5 @@ i:hover {
   padding-top: 0px !important;
   margin-bottom: 10px !important;
   padding-bottom: 10px !important;
-  font-size: 20% !important;
+  font-size: 30% !important;
 }

@@ -4,7 +4,7 @@ form(novalidate=true, name="uvpForm", ng-hide="ctrl.showUVP")
       input(type="text", placeholder="Proven industry example", ng-model="ctrl.method.industryExample", required=true)
   .row
     .small-2.columns
-      label.right.inline(for="attribute") for/of
+      label.right.inline(for="attribute") for
     .small-10.columns
       input#attribute(type="text", placeholder="attribute", ng-model="ctrl.method.attribute", required=true)
   .row
@@ -15,9 +15,9 @@ form(novalidate=true, name="uvpForm", ng-hide="ctrl.showUVP")
 .row(ng-show="ctrl.showUVP")
   h1 {{ctrl.method.template()}}
   br
-  i.fa.fa-arrow-left.fa-3x(ng-click="ctrl.back()")
+  i.fa.fa-chevron-left.fa-2x(ng-click="ctrl.back()")
     .icon-subtitle Back
   = ' '
-  i.fa.fa-arrow-right.fa-3x(ui-sref="SteveBlanks")
+  i.fa.fa-chevron-right.fa-2x(ui-sref="SteveBlanks")
     .icon-subtitle Next
 .footer #2 Venture Hacks' High-Concept Pitch

@@ -15,7 +15,7 @@
     };
 
     VentureHacks.prototype.template = function () {
-      return this.industryExample + ' for/of ' + this.attribute;
+      return this.industryExample + ' for ' + this.attribute;
     };
 
   MethodsService.add('VentureHacks', VentureHacks);

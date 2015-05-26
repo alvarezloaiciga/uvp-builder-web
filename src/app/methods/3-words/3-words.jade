@@ -21,9 +21,9 @@ form(novalidate=true, name="uvpForm", ng-hide="ctrl.showUVP")
 .row(ng-show="ctrl.showUVP")
   h1 {{ctrl.method.template()}}
   br
-  i.fa.fa-arrow-left.fa-3x(ng-click="ctrl.back()")
+  i.fa.fa-chevron-left.fa-2x(ng-click="ctrl.back()")
     .icon-subtitle Back
   = ' '
-  i.fa.fa-arrow-right.fa-3x(ui-sref="JustWriteIt")
+  i.fa.fa-chevron-right.fa-2x(ui-sref="JustWriteIt")
     .icon-subtitle Next
 .footer #14 3 words

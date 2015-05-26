@@ -12,7 +12,7 @@ form(novalidate=true, name="uvpForm", ng-hide="ctrl.showUVP")
     .small-12.columns
       textarea(placeholder="Establish credibility by sharing the pedigree of the entrepreneurs, customers, or the investors", ng-model="ctrl.method.pedigree", required=true)
   .row
-    a._tooltip(title="{{ctrl.method.example}}")
+    a._tooltip(title="Jaskr.com: {{ctrl.method.example}}")
       span(title="") Example
     br
     button.button(ng-disabled="!uvpForm.$valid", ng-click="ctrl.display()") Build

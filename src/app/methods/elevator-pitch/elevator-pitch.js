@@ -15,7 +15,7 @@
       this.benefit = '';
       this.competition = '';
       this.differentiator = '';
-      this.example = 'For digital Journalists who need to generate valuable and viral content from interviews, ' +
+      this.example = 'Jaskr.com: For digital Journalists who need to generate valuable and viral content from interviews, ' +
         'Jaskr is a publisher network that creates powerful interviews to collect people\'s questions, unlike other ' +
         'question and answer platforms Jaskr’s technology build a unique social experience';
     };

@@ -13,7 +13,7 @@
       this.word2 = '';
       this.word3 = '';
       this.product = '';
-      this.example = 'Unique, Popular and Truthful Interviews';
+      this.example = 'Jaskr.com: Unique, Popular and Truthful Interviews';
     };
 
     ThreeWords.prototype.template = function () {

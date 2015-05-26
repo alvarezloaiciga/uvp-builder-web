@@ -10,7 +10,7 @@ form(novalidate=true, name="uvpForm", ng-hide="ctrl.showUVP")
     .small-10.columns
       input#attribute(type="text", placeholder="best customer attribute", ng-model="ctrl.method.attribute", required=true)
   .row
-    a._tooltip(title="Jaskr.com: {{ctrl.method.example}}")
+    a._tooltip(title="{{ctrl.method.example}}")
       span(title="") Example
     br
     button.button(ng-disabled="!uvpForm.$valid", ng-click="ctrl.display()") Build

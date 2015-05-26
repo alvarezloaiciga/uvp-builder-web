@@ -11,7 +11,7 @@
   function addMethod(MethodsService) {
     var JustWriteIt = function () {
       this.prose = '';
-      this.example = 'Avoid rummors and unclear information with a better publisher network';
+      this.example = 'Jaskr.com: Avoid rummors and unclear information with a better publisher network';
     };
 
     JustWriteIt.prototype.template = function () {

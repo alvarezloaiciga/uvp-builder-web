@@ -11,7 +11,7 @@
     var VentureHacks = function () {
       this.industryExample = '';
       this.attribute = '';
-      this.example = 'A smart flip of Quora';
+      this.example = 'Jaskr.com: A smart flip of Quora';
     };
 
     VentureHacks.prototype.template = function () {

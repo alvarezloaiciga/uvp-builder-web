@@ -15,7 +15,7 @@ form(novalidate=true, name="uvpForm", ng-hide="ctrl.showUVP")
     .small-10.columns
       input#product(type="text", placeholder="product", ng-model="ctrl.method.product", required=true)
   .row
-    a._tooltip(title="Jaskr.com: {{ctrl.method.example}}")
+    a._tooltip(title="{{ctrl.method.example}}")
       span(title="") Example
     br
     button.button(ng-disabled="!uvpForm.$valid", ng-click="ctrl.display()") Build

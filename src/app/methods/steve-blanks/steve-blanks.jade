@@ -2,9 +2,11 @@ div(data-interchange="[app/methods/steve-blanks/steve-blanks-default.html, (defa
 
 .row(ng-show="ctrl.showUVP")
   h1 {{ctrl.method.template()}}
-  button.button(ng-click="ctrl.back()") Back
-  .row
-    i.fa.fa-arrow-right.fa-3x(ui-sref="VlaskovitsAndCoopers")
-      .icon-subtitle Next
+  br
+  i.fa.fa-arrow-left.fa-3x(ng-click="ctrl.back()")
+    .icon-subtitle Back
+  = ' '
+  i.fa.fa-arrow-right.fa-3x(ui-sref="VlaskovitsAndCoopers")
+    .icon-subtitle Next
 
 .footer #3 Steve Blank's XYZ

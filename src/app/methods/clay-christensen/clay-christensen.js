@@ -12,7 +12,7 @@
       this.verb = '';
       this.action = '';
       this.identifier = '';
-      this.example = 'Publish the Personal Opinion Answers from the source';
+      this.example = 'Jaskr.com: Publish the Personal Opinion Answers from the source';
     };
 
     ClayChristensen.prototype.template = function () {

@@ -12,7 +12,7 @@
       this.customer = '';
       this.product = '';
       this.objective = '';
-      this.example = 'We help digital journalist to discover people questions about specific topics doing powerful interviews';
+      this.example = 'Jaskr.com: We help digital journalist to discover people questions about specific topics doing powerful interviews';
     };
 
     SteveBlanks.prototype.template = function () {

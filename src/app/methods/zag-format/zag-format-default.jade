@@ -14,11 +14,4 @@ form(novalidate=true, name="uvpForm", ng-hide="ctrl.showUVP")
       span(title="") Example
     br
     button.button(ng-disabled="!uvpForm.$valid", ng-click="ctrl.display()") Build
-.row(ng-show="ctrl.showUVP")
-  h1 {{ctrl.method.template()}}
-  br
-  i.fa.fa-arrow-left.fa-3x(ng-click="ctrl.back()")
-    .icon-subtitle Back
-  = ' '
-  i.fa.fa-arrow-right.fa-3x(ui-sref="ThreeWords")
-    .icon-subtitle Next
+

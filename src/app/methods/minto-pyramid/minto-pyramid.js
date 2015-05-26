@@ -13,7 +13,7 @@
       this.issue = '';
       this.question = '';
       this.answer = '';
-      this.example = 'Nowadays social networks are full of unclear information about Public Figures. ' +
+      this.example = 'Jaskr.com: Nowadays social networks are full of unclear information about Public Figures. ' +
         'Consequently, the public opinion is affected. How can social networks receive better content? ' +
         'Our publisher technology helps the creation of interviews for build the public opinion';
     };

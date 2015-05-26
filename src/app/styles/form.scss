@@ -56,3 +56,22 @@ label {
 .small-font {
   font-size: 125% !important;
 }
+
+form {
+  width: 50%;
+}
+
+input[placeholder] {
+  text-overflow: ellipsis;
+}
+::-moz-placeholder { /* firefox 19+ */
+  text-overflow: ellipsis;
+}
+input:-moz-placeholder {
+  text-overflow: ellipsis;
+}
+
+input:focus::-webkit-input-placeholder {
+  transition: text-indent 4s 0.5s ease-in;
+  text-indent: -200%;
+}

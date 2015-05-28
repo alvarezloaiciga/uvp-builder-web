@@ -22,22 +22,23 @@ module.exports = function(config) {
 
     preprocessors: {
       'src/**/*.html': ['ng-html2js']
-    }
-  };
+    },
 
-  // This block is needed to execute Chrome on Travis
-  // If you ever plan to use Chrome and Travis, you can keep it
-  // If not, you can safely remove it
-  // https://github.com/karma-runner/karma/issues/1144#issuecomment-53633076
-  if(configuration.browsers[0] === 'Chrome' && process.env.TRAVIS) {
-    configuration.customLaunchers = {
-      'chrome-travis-ci': {
-        base: 'Chrome',
-        flags: ['--no-sandbox']
-      }
-    };
-    configuration.browsers = ['chrome-travis-ci'];
-  }
+    files: [
+      'bower_components/angular/angular.js',
+      'bower_components/jquery/dist/jquery.js',
+      'bower_components/angular-mocks/angular-mocks.js',
+      'bower_components/angular-ui-router/release/angular-ui-router.js',
+      'bower_components/ng-flow/dist/ng-flow.js',
+      'src/**/*.module.js',
+      'src/**/*.service.js',
+      'src/**/*.controller.js',
+      'src/**/*.directive.js',
+      'src/**/*.spec.js'
+    ],
+
+    singleRun: true
+  };
 
   config.set(configuration);
 };

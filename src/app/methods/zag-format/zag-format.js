@@ -5,19 +5,21 @@
     .module('uvpBuilderWeb.methods')
     .run(addMethod);
 
-  addMethod.$inject = [ 'MethodsService' ];
+  addMethod.$inject = [ 'MethodsService', 'locale' ];
 
-  function addMethod(MethodsService) {
-    var ZagFormat = function () {
-      this.category = '';
-      this.attribute = '';
-      this.example = 'Jaskr.com: Our publisher network is the only one that helps digital journalists to create public interviews';
-    };
+  function addMethod(MethodsService, locale) {
+    locale.ready('zagFormat').then(function() {
+      var ZagFormat = function () {
+        this.category = '';
+        this.attribute = '';
+        this.example = locale.getString('zagFormat.example');
+      };
 
-    ZagFormat.prototype.template = function () {
-      return 'Our ' + this.category + ' is the only ' + this.attribute + '.';
-    };
+      ZagFormat.prototype.template = function () {
+        return locale.getString('zagFormat.our') + ' ' + this.category + ' ' + locale.getString('zagFormat.only') + ' ' + this.attribute + '.';
+      };
 
-    MethodsService.add('ZagFormat', ZagFormat);
+      MethodsService.add('ZagFormat', ZagFormat);
+    });
   }
 })();

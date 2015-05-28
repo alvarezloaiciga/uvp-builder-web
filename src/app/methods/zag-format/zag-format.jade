@@ -4,9 +4,9 @@ div(data-interchange="[app/methods/zag-format/zag-format-default.html, (default)
   h1 {{ctrl.method.template()}}
   br
   i.fa.fa-chevron-left.fa-2x(ng-click="ctrl.back()")
-    .icon-subtitle Back
+    .icon-subtitle {{ 'common.back' | i18n }}
   = ' '
   i.fa.fa-chevron-right.fa-2x(ui-sref="ThreeWords")
-    .icon-subtitle Next
+    .icon-subtitle {{ 'common.next' | i18n }}
 
 .footer #13 The Zag format

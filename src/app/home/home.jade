@@ -5,17 +5,17 @@
   .outer
     .middle.large-7.text-center
       .row
-        h1 Write 20 different UVPs using the best methods in just minutes
-        h1 Like this one!
+        h1 {{ 'home.header1' | i18n }}
+        h1 {{ 'home.header2' | i18n }}
 
       .row
         br
         a.tiny.button(ui-sref="GeoffMoores")
-          h3 Try it - It's Free!
+          h3 {{ 'home.tryIt' | i18n }}
 
       .home-footer
         .row
-          span Powered by:
+          span {{ 'home.poweredBy' | i18n }}
         .row
           a(href="http://labs.pernix-solutions.com/")
             img.logo(src="../../assets/images/pl.png")

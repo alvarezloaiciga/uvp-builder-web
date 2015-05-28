@@ -1,22 +1,22 @@
 form(novalidate=true, name="uvpForm", ng-hide="ctrl.showUVP")
   .row
     .small-12.columns
-      input(type="text", placeholder="clarify your Why", ng-model="ctrl.method.why", required=true)
+      input(type="text", placeholder="{{ 'simonSineks.placeholder1' | i18n }}", ng-model="ctrl.method.why", required=true)
   .row
     .small-12.columns
-      input(type="text", placeholder="articulate your Hows", ng-model="ctrl.method.how", required=true)
+      input(type="text", placeholder="{{ 'simonSineks.placeholder2' | i18n }}", ng-model="ctrl.method.how", required=true)
   .row
     .small-12.columns
-      input(type="text", placeholder="the importance of being consistent in What you do", ng-model="ctrl.method.importance", required=true)
+      input(type="text", placeholder="{{ 'simonSineks.placeholder3' | i18n }}", ng-model="ctrl.method.importance", required=true)
   .row
     br
-    button.button(ng-disabled="!uvpForm.$valid", ng-click="ctrl.display()") Build
+    button.button(ng-disabled="!uvpForm.$valid", ng-click="ctrl.display()") {{ 'common.build' | i18n }}
 .row(ng-show="ctrl.showUVP")
   h1 {{ctrl.method.template()}}
   br
   i.fa.fa-chevron-left.fa-2x(ng-click="ctrl.back()")
-    .icon-subtitle Back
+    .icon-subtitle {{ 'common.back' | i18n }}
   = ' '
   i.fa.fa-chevron-right.fa-2x(ui-sref="MintoPyramid")
-    .icon-subtitle Next
+    .icon-subtitle {{ 'common.next' | i18n }}
 .footer #10 Simon Sinek’s WHY

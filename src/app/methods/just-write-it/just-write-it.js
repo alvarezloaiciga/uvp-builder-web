@@ -6,19 +6,21 @@
     .module('uvpBuilderWeb.methods')
     .run(addMethod);
 
-  addMethod.$inject = [ 'MethodsService' ];
+  addMethod.$inject = [ 'MethodsService', 'locale' ];
 
-  function addMethod(MethodsService) {
-    var JustWriteIt = function () {
-      this.prose = '';
-      this.example = 'Jaskr.com: Avoid rummors and unclear information with a better publisher network';
-    };
+  function addMethod(MethodsService, locale) {
+    locale.ready('justWriteIt').then(function() {
+      var JustWriteIt = function () {
+        this.prose = '';
+        this.example = locale.getString('justWriteIt.example');
+      };
 
-    JustWriteIt.prototype.template = function () {
-      return this.prose;
-    };
+      JustWriteIt.prototype.template = function () {
+        return this.prose;
+      };
 
-    MethodsService.add('JustWriteIt', JustWriteIt);
+      MethodsService.add('JustWriteIt', JustWriteIt);
+    });
   }
 })();
 

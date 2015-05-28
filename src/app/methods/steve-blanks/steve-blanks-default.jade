@@ -1,22 +1,22 @@
 form(novalidate=true, name="uvpForm", ng-hide="ctrl.showUVP")
   .row
     .small-2.columns
-      label.right.inline(for="customer") We help
+      label.right.inline(for="customer") {{ 'steveBlanks.wehelp' | i18n }}
     .small-10.columns
-      input#costumer(type="text", placeholder="target consumer", ng-model="ctrl.method.customer", required=true)
+      input#costumer(type="text", placeholder="{{ 'steveBlanks.placeholder1' | i18n }}", ng-model="ctrl.method.customer", required=true)
   .row
     .small-2.columns
-      label.right.inline(for="objective") to
+      label.right.inline(for="objective") {{ 'steveBlanks.to' | i18n }}
     .small-10.columns
-      input#objective(type="text", placeholder="objective", ng-model="ctrl.method.objective", required=true)
+      input#objective(type="text", placeholder="{{ 'steveBlanks.placeholder2' | i18n }}", ng-model="ctrl.method.objective", required=true)
   .row
     .small-2.columns
-      label.right.inline(for="product") doing
+      label.right.inline(for="product") {{ 'steveBlanks.doing' | i18n }}
     .small-10.columns
-      input#product(type="text", placeholder="product", ng-model="ctrl.method.product", required=true)
+      input#product(type="text", placeholder="{{ 'steveBlanks.placeholder3' | i18n }}", ng-model="ctrl.method.product", required=true)
   .row
     a._tooltip(title="{{ctrl.method.example}}")
-      span(title="") Example
+      span(title="") {{ 'common.example' | i18n }}
     br
-    button.button(ng-disabled="!uvpForm.$valid", ng-click="ctrl.display()") Build
+    button.button(ng-disabled="!uvpForm.$valid", ng-click="ctrl.display()") {{ 'common.build' | i18n }}
 

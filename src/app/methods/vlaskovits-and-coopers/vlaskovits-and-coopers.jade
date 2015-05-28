@@ -1,22 +1,22 @@
 form(novalidate=true, name="uvpForm", ng-hide="ctrl.showUVP")
   .row
     .small-12.columns
-      input(type="text", placeholder="Who your customer is", ng-model="ctrl.method.customer", required=true)
+      input(type="text", placeholder="{{ 'vlaskovitsAndCoopers.placeholder1' | i18n }}", ng-model="ctrl.method.customer", required=true)
   .row
     .small-12.columns
-      input(type="text", placeholder="What problem you're solving for the customer", ng-model="ctrl.method.problem", required=true)
+      input(type="text", placeholder="{{ 'vlaskovitsAndCoopers.placeholder2' | i18n }}", ng-model="ctrl.method.problem", required=true)
   .row
     .small-12.columns
-      input(type="text", placeholder="What is your solution for the problem", ng-model="ctrl.method.solution", required=true)
+      input(type="text", placeholder="{{ 'vlaskovitsAndCoopers.placeholder1' | i18n }}", ng-model="ctrl.method.solution", required=true)
   .row
     br
-    button.button(ng-disabled="!uvpForm.$valid", ng-click="ctrl.display()") Build
+    button.button(ng-disabled="!uvpForm.$valid", ng-click="ctrl.display()") {{ 'common.build' | i18n }}
 .row(ng-show="ctrl.showUVP")
   h1 {{ctrl.method.template()}}
   br
   i.fa.fa-chevron-left.fa-2x(ng-click="ctrl.back()")
-    .icon-subtitle Back
+    .icon-subtitle {{ 'common.back' | i18n }}
   = ' '
   i.fa.fa-chevron-right.fa-2x(ui-sref="DaveMcClures")
-    .icon-subtitle Next
+    .icon-subtitle {{ 'common.next' | i18n }}
 .footer #4 Vlaskovits & Cooper's CPS

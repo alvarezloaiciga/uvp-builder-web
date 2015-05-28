@@ -5,23 +5,23 @@
     .module('uvpBuilderWeb.methods')
     .run(addMethod);
 
-  addMethod.$inject = [ 'MethodsService' ];
+  addMethod.$inject = [ 'MethodsService', 'locale' ];
 
-  function addMethod(MethodsService) {
-    var DavidCowans = function () {
-      this.problem = '';
-      this.product = '';
-      this.differentiation = '';
-      this.pedigree = '';
-      this.example = 'Jaskr.com: Every day journalists spends hours finding which information people ' +
-        'needs to know about Public Figures. We offer a publisher network to collect millions of ' +
-        'questions and give to the journalist the popular ones with the best question recognition technology';
-    };
+  function addMethod(MethodsService, locale) {
+    locale.ready('davidCowans').then(function() {
+      var DavidCowans = function () {
+        this.problem = '';
+        this.product = '';
+        this.differentiation = '';
+        this.pedigree = '';
+        this.example = locale.getString('davidCowans.example');
+      };
 
-    DavidCowans.prototype.template = function () {
-      return this.problem + ' ' + this.product + ' ' + this.differentiation + ' ' + this.pedigree;
-    };
+      DavidCowans.prototype.template = function () {
+        return this.problem + ' ' + this.product + ' ' + this.differentiation + ' ' + this.pedigree;
+      };
 
-    MethodsService.add('DavidCowans', DavidCowans);
+      MethodsService.add('DavidCowans', DavidCowans);
+    });
   }
 })();

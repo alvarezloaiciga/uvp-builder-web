@@ -5,21 +5,25 @@
     .module('uvpBuilderWeb.methods')
     .run(addMethod);
 
-  addMethod.$inject = [ 'MethodsService' ];
+  addMethod.$inject = [ 'MethodsService', 'locale' ];
 
-  function addMethod(MethodsService) {
-    var DaveMcClures = function () {
-      this.product = '';
-      this.firstAdjective = '';
-      this.secondAdjective = '';
-      this.attribute = '';
-      this.example = 'Jaskr.com: Jaskr is the powerful and human way to create public interviews';
-    };
+  function addMethod(MethodsService, locale) {
+    locale.ready('daveMcClures').then(function() {
+      var DaveMcClures = function () {
+        this.product = '';
+        this.firstAdjective = '';
+        this.secondAdjective = '';
+        this.attribute = '';
+        this.example = locale.getString('daveMcClures.example');
+      };
 
-    DaveMcClures.prototype.template = function () {
-      return this.product + ' is ' + this.firstAdjective + ' and ' + this.secondAdjective + ' to ' + this.attribute;
-    };
+      DaveMcClures.prototype.template = function () {
+        return this.product + ' ' + locale.getString('daveMcClures.is') + ' ' + this.firstAdjective +
+          ' ' + locale.getString('daveMcClures.and') + ' ' + this.secondAdjective + ' ' + locale.getString('daveMcClures.to') +
+          ' ' + this.attribute;
+      };
 
-  MethodsService.add('DaveMcClures', DaveMcClures);
+      MethodsService.add('DaveMcClures', DaveMcClures);
+    });
   }
 })();

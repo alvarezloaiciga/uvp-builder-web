@@ -5,23 +5,25 @@
     .module('uvpBuilderWeb.methods')
     .run(addMethod);
 
-  addMethod.$inject = [ 'MethodsService' ];
+  addMethod.$inject = [ 'MethodsService', 'locale' ];
 
-  function addMethod(MethodsService) {
-    var GeoffMoores = function () {
-      this.customer = '';
-      this.need = '';
-      this.product = '';
-      this.category = '';
-      this.benefit = '';
-      this.example = 'Jaskr.com: For digital journalist who struggle to discover the people questions ' +
-        'our product is a publisher tool that creates powerful interviews to collect people questions';
-    };
+  function addMethod(MethodsService, locale) {
+    locale.ready('geoffMoores').then(function() {
+      var GeoffMoores = function () {
+        this.customer = '';
+        this.need = '';
+        this.product = '';
+        this.category = '';
+        this.benefit = '';
+        this.example = locale.getString('geoffMoores.example');
+      };
+      GeoffMoores.prototype.template = function () {
+        return locale.getString('geoffMoores.for') + ' ' + this.customer + ' ' + locale.getString('geoffMoores.who') + ' ' +
+          this.need + ' ' + locale.getString('geoffMoores.our') + ' ' + this.product + ' ' +
+          locale.getString('geoffMoores.is') + ' ' + this.category + ' ' + locale.getString('geoffMoores.that') + ' ' + this.benefit;
+      };
 
-    GeoffMoores.prototype.template = function () {
-      return 'For ' + this.customer + ' who ' + this.need + ' our ' + this.product + ' is ' + this.category + ' that ' + this.benefit;
-    };
-
-    MethodsService.add('GeoffMoores', GeoffMoores);
+      MethodsService.add('GeoffMoores', GeoffMoores);
+    });
   }
 })();

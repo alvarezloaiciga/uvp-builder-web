@@ -4,9 +4,9 @@ div(data-interchange="[app/methods/steve-blanks/steve-blanks-default.html, (defa
   h1 {{ctrl.method.template()}}
   br
   i.fa.fa-chevron-left.fa-2x(ng-click="ctrl.back()")
-    .icon-subtitle Back
+    .icon-subtitle {{ 'common.back' | i18n }}
   = ' '
   i.fa.fa-chevron-right.fa-2x(ui-sref="VlaskovitsAndCoopers")
-    .icon-subtitle Next
+    .icon-subtitle {{ 'common.next' | i18n }}
 
 .footer #3 Steve Blank's XYZ

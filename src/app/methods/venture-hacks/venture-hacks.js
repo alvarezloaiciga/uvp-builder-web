@@ -5,19 +5,21 @@
     .module('uvpBuilderWeb.methods')
     .run(addMethod);
 
-  addMethod.$inject = [ 'MethodsService' ];
+  addMethod.$inject = [ 'MethodsService', 'locale' ];
 
-  function addMethod(MethodsService) {
-    var VentureHacks = function () {
-      this.industryExample = '';
-      this.attribute = '';
-      this.example = 'Jaskr.com: A smart flip of Quora';
-    };
+  function addMethod(MethodsService, locale) {
+    locale.ready('ventureHacks').then(function() {
+      var VentureHacks = function () {
+        this.industryExample = '';
+        this.attribute = '';
+        this.example = locale.getString('ventureHacks.example');
+      };
 
-    VentureHacks.prototype.template = function () {
-      return this.industryExample + ' for ' + this.attribute;
-    };
+      VentureHacks.prototype.template = function () {
+        return this.industryExample + ' ' + locale.getString('ventureHacks.for') + ' ' + this.attribute;
+      };
 
-  MethodsService.add('VentureHacks', VentureHacks);
+      MethodsService.add('VentureHacks', VentureHacks);
+    });
   }
 })();

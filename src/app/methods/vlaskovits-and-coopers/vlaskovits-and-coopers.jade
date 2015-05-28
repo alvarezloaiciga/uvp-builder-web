@@ -7,7 +7,7 @@ form(novalidate=true, name="uvpForm", ng-hide="ctrl.showUVP")
       input(type="text", placeholder="{{ 'vlaskovitsAndCoopers.placeholder2' | i18n }}", ng-model="ctrl.method.problem", required=true)
   .row
     .small-12.columns
-      input(type="text", placeholder="{{ 'vlaskovitsAndCoopers.placeholder1' | i18n }}", ng-model="ctrl.method.solution", required=true)
+      input(type="text", placeholder="{{ 'vlaskovitsAndCoopers.placeholder3' | i18n }}", ng-model="ctrl.method.solution", required=true)
   .row
     br
     button.button(ng-disabled="!uvpForm.$valid", ng-click="ctrl.display()") {{ 'common.build' | i18n }}

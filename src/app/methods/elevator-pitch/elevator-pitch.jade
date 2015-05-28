@@ -14,17 +14,22 @@ form(novalidate=true, name="uvpForm", ng-hide="ctrl.showUVP")
       input#product(type="text", placeholder="{{ 'elevatorPitch.placeholder3' | i18n }}", ng-model="ctrl.method.product", required=true)
   .row
     .small-2.columns
+      label.right.inline(for="category") {{ 'elevatorPitch.is' | i18n }}
+    .small-10.columns
+      input#category(type="text", placeholder="{{ 'elevatorPitch.placeholder4' | i18n }}", ng-model="ctrl.method.benefit", required=true)
+  .row
+    .small-2.columns
       label.right.inline(for="benefit") {{ 'elevatorPitch.that' | i18n }}
     .small-10.columns
-      input#benefit(type="text", placeholder="{{ 'elevatorPitch.placeholder4' | i18n }}", ng-model="ctrl.method.benefit", required=true)
+      input#benefit(type="text", placeholder="{{ 'elevatorPitch.placeholder5' | i18n }}", ng-model="ctrl.method.benefit", required=true)
   .row
     .small-2.columns
       label.right.inline(for="competition") {{ 'elevatorPitch.unlike' | i18n }}
     .small-10.columns
-      input#competition(type="text", placeholder="{{ 'elevatorPitch.placeholder5' | i18n }}", ng-model="ctrl.method.competition", required=true)
+      input#competition(type="text", placeholder="{{ 'elevatorPitch.placeholder6' | i18n }}", ng-model="ctrl.method.competition", required=true)
   .row
     .small-10.columns.right
-      input(type="text", placeholder="{{ 'elevatorPitch.placeholder6' | i18n }}", ng-model="ctrl.method.differentiator", required=true)
+      input(type="text", placeholder="{{ 'elevatorPitch.placeholder7' | i18n }}", ng-model="ctrl.method.differentiator", required=true)
   .row
     a._tooltip(title="{{ctrl.method.example}}")
       span(title="") {{ 'common.example' | i18n }}

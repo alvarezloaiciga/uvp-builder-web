@@ -13,6 +13,7 @@
         this.customer = '';
         this.need = '';
         this.product = '';
+        this.category = '';
         this.benefit = '';
         this.competition = '';
         this.differentiator = '';
@@ -21,7 +22,7 @@
 
       ElevatorPitch.prototype.template = function () {
         return locale.getString('elevatorPitch.for') + ' ' + this.customer + ' ' + locale.getString('elevatorPitch.who') + ' ' +
-          this.need + ' ' + locale.getString('elevatorPitch.our') + ' ' + this.product + ' ' +
+          this.need + ' ' + this.product + ' ' + locale.getString('elevatorPitch.is') + ' ' + this.category + ' ' +
           locale.getString('elevatorPitch.that') + ' ' + this.benefit + ' ' + locale.getString('elevatorPitch.unlike') + ' ' +
           this.competition + ' ' + this.differentiator;
       };

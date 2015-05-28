@@ -2,12 +2,14 @@
   "example": "Jaskr.com: Para periodistas digitales que necesitan generar contenido valioso y viral de entrevistas, Jaskr es una red de publicaciones que crea poderosas entrevistas para recolectar las preguntasde la gente, a diferencia de otras plataformas de preguntas y respuestas, la tecnología de Jaskr construye una experiencia social única",
   "for": "Para",
   "who": "que",
+  "is": "es",
   "that": "que",
   "unlike": "a diferencia de",
   "placeholder1": "cliente meta",
   "placeholder2": "necesidad del cliente",
   "placeholder3": "nombre del producto",
-  "placeholder4": "beneficio clave",
-  "placeholder5": "competidores",
-  "placeholder6": "diferenciador único del producto"
+  "placeholder4": "categoría de mercado",
+  "placeholder5": "beneficio clave",
+  "placeholder6": "competidores",
+  "placeholder7": "diferenciador único del producto"
 }

@@ -19,9 +19,10 @@
     vm.postUVP = postUVP;
 
     function postUVP(uvp) {
+      console.log(uvp.replace(/ /g,'%20'));
       FB.ui(
         { method: 'share',
-          href: 'http://staging.uvp-builder-web.divshot.io/#/share/' + uvp,
+          href: 'http://development.uvp-builder-web.divshot.io/#/share/' + uvp.replace(/ /g,'%20'),
           privacy: {'value': 'SELF'} },
         function(response) {
           if (!response) {

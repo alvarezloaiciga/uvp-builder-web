@@ -14,7 +14,9 @@
     };
   }
 
-  function FacebookShareButtonController() {
+  FacebookShareButtonController.$inject = ['$window'];
+
+  function FacebookShareButtonController($window) {
     var vm = this;
     vm.postUVP = postUVP;
 

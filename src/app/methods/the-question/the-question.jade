@@ -1,16 +1,16 @@
 form(novalidate=true, name="uvpForm", ng-hide="ctrl.showUVP")
   .row
     .small-12.columns
-      input(type="text", placeholder="Do you need/want to... ?", ng-model="ctrl.method.question", required=true)
+      input(type="text", placeholder="{{ 'theQuestion.placeholder1' | i18n }}", ng-model="ctrl.method.question", required=true)
   .row
     a._tooltip(title="{{ctrl.method.example}}")
-      span(title="") Example
+      span(title="") {{ 'common.example' | i18n }}
     br
-    button.button(ng-disabled="!uvpForm.$valid", ng-click="ctrl.display()") Build
+    button.button(ng-disabled="!uvpForm.$valid", ng-click="ctrl.display()") {{ 'common.build' | i18n }}
 .row(ng-show="ctrl.showUVP")
   h1 {{ctrl.method.template()}}
   br
   i.fa.fa-chevron-left.fa-2x(ng-click="ctrl.back()")
-    .icon-subtitle Back
+    .icon-subtitle {{ 'common.back' | i18n }}
   = ' '
 .footer #16 The Question

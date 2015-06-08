@@ -5,18 +5,20 @@
     .module('uvpBuilderWeb.methods')
     .run(addMethod);
 
-  addMethod.$inject = [ 'MethodsService' ];
+  addMethod.$inject = [ 'MethodsService', 'locale' ];
 
-  function addMethod(MethodsService) {
-    var TheQuestion = function () {
-      this.question = '';
-      this.example = 'Jaskr.com: Do you want to experience a new way to create journalistic interviews?';
-    };
+  function addMethod(MethodsService, locale) {
+    locale.ready('theQuestion').then(function() {
+      var TheQuestion = function () {
+        this.question = '';
+        this.example = locale.getString('theQuestion.example');
+      };
 
-    TheQuestion.prototype.template = function () {
-      return this.question;
-    };
+      TheQuestion.prototype.template = function () {
+        return this.question;
+      };
 
-    MethodsService.add('TheQuestion', TheQuestion);
+      MethodsService.add('TheQuestion', TheQuestion);
+    });
   }
 })();

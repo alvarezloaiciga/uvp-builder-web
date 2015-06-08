@@ -5,20 +5,24 @@
     .module('uvpBuilderWeb.methods')
     .run(addMethod);
 
-  addMethod.$inject = [ 'MethodsService' ];
+  addMethod.$inject = [ 'MethodsService', 'locale' ];
 
-  function addMethod(MethodsService) {
-    var SteveBlanks = function () {
-      this.customer = '';
-      this.product = '';
-      this.objective = '';
-      this.example = 'Jaskr.com: We help digital journalist to discover people questions about specific topics doing powerful interviews';
-    };
+  function addMethod(MethodsService, locale) {
+    locale.ready('steveBlanks').then(function() {
+      var SteveBlanks = function () {
+        this.customer = '';
+        this.product = '';
+        this.objective = '';
+        this.example = locale.getString('steveBlanks.example');
+      };
 
-    SteveBlanks.prototype.template = function () {
-      return 'We help ' + this.customer + ' to ' + this.objective + ' doing ' + this.product;
-    };
+      SteveBlanks.prototype.template = function () {
+        return locale.getString('steveBlanks.weHelp') + ' ' + this.customer + ' ' +
+          locale.getString('steveBlanks.to') + ' ' + this.objective + ' ' +
+          locale.getString('steveBlanks.doing') + ' ' + this.product;
+      };
 
-    MethodsService.add('SteveBlanks', SteveBlanks);
+      MethodsService.add('SteveBlanks', SteveBlanks);
+    });
   }
 })();

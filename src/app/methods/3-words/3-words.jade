@@ -1,29 +1,29 @@
 form(novalidate=true, name="uvpForm", ng-hide="ctrl.showUVP")
   .row
     .small-10.columns.right
-      input(type="text", placeholder="Word 1", ng-model="ctrl.method.word1", required=true)
+      input(type="text", placeholder="{{ '3words.placeholder1' | i18n }}", ng-model="ctrl.method.word1", required=true)
   .row
     .small-10.columns.right
-      input(type="text", placeholder="word 2", ng-model="ctrl.method.word2", required=true)
+      input(type="text", placeholder="{{ '3words.placeholder2' | i18n }}", ng-model="ctrl.method.word2", required=true)
   .row
     .small-2.columns
-      label.right.inline(for="word3") and
+      label.right.inline(for="word3") {{ '3words.and' | i18n }}
     .small-10.columns
-      input#word3(type="text", placeholder="word 3", ng-model="ctrl.method.word3", required=true)
+      input#word3(type="text", placeholder="{{ '3words.placeholder3' | i18n }}", ng-model="ctrl.method.word3", required=true)
   .row
     .small-10.columns.right
-      input(type="text", placeholder="product/service name", ng-model="ctrl.method.product", required=true)
+      input(type="text", placeholder="{{ '3words.placeholder4' | i18n }}", ng-model="ctrl.method.product", required=true)
   .row
     a._tooltip(title="{{ctrl.method.example}}")
-      span(title="") Example
+      span(title="") {{ 'common.example' | i18n }}
     br
-    button.button(ng-disabled="!uvpForm.$valid", ng-click="ctrl.display()") Build
+    button.button(ng-disabled="!uvpForm.$valid", ng-click="ctrl.display()") {{ 'common.build' | i18n }}
 .row(ng-show="ctrl.showUVP")
   h1 {{ctrl.method.template()}}
   br
   i.fa.fa-chevron-left.fa-2x(ng-click="ctrl.back()")
-    .icon-subtitle Back
+    .icon-subtitle {{ 'common.back' | i18n }}
   = ' '
   i.fa.fa-chevron-right.fa-2x(ui-sref="JustWriteIt")
-    .icon-subtitle Next
+    .icon-subtitle {{ 'common.next' | i18n }}
 .footer #14 3 words

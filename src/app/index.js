@@ -7,7 +7,16 @@
     'ngTouch',
     'ngSanitize',
     'ngResource',
+    'ngLocalize',
     'mm.foundation',
     'uvpBuilderWeb.methods',
-    'uvpBuilderWeb.home']);
+    'uvpBuilderWeb.home'])
+    .value('localeSupported', [
+      'en-US',
+      'es-CR'
+    ])
+    .value('localeFallbacks', {
+      'en': 'en-US',
+      'es': 'es-CR'
+    });
 })();

@@ -5,23 +5,23 @@
     .module('uvpBuilderWeb.methods')
     .run(addMethod);
 
-  addMethod.$inject = [ 'MethodsService' ];
+  addMethod.$inject = [ 'MethodsService', 'locale' ];
 
-  function addMethod(MethodsService) {
-    var MintoPyramid = function () {
-      this.situation = '';
-      this.issue = '';
-      this.question = '';
-      this.answer = '';
-      this.example = 'Jaskr.com: Nowadays social networks are full of unclear information about Public Figures. ' +
-        'Consequently, the public opinion is affected. How can social networks receive better content? ' +
-        'Our publisher technology helps the creation of interviews for build the public opinion';
-    };
+  function addMethod(MethodsService, locale) {
+    locale.ready('mintoPyramid').then(function() {
+      var MintoPyramid = function () {
+        this.situation = '';
+        this.issue = '';
+        this.question = '';
+        this.answer = '';
+        this.example = locale.getString('mintoPyramid.example');
+      };
 
-    MintoPyramid.prototype.template = function () {
-      return this.situation + '. ' + this.issue + '. ' + this.question + ' ' + this.answer + '.';
-    };
+      MintoPyramid.prototype.template = function () {
+        return this.situation + '. ' + this.issue + '. ' + this.question + ' ' + this.answer + '.';
+      };
 
-    MethodsService.add('MintoPyramid', MintoPyramid);
+      MethodsService.add('MintoPyramid', MintoPyramid);
+    })
   }
 })();

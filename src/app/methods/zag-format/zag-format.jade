@@ -3,6 +3,8 @@ div(data-interchange="[app/methods/zag-format/zag-format-default.html, (default)
 .row(ng-show="ctrl.showUVP")
   h1 {{ctrl.method.template()}}
   br
+  uvp-facebook-share-button
+  br
   i.fa.fa-chevron-left.fa-2x(ng-click="ctrl.back()")
     .icon-subtitle {{ 'common.back' | i18n }}
   = ' '

@@ -16,6 +16,14 @@
         controller: 'MethodsController',
         controllerAs: 'ctrl'
       })
+      .state('share', {
+        url: '/share/:uvp',
+        templateUrl: 'app/methods/share.html',
+        controller: function ($stateParams) {
+          this.uvp = $stateParams.uvp;
+        },
+        controllerAs: 'ctrl'
+      })
       .state('GeoffMoores', {
         url: '/geoff-moores',
         templateUrl: 'app/methods/geoff-moores/geoff-moores.html',

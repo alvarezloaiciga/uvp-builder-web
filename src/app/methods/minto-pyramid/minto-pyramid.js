@@ -22,6 +22,6 @@
       };
 
       MethodsService.add('MintoPyramid', MintoPyramid);
-    })
+    });
   }
 })();

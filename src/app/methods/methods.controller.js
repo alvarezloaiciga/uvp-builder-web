@@ -5,9 +5,9 @@
     .module('uvpBuilderWeb.methods')
     .controller('MethodsController', MethodsController);
 
-  MethodsController.$inject = ['$scope', 'MethodsService', '$state', '$rootScope'];
+  MethodsController.$inject = ['$scope', 'MethodsService', '$state', '$rootScope', '$mixpanel'];
 
-  function MethodsController($scope, MethodsService, $state, $rootScope) {
+  function MethodsController($scope, MethodsService, $state, $rootScope, $mixpanel) {
     var vm = this;
     vm.backgroundImage = '../../assets/images/home_background.png';
     $scope.userBackground = $scope.userBackground || {};
@@ -21,7 +21,7 @@
 
     function display() {
       vm.showUVP = true;
-      mixpanel.track('Method built', {
+      $mixpanel.track('Method built', {
         methodName: vm.methodName
       });
     }
@@ -38,10 +38,5 @@
     function refresh() {
       return;
     }
-
-    $rootScope.$on('$stateChangeSuccess',
-      function(event, toState){
-        $scope.$broadcast('stateChange', {stateName: toState.name});
-      });
   }
 })();

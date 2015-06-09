@@ -9,6 +9,7 @@
     'ngResource',
     'ngLocalize',
     'mm.foundation',
+    'analytics.mixpanel',
     'uvpBuilderWeb.methods',
     'uvpBuilderWeb.home'])
     .value('localeSupported', [

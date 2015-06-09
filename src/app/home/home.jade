@@ -17,6 +17,9 @@
       br
       a(href="http://labs.pernix-solutions.com/")
         img.logo(src="../../assets/images/pl.png")
-
-script(type="text/javascript").
-  mixpanel.track('Page view');
+      .home-footer
+        .row
+          span {{ 'home.poweredBy' | i18n }}
+        .row
+          a(href="http://labs.pernix-solutions.com/")
+            img.logo(src="../../assets/images/pl.png")

@@ -1,7 +1,13 @@
-'use strict';
+(function() {
+  'use strict';
 
-function HomeController() {}
+  angular
+    .module('uvpBuilderWeb.home')
+    .controller('HomeController', HomeController);
 
-angular
-  .module('uvpBuilderWeb.home')
-  .controller('HomeController', HomeController);
+  HomeController.$inject = ['$mixpanel'];
+
+  function HomeController($mixpanel) {
+    $mixpanel.track('Page view');
+  }
+})();

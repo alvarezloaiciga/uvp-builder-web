@@ -26,7 +26,7 @@ module.exports = function(config) {
       'src/**/*.js': ['coverage']
     },
 
-    reporters: ['progress', 'coverage'],
+    reporters: ['coverage', 'progress'],
 
     coverageReporter: {
       reporters:[
@@ -38,22 +38,7 @@ module.exports = function(config) {
           type: 'text'
         }
       ]
-    },
-
-    files: [
-      'bower_components/angular/angular.js',
-      'bower_components/jquery/dist/jquery.js',
-      'bower_components/angular-mocks/angular-mocks.js',
-      'bower_components/angular-ui-router/release/angular-ui-router.js',
-      'bower_components/ng-flow/dist/ng-flow.js',
-      'src/**/*.module.js',
-      'src/**/*.service.js',
-      'src/**/*.controller.js',
-      'src/**/*.directive.js',
-      'src/**/*.spec.js'
-    ],
-
-    singleRun: true
+    }
   };
 
   config.set(configuration);

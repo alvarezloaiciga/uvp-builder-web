@@ -2,10 +2,10 @@
 
 describe('methods.controller', function(){
 
-  var controller, MethodsService, scope, state, compile;
+  var controller, MethodsService, scope, state;
 
   var CURRENT_STATE = { name: 'someMethod' },
-    CURRENT_METHOD = function(){ this.name = CURRENT_STATE.name },
+    CURRENT_METHOD = function(){ this.name = CURRENT_STATE.name; },
     METHODS = {};
 
   METHODS[CURRENT_STATE.name] = CURRENT_METHOD;

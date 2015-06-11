@@ -1,13 +1,16 @@
 {
   "local": {
+    "environment": "local",
     "mixpanelApiKey": "d42f6a79df143684e61767c50175bb62",
     "facebookAppId": "378031438988076"
   },
   "staging": {
+    "environment": "staging",
     "mixpanelApiKey": "d42f6a79df143684e61767c50175bb62",
     "facebookAppId": "378031438988076"
   },
   "production": {
+    "environment": "production",
     "mixpanelApiKey": "d42f6a79df143684e61767c50175bb62",
     "facebookAppId": "378031438988076"
   }

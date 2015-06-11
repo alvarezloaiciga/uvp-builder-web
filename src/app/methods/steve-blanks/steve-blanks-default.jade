@@ -1,18 +1,18 @@
 form(novalidate=true, name="uvpForm", ng-hide="ctrl.showUVP")
   .row
-    .small-2.columns
+    .small-3.columns
       label.right.inline(for="customer") {{ 'steveBlanks.weHelp' | i18n }}
-    .small-10.columns
+    .small-9.columns
       input#costumer(type="text", placeholder="{{ 'steveBlanks.placeholder1' | i18n }}", ng-model="ctrl.method.customer", required=true)
   .row
-    .small-2.columns
+    .small-3.columns
       label.right.inline(for="objective") {{ 'steveBlanks.to' | i18n }}
-    .small-10.columns
+    .small-9.columns
       input#objective(type="text", placeholder="{{ 'steveBlanks.placeholder2' | i18n }}", ng-model="ctrl.method.objective", required=true)
   .row
-    .small-2.columns
+    .small-3.columns
       label.right.inline(for="product") {{ 'steveBlanks.doing' | i18n }}
-    .small-10.columns
+    .small-9.columns
       input#product(type="text", placeholder="{{ 'steveBlanks.placeholder3' | i18n }}", ng-model="ctrl.method.product", required=true)
   .row
     a._tooltip(title="{{ctrl.method.example}}")

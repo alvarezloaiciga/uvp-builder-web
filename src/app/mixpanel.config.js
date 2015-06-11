@@ -4,9 +4,9 @@
   angular.module('analytics.mixpanel')
     .config(configuration);
 
-  configuration.$inject = ['$mixpanelProvider', 'mixpanelApiKey'];
+  configuration.$inject = ['$mixpanelProvider', 'environment'];
 
-  function configuration($mixpanelProvider, mixpanelApiKey) {
-    $mixpanelProvider.apiKey(mixpanelApiKey);
+  function configuration($mixpanelProvider, environment) {
+    $mixpanelProvider.apiKey(environment.mixpanelApiKey);
   }
 })();

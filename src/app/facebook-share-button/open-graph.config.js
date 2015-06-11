@@ -4,13 +4,13 @@
   angular.module('uvpBuilderWeb')
     .run(configuration);
 
-  configuration.$inject = ['facebookAppId'];
+  configuration.$inject = ['environment'];
 
-  function configuration(facebookAppId) {
+  function configuration(environment) {
 
     window.fbAsyncInit = function () {
       FB.init({
-        appId: facebookAppId, // App ID
+        appId: environment.facebookAppId, // App ID
         status: true,    // check login status
         cookie: true,    // enable cookies to allow the
                          // server to access the session

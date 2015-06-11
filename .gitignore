@@ -7,4 +7,4 @@ dist/
 .divshot-cache/
 .idea/
 npm-debug.log/
-
+src/app/configFile.js

@@ -1,13 +1,13 @@
 form(novalidate=true, name="uvpForm", ng-hide="ctrl.showUVP")
   .row
-    .small-2.columns
+    .small-3.columns
       label.right.inline(for="category") {{ 'zagFormat.our' | i18n }}
-    .small-10.columns
+    .small-9.columns
       input#category(type="text", placeholder="{{ 'zagFormat.placeholder1' | i18n }}", ng-model="ctrl.method.category", required=true)
   .row
-    .small-2.columns
+    .small-3.columns
       label.right.inline(for="attribute") {{ 'zagFormat.only' | i18n }}
-    .small-10.columns
+    .small-9.columns
       input#attribute(type="text", placeholder="{{ 'zagFormat.placeholder2' | i18n }}", ng-model="ctrl.method.attribute", required=true)
   .row
     a._tooltip(title="{{ctrl.method.example}}")

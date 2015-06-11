@@ -2,7 +2,7 @@
 
 describe('home.route', function(){
 
-  var $location, $state, $scope, $injector;
+  var $location, $state, $scope;
 
   var views = {
     home: 'app/home/home.html'
@@ -10,11 +10,10 @@ describe('home.route', function(){
 
   beforeEach(module('uvpBuilderWeb.home'));
 
-  beforeEach(inject(function(_$location_, _$rootScope_, _$state_, _$injector_, $templateCache) {
+  beforeEach(inject(function(_$location_, _$rootScope_, _$state_, $templateCache) {
     $state = _$state_;
     $scope = _$rootScope_;
     $location = _$location_;
-    $injector = _$injector_;
 
     $templateCache.put(views.home, '');
   }));

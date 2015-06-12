@@ -5,12 +5,19 @@
     .module('uvpBuilderWeb.methods')
     .factory('MethodsService', methodsService);
 
-  function methodsService() {
+  methodsService.$inject=['$http'];
+
+  function methodsService($http) {
     var service = {
       methods: {},
       getMethod: getMethod,
-      add: add
+      //add: add
     };
+    $http.get('/app/methods/methods.json')
+    .success(function(data) {
+    service.methods = data.methods;
+  });
+
 
     return service;
 
@@ -24,8 +31,8 @@
       }
     }
 
-    function add(name, method) {
+    /*function add(name, method) {
       this.methods[name] = method;
-    }
+    }*/
   }
 })();

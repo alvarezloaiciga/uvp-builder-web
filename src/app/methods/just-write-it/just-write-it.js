@@ -19,7 +19,7 @@
         return this.prose;
       };
 
-      MethodsService.add('JustWriteIt', JustWriteIt);
+      MethodsService.add('JustWriteIt', new JustWriteIt());
     });
   }
 })();

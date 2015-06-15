@@ -18,6 +18,6 @@
       return this.customer + '. ' + this.problem + '. ' + this.solution;
     };
 
-  MethodsService.add('VlaskovitsAndCoopers', VlaskovitsAndCoopers);
+  MethodsService.add('VlaskovitsAndCoopers', new VlaskovitsAndCoopers());
   }
 })();

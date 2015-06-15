@@ -18,7 +18,7 @@
         return this.question;
       };
 
-      MethodsService.add('TheQuestion', TheQuestion);
+      MethodsService.add('TheQuestion', new TheQuestion());
     });
   }
 })();

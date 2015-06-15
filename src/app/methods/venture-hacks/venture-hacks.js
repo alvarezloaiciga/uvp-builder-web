@@ -19,7 +19,7 @@
         return this.industryExample + ' ' + locale.getString('ventureHacks.for') + ' ' + this.attribute;
       };
 
-      MethodsService.add('VentureHacks', VentureHacks);
+      MethodsService.add('VentureHacks', new VentureHacks());
     });
   }
 })();

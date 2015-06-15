@@ -23,7 +23,7 @@
           locale.getString('geoffMoores.is') + ' ' + this.category + ' ' + locale.getString('geoffMoores.that') + ' ' + this.benefit;
       };
 
-      MethodsService.add('GeoffMoores', GeoffMoores);
+      MethodsService.add('GeoffMoores', new GeoffMoores());
     });
   }
 })();

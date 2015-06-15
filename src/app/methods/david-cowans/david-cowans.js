@@ -21,7 +21,7 @@
         return this.problem + ' ' + this.product + ' ' + this.differentiation + ' ' + this.pedigree;
       };
 
-      MethodsService.add('DavidCowans', DavidCowans);
+      MethodsService.add('DavidCowans', new DavidCowans());
     });
   }
 })();

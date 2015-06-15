@@ -16,6 +16,6 @@
       return this.what;
     };
 
-    MethodsService.add('EricSinksLabel', EricSinksLabel);
+    MethodsService.add('EricSinksLabel', new EricSinksLabel());
   }
 })();

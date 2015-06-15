@@ -22,7 +22,7 @@
           locale.getString('steveBlanks.doing') + ' ' + this.product;
       };
 
-      MethodsService.add('SteveBlanks', SteveBlanks);
+      MethodsService.add('SteveBlanks', new SteveBlanks());
     });
   }
 })();

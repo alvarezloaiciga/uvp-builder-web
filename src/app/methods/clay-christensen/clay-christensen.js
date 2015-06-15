@@ -20,7 +20,7 @@
         return this.verb + ' ' + this.action + ' ' + this.identifier;
       };
 
-      MethodsService.add('ClayChristensen', ClayChristensen);
+      MethodsService.add('ClayChristensen', new ClayChristensen());
     });
   }
 })();

@@ -8,7 +8,7 @@
   function changeBackgroundButton(){
     return {
       restrict: 'E',
-      templateUrl: 'app/methods/changeBackgroundButton.html',
+      templateUrl: 'app/change-background-button/changeBackgroundButton.html',
       controller: buttonController
     };
   }

@@ -18,6 +18,7 @@
     vm.method = MethodsService.getMethod(vm.methodName);
     vm.isSideBarOpen = isSideBarOpen;
     vm.refresh = refresh;
+    vm.resetForm = resetForm;
 
     function display() {
       vm.showUVP = true;
@@ -32,6 +33,14 @@
 
     function isSideBarOpen() {
       return angular.element('#off-canvas').hasClass('move-left');
+    }
+
+    function resetForm() {
+      for(var key in vm.method) {
+        if (key !== 'template' && key !== 'example' && vm.method.hasOwnProperty(key)){
+          vm.method[key] = '';
+        }
+      }
     }
 
     //This function is intended only to refresh the controller in order for the view to change from "<" to ">"

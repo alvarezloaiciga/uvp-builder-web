@@ -4,5 +4,6 @@
   "build": "Build",
   "back": "Back",
   "next": "Next",
-  "changeBackground": "Change Background"
+  "changeBackground": "Change Background",
+  "clear": "Clear"
 }

@@ -1,7 +1,7 @@
 'use strict';
 describe('methods.service', function () {
 
-  var MethodService, $httpBackend, $scope;
+  var MethodService, $httpBackend;
   beforeEach(module('uvpBuilderWeb.methods'));
   beforeEach(inject(function (_MethodService_, _$httpBackend_) {
     MethodService = _MethodService_;

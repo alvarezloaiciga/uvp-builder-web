@@ -5,22 +5,12 @@
     .module('uvpBuilderWeb.methods')
     .factory('MethodsService', methodsService);
 
-  methodsService.$inject=['$http'];
-
-  function methodsService($http) {
+  function methodsService() {
     var service = {
       methods: [],
       getMethod: getMethod,
-      add: add
+      set: set
     };
-    $http.get('/app/methods/methods.json')
-    .success(function(data) {
-    service.methods = data.methods;
-  }).
-    error(function(data) {
-      throw new Error( data || 'Request failed');
-  });
-
 
     return service;
 
@@ -29,9 +19,9 @@
       for (var i=0; i<this.methods.length; i++ ) {
         if (this.methods[i].slug === method){
           Method = this.methods[i];
-        } 
+        }
       }
-      if(Method!=null){
+      if(Method !== null){
         return Method;
       } else {
         throw new Error('Invalid method: ' + method);
@@ -39,8 +29,8 @@
 
     }
 
-    function add(name, method) {
-      this.methods[name] = method;
+    function set(methods) {
+      this.methods = methods;
     }
   }
 })();

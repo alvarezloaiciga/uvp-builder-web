@@ -10,10 +10,17 @@
   function routeConfig($stateProvider) {
     $stateProvider
       .state('method', {
-        url: '/method/:slug',
+        abstract: true,
+        url: '/method',
         templateUrl: 'app/methods/method.html',
-        controller: 'MethodsController',
+        controller: 'MethodController',
         controllerAs: 'ctrl'
+      })
+      .state('method.form', {
+        url: '/:slug',
+        templateUrl: 'app/methods/form.html',
+        controller: 'FormController',
+        controllerAs: 'form'
       })
       .state('share', {
         url: '/share/:uvp',

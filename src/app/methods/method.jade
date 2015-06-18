@@ -12,30 +12,8 @@ div(flow-init, flow-file-added="!!{png:1,gif:1,jpg:1,jpeg:1}[$file.getExtension(
         uvp-side-bar
 
       .container
-        .middle.text-center
-          .inner
+        .outer
+          .middle.text-center
             .row
               uvp-change-background-button
-            div(align="center")
-              form(novalidate=true, name="uvpForm", ng-hide="ctrl.showUVP")
-                .row(ng-repeat="field in ctrl.method.formFields")
-                  .small-2.columns(ng-show="field.label")
-                    label.right.inline(for="{{ field.label }}") {{ field.label }}
-                  .columns.right(ng-attr-id="{{ field.label }}", ng-class="{'small-10': ctrl.method.hasLabels, 'small-12': !ctrl.method.hasLabels}")
-                    input(type="text", placeholder="{{ field.placeholder }}", ng-model="field.value", required=true)
-                .row
-                  a._tooltip(title="{{ctrl.method.example}}", ng-show="ctrl.method.example")
-                    span(title="") {{ 'common.example' | i18n }}
-                  br
-                  button.button(ng-disabled="!uvpForm.$valid", ng-click="ctrl.display()") {{ 'common.build' | i18n }}
-              .row(ng-show="ctrl.showUVP")
-                //h1 {{ctrl.method.template()}}
-                br
-                uvp-facebook-share-button
-                br
-                i.fa.fa-chevron-left.fa-2x(ng-click="ctrl.back()")
-                  .icon-subtitle {{ 'common.back' | i18n }}
-                = ' '
-                i.fa.fa-chevron-right.fa-2x(ui-sref="method({ slug: ctrl.method.index+1 })")
-                  .icon-subtitle {{ 'common.next' | i18n }}
-            .footer # {{ ctrl.method.index+1 }} {{ctrl.method.name}}
+            div(ui-view)

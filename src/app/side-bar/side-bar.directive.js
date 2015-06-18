@@ -14,19 +14,19 @@
     };
   }
 
-  SideBarController.$inject = ['$scope', '$state', '$urlRouter'];
+  SideBarController.$inject = ['$scope', '$state', 'MethodsService'];
 
-  function SideBarController($scope, $state) {
+  function SideBarController($scope, $state, MethodsService) {
     var vm = this;
-    vm.method = $state.current.name;
+    vm.methods = MethodsService.methods;
     vm.isActive = isActive;
 
-    function isActive(option) {
-      return (vm.method === option);
+    function isActive(slug, index) {
+      return ($state.params.slug === slug || $state.params.slug === index.toString());
     }
 
-    $scope.$on('stateChange', function (event, args) {
-      vm.method = args.stateName;
-    });
+    //$scope.$on('stateChange', function (event, args) {
+    //  vm.method = args.stateName;
+    //});
   }
 })();

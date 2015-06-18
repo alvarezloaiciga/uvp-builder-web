@@ -9,6 +9,8 @@
     'ngResource',
     'ngLocalize',
     'mm.foundation',
+    'uvpBuilderWeb.config',
+    'analytics.mixpanel',
     'uvpBuilderWeb.methods',
     'uvpBuilderWeb.home'])
     .value('localeSupported', [

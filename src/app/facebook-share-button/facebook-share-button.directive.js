@@ -14,9 +14,9 @@
     };
   }
 
-  FacebookShareButtonController.$inject = ['$window', '$location'];
+  FacebookShareButtonController.$inject = ['$window', '$location', '$mixpanel', '$state'];
 
-  function FacebookShareButtonController($window, $location) {
+  function FacebookShareButtonController($window, $location, $mixpanel, $state) {
     var vm = this;
     vm.postUVP = postUVP;
     var url = $location.host() + '/#/share/';
@@ -40,6 +40,9 @@
           } else if (response.error) {
             $window.alert('Error: ' + response.error.message);
           } else {
+            $mixpanel.track('FB share', {
+              methodName: $state.current.name
+            });
             $window.alert('Thanks for sharing!');
           }
         }

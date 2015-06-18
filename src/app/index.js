@@ -9,6 +9,7 @@
     'ngResource',
     'ngLocalize',
     'mm.foundation',
+    'firebase',
     'uvpBuilderWeb.config',
     'analytics.mixpanel',
     'uvpBuilderWeb.methods',

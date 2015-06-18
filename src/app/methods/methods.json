@@ -59,7 +59,7 @@
         "index": 2,
         "slug": "SteveBlanks",
         "name": "Steve Blank's XYZ",
-        "hasLabels": false,
+        "hasLabels": true,
         "formFields": [
           {
             "label": "We help",

@@ -30,4 +30,8 @@
     padding-bottom: 5px;
     position: inherit;
   }
+
+  ._tooltip:hover:after {
+    width: 120px !important;
+  }
 }

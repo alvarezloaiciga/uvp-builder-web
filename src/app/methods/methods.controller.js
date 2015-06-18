@@ -5,17 +5,18 @@
     .module('uvpBuilderWeb.methods')
     .controller('MethodsController', MethodsController);
 
-  MethodsController.$inject = ['$scope', 'MethodsService', '$state', '$rootScope', '$mixpanel'];
 
-  function MethodsController($scope, MethodsService, $state, $rootScope, $mixpanel) {
+  MethodsController.$inject = ['$scope', 'MethodsService', '$state', '$rootScope', '$stateParams'];
+
+  function MethodsController($scope, MethodsService, $state, $rootScope, $stateParams) {
+
     var vm = this;
     vm.backgroundImage = '../../assets/images/home_background.png';
     $scope.userBackground = $scope.userBackground || {};
     vm.showUVP = false;
     vm.display = display;
     vm.back = back;
-    vm.methodName = $state.current.name;
-    vm.method = MethodsService.getMethod(vm.methodName);
+    vm.method = MethodsService.getMethod($stateParams.slug);
     vm.isSideBarOpen = isSideBarOpen;
     vm.refresh = refresh;
 

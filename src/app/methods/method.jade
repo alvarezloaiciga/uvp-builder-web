@@ -36,6 +36,6 @@ div(flow-init, flow-file-added="!!{png:1,gif:1,jpg:1,jpeg:1}[$file.getExtension(
                 i.fa.fa-chevron-left.fa-2x(ng-click="ctrl.back()")
                   .icon-subtitle {{ 'common.back' | i18n }}
                 = ' '
-                i.fa.fa-chevron-right.fa-2x(ui-sref="JustWriteIt")
+                i.fa.fa-chevron-right.fa-2x(ui-sref="method({ slug: ctrl.method.index+1 })")
                   .icon-subtitle {{ 'common.next' | i18n }}
             .footer # {{ ctrl.method.index+1 }} {{ctrl.method.name}}

@@ -16,12 +16,15 @@
 
     function getMethod(method) {
       var Method = null;
-      if (typeof method === 'string') {
+      if (typeof method === 'string' && isNaN(method)) {
         for (var i = 0; i < this.methods.length; i++) {
           if (this.methods[i].slug === method) {
             Method = this.methods[i];
           }
         }
+      }
+      else if (typeof method === 'string' && !isNaN(method) && this.methods[parseInt(method)]) {
+        Method = this.methods[parseInt(method)];
       }
       else if (typeof method === 'number' && this.methods[method]) {
         Method = this.methods[method];

@@ -38,5 +38,10 @@
     function refresh() {
       return;
     }
+
+    $rootScope.$on('$stateChangeSuccess',
+      function(event, toState){
+        $scope.$broadcast('stateChange', {stateName: toState.name});
+      });
   }
 })();

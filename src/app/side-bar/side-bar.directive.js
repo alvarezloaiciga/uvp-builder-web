@@ -24,5 +24,9 @@
     function isActive(option) {
       return (vm.method === option);
     }
+
+    $scope.$on('stateChange', function (event, args) {
+      vm.method = args.stateName;
+    });
   }
 })();

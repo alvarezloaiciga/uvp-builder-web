@@ -9,6 +9,8 @@ form(novalidate=true, name="uvpForm", ng-hide="ctrl.showUVP")
     .small-12.columns
       input(type="text", placeholder="{{ 'simonSineks.placeholder3' | i18n }}", ng-model="ctrl.method.importance", required=true)
   .row
+    a._tooltip(title="{{ctrl.method.example}}")
+      span(title="") {{ 'common.example' | i18n }}
     br
     button.button(ng-disabled="!uvpForm.$valid", ng-click="ctrl.display()") {{ 'common.build' | i18n }}
 .row(ng-show="ctrl.showUVP")

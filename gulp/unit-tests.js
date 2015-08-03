@@ -28,10 +28,12 @@ module.exports = function(options) {
     ];
 
     var srcFiles = [
-      options.src + '/{app,components}/**/*.js'
-    ].concat(specFiles.map(function(file) {
-      return '!' + file;
-    }));
+      options.src + '/**/*.module.js',
+      options.src + '/**/*.route.js',
+      options.src + '/**/*.service.js',
+      options.src + '/**/*.controller.js',
+      options.src + '/**/*.directive.js'
+    ];
 
 
     gulp.src(srcFiles)

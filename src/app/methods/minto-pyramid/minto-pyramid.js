@@ -21,7 +21,7 @@
         return this.situation + '. ' + this.issue + '. ' + this.question + ' ' + this.answer + '.';
       };
 
-      MethodsService.add('MintoPyramid', MintoPyramid);
+      MethodsService.add('MintoPyramid', new MintoPyramid());
     });
   }
 })();

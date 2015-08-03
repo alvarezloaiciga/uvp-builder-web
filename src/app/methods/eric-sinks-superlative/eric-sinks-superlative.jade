@@ -5,6 +5,8 @@ form(novalidate=true, name="uvpForm", ng-hide="ctrl.showUVP")
   .row
     br
     button.button(ng-disabled="!uvpForm.$valid", ng-click="ctrl.display()") {{ 'common.build' | i18n }}
+    br
+    uvp-clear-form-button
 .row(ng-show="ctrl.showUVP")
   h1 {{ctrl.method.template()}}
   br

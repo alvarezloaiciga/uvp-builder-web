@@ -21,7 +21,7 @@
         return this.word1 + ', ' + this.word2 + ' ' + locale.getString('3words.and') + ' ' + this.word3 + ' ' + this.product;
       };
 
-      MethodsService.add('ThreeWords', ThreeWords);
+      MethodsService.add('ThreeWords', new ThreeWords());
     });
   }
 })();

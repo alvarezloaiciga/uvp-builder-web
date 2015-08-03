@@ -17,8 +17,8 @@
     function getMethod(method) {
       var Method = this.methods[method];
 
-      if (Method && typeof Method === 'function') {
-        return new Method();
+      if (Method) {
+        return Method;
       } else {
         throw new Error('Invalid method: ' + method);
       }

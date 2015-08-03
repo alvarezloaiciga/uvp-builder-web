@@ -19,6 +19,6 @@
       return this.why + '. ' + this.how + '. ' + this.importance + '.';
     };
 
-    MethodsService.add('SimonSineks', SimonSineks);
+    MethodsService.add('SimonSineks', new SimonSineks());
   }
 })();

@@ -19,7 +19,7 @@
         return locale.getString('zagFormat.our') + ' ' + this.category + ' ' + locale.getString('zagFormat.only') + ' ' + this.attribute + '.';
       };
 
-      MethodsService.add('ZagFormat', ZagFormat);
+      MethodsService.add('ZagFormat', new ZagFormat());
     });
   }
 })();

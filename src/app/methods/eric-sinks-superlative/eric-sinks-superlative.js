@@ -16,6 +16,6 @@
       return this.why;
     };
 
-    MethodsService.add('EricSinksSuperlative', EricSinksSuperlative);
+    MethodsService.add('EricSinksSuperlative', new EricSinksSuperlative());
   }
 })();

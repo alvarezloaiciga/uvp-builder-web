@@ -27,7 +27,7 @@
           this.competition + ' ' + this.differentiator;
       };
 
-      MethodsService.add('ElevatorPitch', ElevatorPitch);
+      MethodsService.add('ElevatorPitch', new ElevatorPitch());
     });
   }
 })();

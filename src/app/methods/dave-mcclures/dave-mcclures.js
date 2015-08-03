@@ -23,7 +23,7 @@
           ' ' + this.attribute;
       };
 
-      MethodsService.add('DaveMcClures', DaveMcClures);
+      MethodsService.add('DaveMcClures', new DaveMcClures());
     });
   }
 })();

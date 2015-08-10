@@ -11,7 +11,7 @@ div(align="center")
       br
       button.button(ng-disabled="!uvpForm.$valid", ng-click="form.display()") {{ 'common.build' | i18n }}
   .row(ng-show="form.showUVP")
-    //h1 {{form.method.template()}}
+    h1 {{ form.getTemplate() }}
     br
     uvp-facebook-share-button
     br

@@ -12,7 +12,7 @@
     vm.showUVP = false;
     vm.display = display;
     vm.back = back;
-    vm.getTemplate = getTemplate;
+    vm.getUVPFromTemplate = getUVPFromTemplate;
     vm.method = MethodsService.getMethod($stateParams.slug);
 
     function display() {
@@ -23,45 +23,67 @@
       vm.showUVP = false;
     }
 
-    function getTemplate(){
-      var currentMethodTemplate = vm.method.template;
+    function getUVPFromTemplate(){
       var fields = vm.method.formFields;
-      var templateWordsArray = currentMethodTemplate.split(" ");
-      return parseTemplate(fields, templateWordsArray);
+      var templateWords = vm.method.template.split(" ");
+      return buildUVPFromFieldsAndTemplate(fields, templateWords);
     }
 
-    function parseTemplate(fields, wordsArray) {
-      var uvpText = "";
-      for (var i = 0; i < wordsArray.length; i++) {
-        var currentWord = wordsArray[i];
-        uvpText += isFieldSpot(currentWord)? getValueFromName(currentWord, fields) : currentWord;
-        uvpText += " ";
+    function buildUVPFromFieldsAndTemplate(fields, template) {
+      var UVPText = "";
+      for (var i = 0; i < template.length; i++) {
+        var currentTemplateWord = template[i];
+        UVPText += replaceIfReplaceable(fields, currentTemplateWord);
       }
-      return uvpText;
+      return UVPText;
     }
 
-    function getValueFromName(name, fields) {
+    function replaceIfReplaceable(fields, currentTemplateWord) {
+      return isReplaceable(currentTemplateWord) ?
+                getFieldText(fields, currentTemplateWord)
+                : (currentTemplateWord + " ");
+    }
+
+    function getFieldText(fields, targetReplaceableWord) {
+      var extraChars = "";
       for (var i = 0; i < fields.length; i++) {
         var currentField = fields[i];
-        if (isMatch(name, currentField.name)) {
-          return fields[i].value;
-        }
+        extraChars = checkForExtraChars(targetReplaceableWord);
+        var targetName = getRigthWord(targetReplaceableWord);
+        if (currentField.name === targetName)
+          return buildWholeWord(currentField.value, extraChars);
       }
       return "";
     }
 
-    function isFieldSpot(word) {
+    function checkForExtraChars(word) {
+      if (hasExtraChars(word))
+        return getExtraChars(word);
+      return "";
+    }
+
+    function buildWholeWord(word, extraChars) {
+      return word + extraChars + " ";
+    }
+
+    function hasExtraChars(word) {
+      return getExtraChars(word) !== null;
+    }
+
+    function isReplaceable(word) {
       return word.charAt(0) === '$';
     }
 
-    function isMatch(templateWord, fieldName) {
-      var fieldNameBoundary = fieldName.length + 1;  // To get exactly the same word
-      return removeDollarSign(templateWord, fieldNameBoundary) === fieldName;
+    function getRigthWord(word) {
+      if (word.match(/\w+/))
+        return word.match(/\w+/)[0];
+      return "";
     }
 
-    function removeDollarSign(word, limit) {
-      return word.slice(1,limit);
+    function getExtraChars(word) {
+      return word.match(/\.+|\,|\;|\:/);
     }
+
 
   }
 })();

@@ -12,8 +12,9 @@
     vm.showUVP = false;
     vm.display = display;
     vm.back = back;
-    vm.getUVPFromTemplate = getUVPFromTemplate;
     vm.method = MethodsService.getMethod($stateParams.slug);
+    vm.getUVPFromTemplate = getUVPFromTemplate;
+    vm.isLastMethod = isLastMethod;
 
     function display() {
       vm.showUVP = true;
@@ -27,6 +28,18 @@
       var fields = vm.method.formFields;
       var templateWords = vm.method.template.split(" ");
       return buildUVPFromFieldsAndTemplate(fields, templateWords);
+    }
+
+    function getMethodsLength() {
+      return MethodsService.methods.length;
+    }
+
+    function getMethodIndex() {
+      return vm.method.index + 1;
+    }
+
+    function isLastMethod() {
+      return getMethodsLength() === getMethodIndex() ;
     }
 
     function buildUVPFromFieldsAndTemplate(fields, template) {

@@ -18,6 +18,6 @@ div(align="center")
     i.fa.fa-chevron-left.fa-2x(ng-click="form.back()")
       .icon-subtitle {{ 'common.back' | i18n }}
     = ' '
-    i.fa.fa-chevron-right.fa-2x(ui-sref="method.form({ slug: form.method.index+1 })")
+    i.fa.fa-chevron-right.fa-2x(ui-sref="method.form({ slug: form.method.index + 1 })" ng-hide="form.isLastMethod()")
       .icon-subtitle {{ 'common.next' | i18n }}
 .footer # {{ form.method.index+1 }} {{form.method.name}}

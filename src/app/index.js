@@ -11,6 +11,7 @@
     'mm.foundation',
     'uvpBuilderWeb.config',
     'analytics.mixpanel',
+    'uvpBuilderWeb.language',
     'uvpBuilderWeb.methods',
     'uvpBuilderWeb.home'])
     .value('localeSupported', [

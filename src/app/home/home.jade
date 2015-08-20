@@ -14,16 +14,20 @@
         br
         a.tiny.button(ui-sref="method.form({ slug: 0 })")
           h3 {{ 'home.tryIt' | i18n }}
-
-
+    
+    .row
+      button.button.tiny(
+        ng-disabled="ctrl.isActiveLanguage('EN')" 
+        ng-click="ctrl.setLanguage('EN')") English
+      button.button.tiny(
+        ng-disabled="ctrl.isActiveLanguage('ES')" 
+        ng-click="ctrl.setLanguage('ES')") Spanish
+    br
+    br
+  
     .home-footer
-      span {{ 'home.poweredBy' | i18n }}
-      br
-      a(href="http://labs.pernix-solutions.com/")
-        img.logo(src="../../assets/images/pl.png")
-      .home-footer
-        .row
-          span {{ 'home.poweredBy' | i18n }}
-        .row
-          a(href="http://labs.pernix-solutions.com/")
-            img.logo(src="../../assets/images/pl.png")
+      .row
+        span {{ 'home.poweredBy' | i18n }}
+      .row
+        a(href="http://labs.pernix-solutions.com/")
+          img.logo(src="../../assets/images/pl.png")

@@ -45,18 +45,11 @@
     }
 
     function setLanguage(Language){
-      var methodFileURL = '';
-      switch(Language){
-        case 'EN':
-          methodFileURL = '/app/methods/methods.json'
-          break;
-        case 'ES':
-          methodFileURL = '/app/methods/metodos.json'
-          break;
-        default:
-          methodFileURL = '/app/methods/methods.json'
-          break;
-      }
+      if(Language === '')
+        throw new Error('Invalid Language');
+      var methodFileURL = '/app/methods/';
+      methodFileURL += Language;
+      methodFileURL += '_methods.json';
       requestForMethods(methodFileURL);
     }
 
@@ -66,7 +59,7 @@
           set(data.methods);
         }).
         error(function(data) {
-          throw new Error( data || 'Request failed');
+          throw new Error( data || 'Unknown/Unsupported language');
         });
     }
   }

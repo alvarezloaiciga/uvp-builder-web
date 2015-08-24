@@ -5,11 +5,14 @@
     .module('uvpBuilderWeb.methods')
     .factory('MethodsService', methodsService);
 
-  function methodsService() {
+  methodsService.$inject = ['$http'];
+
+  function methodsService($http) {
     var service = {
       methods: [],
       getMethod: getMethod,
-      set: set
+      set: set,
+      setLanguage: setLanguage
     };
 
     return service;
@@ -38,7 +41,33 @@
     }
 
     function set(methods) {
-      this.methods = methods;
+      service.methods = methods;
+    }
+
+    function setLanguage(Language){
+      var methodFileURL = '';
+      switch(Language){
+        case 'EN':
+          methodFileURL = '/app/methods/methods.json'
+          break;
+        case 'ES':
+          methodFileURL = '/app/methods/metodos.json'
+          break;
+        default:
+          methodFileURL = '/app/methods/methods.json'
+          break;
+      }
+      requestForMethods(methodFileURL);
+    }
+
+    function requestForMethods(fileURL){
+      $http.get(fileURL)
+        .success(function(data) {
+          set(data.methods);
+        }).
+        error(function(data) {
+          throw new Error( data || 'Request failed');
+        });
     }
   }
 })();

@@ -13,28 +13,28 @@
             "name": "customer"
           },
           {
-            "label": "who",
-            "placeholder": "statement of need or opportunity",
+            "label": "que",
+            "placeholder": "declaración de necesidad u oportunidad",
             "name": "need"
           },
           {
-            "label": "our",
-            "placeholder": "product/service name",
+            "label": "nuestro",
+            "placeholder": "nombre del producto/servicio",
             "name": "product"
           },
           {
-            "label": "is",
-            "placeholder": "(a/an) product category",
+            "label": "es",
+            "placeholder": "(un/una) categoría de producto",
             "name": "category"
           },
           {
-            "label": "that",
-            "placeholder": "statement of benefit",
+            "label": "que",
+            "placeholder": "declaración de beneficio",
             "name": "benefit"
           }
         ],
-        "template": "For $customer who $need our $product is $category that $benefit",
-        "example": "For digital journalist who struggle to discover the people questions our product is a publisher tool that creates powerful interviews to collect people questions"
+        "template": "Para $customer que $need nuestro $product es $category que $benefit",
+        "example": "Para periodistas digitales que luchan para descubrir las incógnitas de la gente nuestro producto es una herramienta editorial que genera poderosas entrevistas para obtener preguntas de las personas"
       },
       {
         "index": 1,
@@ -189,15 +189,15 @@
         "hasLabels": false,
         "formFields": [
           {
-            "placeholder": "Action verb",
+            "placeholder": "Verbo",
             "name": "verb"
           },
           {
-            "placeholder": "object of action",
+            "placeholder": "objeto de acción",
             "name": "action"
           },
           {
-            "placeholder": "contextual identifier",
+            "placeholder": "identificador contextual",
             "name": "identifier"
           }
         ],
@@ -211,15 +211,15 @@
         "hasLabels": false,
         "formFields": [
           {
-            "placeholder": "Clarify your Why",
+            "placeholder": "Clarifica tu Porqué",
             "name": "why"
           },
           {
-            "placeholder": "Articulate your Hows",
+            "placeholder": "Articula tus Cómos",
             "name": "how"
           },
           {
-            "placeholder": "The importance of being consistent in What you do",
+            "placeholder": "La importancia de ser consistente en lo que haces",
             "name": "importance"
           }
         ],
@@ -232,24 +232,24 @@
         "hasLabels": false,
         "formFields": [
           {
-            "placeholder": "Describe the current situation",
+            "placeholder": "Describa la situación actual",
             "name": "situation"
           },
           {
-            "placeholder": "Describe the issue in the situation",
+            "placeholder": "Describa el problema de esta situación",
             "name": "issue"
           },
           {
-            "placeholder": "Describe the question in response to the issue",
+            "placeholder": "Describa la pregunta en respuesta a ese problema",
             "name": "question"
           },
           {
-            "placeholder": "Suggest answer to ease out or mitigate the issue",
+            "placeholder": "Sugiera una solución que mitigue el problema",
             "name": "answer"
           }
         ],
         "template": "$situation. $issue. $question $answer",
-        "example": "Nowadays social networks are full of unclear information about Public Figures. Consequently, the public opinion is affected. How can social networks receive better content? Our publisher technology helps the creation of interviews for build the public opinion"
+        "example": "Hoy en día, las redes sociales están llenas de información distorcionada acerca de las figuras públicas. Por lo tanto, la opinión publica está afectada. Cómo pueden las redes sociales recibir mejor contenido? Nuestra tecnología de publicaciones permite crear entrevistas para construir una opinión pública"
       },
       {
         "index": 11,
@@ -258,36 +258,36 @@
         "hasLabels": true,
         "formFields": [
           {
-            "label": "For",
-            "placeholder": "target customer",
+            "label": "Para",
+            "placeholder": "cliente meta",
             "name": "customer"
           },
           {
-            "label": "who",
-            "placeholder": "customer need",
+            "label": "el cual",
+            "placeholder": "necesidad del cliente",
             "name": "need"
           },
           {
-            "placeholder": "product name",
+            "placeholder": "nombre del producto",
             "name": "product"
           },
           {
-            "label": "that",
-            "placeholder": "one key benefit",
+            "label": "que",
+            "placeholder": "beneficio clave",
             "name": "benefit"
           },
           {
-            "label": "unlike",
-            "placeholder": "competition",
+            "label": "diferente de",
+            "placeholder": "competencia",
             "name": "competition"
           },
           {
-            "placeholder": "the product (unique differentiator)",
+            "placeholder": "diferenciador único",
             "name": "differentiator"
           }
         ],
-        "template": "For $customer who $need, $product that $benefit, unlike $competition, $differentiator",
-        "example": "For digital Journalists who need to generate valuable and viral content from interviews, Jaskr is a publisher network that creates powerful interviews to collect people's questions, unlike other question and answer platforms Jaskr’s technology build a unique social experience"
+        "template": "Para $customer el/la cual $need, $product que $benefit, a diferencia de $competition, $differentiator",
+        "example": "Para periodistas digitales que necesitan generar contenido viral y de valor de entrevistas, Jaskr es una red editorial que crear poderosas entrevistas para obtener preguntas de personas, a diferencia de otras plataformas la tecnología de Jaskr crea una experiencia social única."
       },
       {
         "index": 12,
@@ -296,18 +296,18 @@
         "hasLabels": true,
         "formFields": [
           {
-            "label": "Our",
-            "placeholder": "product category or brand",
+            "label": "Nuestro(a)",
+            "placeholder": "Categoría de producto o marca",
             "name": "category"
           },
           {
-            "label": "is the only",
-            "placeholder": "best customer attribute",
+            "label": "es la única",
+            "placeholder": "mejor atributo para el cliente",
             "name": "attribute"
           }
         ],
-        "template": "Our $category is the only $attribute",
-        "example": "Our publisher network is the only one that helps digital journalists to create public interviews"
+        "template": "Nuestro(a) $category es la/el única/único $attribute",
+        "example": "Nuestra red editorial es la única que ayuda a periodistas digitales a crear entrevistas públicas"
       },
       {
         "index": 13,
@@ -316,25 +316,25 @@
         "hasLabels": true,
         "formFields": [
           {
-            "placeholder": "Word 1",
+            "placeholder": "Palabra 1",
             "name": "word1"
           },
           {
-            "placeholder": "word 2",
+            "placeholder": "Palabra 2",
             "name": "word2"
           },
           {
-            "label": "and",
-            "placeholder": "word 3",
+            "label": "y",
+            "placeholder": "Palabra 3",
             "name": "word3"
           },
           {
-            "placeholder": "product/service name",
+            "placeholder": "nombre del producto/servicio",
             "name": "product"
           }
         ],
-        "template": "$word1, $word2 and $word3 $product",
-        "example": "Unique, Popular and Truthful Interviews"
+        "template": "$word1, $word2 y $word3 $product",
+        "example": "Populares, únicas y verídicas Entrevistas"
       },
       {
         "index": 14,
@@ -343,7 +343,7 @@
         "hasLabels": false,
         "formFields": [
           {
-            "placeholder": "Just write it!",
+            "placeholder": "Solo escríbelo!",
             "name": "prose"
           }
         ],
@@ -356,12 +356,12 @@
         "hasLabels": false,
         "formFields": [
           {
-            "placeholder": "Do you need/want to... ?",
+            "placeholder": "Usted necesita/desea ... ?",
             "name": "question"
           }
         ],
         "template": "$question",
-        "example": "Do you want to experience a new way to create journalistic interviews?"
+        "example": "Desea crear una nueva forma de obtener entrevistas?"
       }
     ]
 }

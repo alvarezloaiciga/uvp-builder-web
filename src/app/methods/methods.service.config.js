@@ -5,9 +5,9 @@
     .module('uvpBuilderWeb.methods')
     .run(setMethods);
 
-  setMethods.$inject = ['MethodsService', '$http'];
+  setMethods.$inject = ['MethodsService', '$http', 'LanguageService'];
 
-  function setMethods(MethodsService, $http) {
+  function setMethods(MethodsService, $http, LanguageService) {
     $http.get('/app/methods/methods.json')
       .success(function(data) {
         MethodsService.set(data.methods);

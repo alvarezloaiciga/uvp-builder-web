@@ -7,25 +7,38 @@
 
   function methodsService() {
     var service = {
-      methods: {},
+      methods: [],
       getMethod: getMethod,
-      add: add
+      set: set
     };
 
     return service;
 
     function getMethod(method) {
-      var Method = this.methods[method];
-
-      if (Method && typeof Method === 'function') {
-        return new Method();
+      var Method = null;
+      if (typeof method === 'string' && isNaN(method)) {
+        for (var i = 0; i < this.methods.length; i++) {
+          if (this.methods[i].slug === method) {
+            Method = this.methods[i];
+          }
+        }
+      }
+      else if (typeof method === 'string' && !isNaN(method) && this.methods[parseInt(method)]) {
+        Method = this.methods[parseInt(method)];
+      }
+      else if (typeof method === 'number' && this.methods[method]) {
+        Method = this.methods[method];
+      }
+      if(Method !== null){
+        return Method;
       } else {
         throw new Error('Invalid method: ' + method);
       }
+
     }
 
-    function add(name, method) {
-      this.methods[name] = method;
+    function set(methods) {
+      this.methods = methods;
     }
   }
 })();

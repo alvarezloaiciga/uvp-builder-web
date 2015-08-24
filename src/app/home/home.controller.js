@@ -5,9 +5,9 @@
     .module('uvpBuilderWeb.home')
     .controller('HomeController', HomeController);
 
-  HomeController.$inject = ['$mixpanel', 'LanguageService'];
+  HomeController.$inject = ['$mixpanel', 'LanguageService', 'MethodsService'];
 
-  function HomeController($mixpanel, LanguageService) {
+  function HomeController($mixpanel, LanguageService, MethodsService) {
     $mixpanel.track('Page view');
     var vm = this;
     vm.language = LanguageService.getLanguage();
@@ -22,6 +22,7 @@
     function setLanguage(language) {
       LanguageService.setLanguage(language);
       vm.language = LanguageService.getLanguage();
+      MethodsService.setLanguage(language);
     }
   }
 })();

@@ -8,8 +8,8 @@
         "hasLabels": true,
         "formFields": [
           {
-            "label": "For",
-            "placeholder": "target consumer",
+            "label": "Para",
+            "placeholder": "consumidor meta",
             "name": "customer"
           },
           {

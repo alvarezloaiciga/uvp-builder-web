@@ -4,5 +4,6 @@
   "build": "Construir",
   "back": "Volver",
   "next": "Siguiente",
-  "changeBackground": "Cambiar Fondo"
+  "changeBackground": "Cambiar Fondo",
+  "home": "Inicio"
 }

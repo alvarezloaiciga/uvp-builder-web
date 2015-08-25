@@ -24,7 +24,7 @@
           },
           {
             "label": "es",
-            "placeholder": "(un/una) categoría de producto",
+            "placeholder": "un/una categoría de producto",
             "name": "category"
           },
           {
@@ -34,7 +34,7 @@
           }
         ],
         "template": "Para $customer que $need nuestro $product es $category que $benefit",
-        "example": "Para periodistas digitales que luchan para descubrir las incógnitas de la gente nuestro producto es una herramienta editorial que genera poderosas entrevistas para obtener preguntas de las personas"
+        "example": "Para periodistas digitales que luchan para descubrir las incógnitas de la gente nuestro producto es una herramienta editorial que genera poderosas entrevistas para obtener preguntas de las personas."
       },
       {
         "index": 1,
@@ -43,17 +43,17 @@
         "hasLabels": true,
         "formFields": [
           {
-            "placeholder": "Proven industry example",
+            "placeholder": "Ejemplo comprobado en la industria",
             "name": "example"
           },
           {
-            "label": "for/of",
-            "placeholder": "attribute",
+            "label": "a/para",
+            "placeholder": "atributo",
             "name": "attribute"
           }
         ],
         "template": "$example for/of $attribute",
-        "example": "A smart flip of Quora"
+        "example": "Un flip inteligente para Quora."
       },
       {
         "index": 2,
@@ -62,23 +62,23 @@
         "hasLabels": true,
         "formFields": [
           {
-            "label": "We help",
-            "placeholder": "target consumer",
+            "label": "Ayudamos",
+            "placeholder": "consumidor meta",
             "name": "customer"
           },
           {
-            "label": "do",
-            "placeholder": "objective",
+            "label": "a lograr",
+            "placeholder": "objetivo",
             "name": "objective"
           },
           {
-            "label": "doing",
-            "placeholder": "product",
+            "label": "mediante",
+            "placeholder": "producto",
             "name": "product"
           }
         ],
-        "template": "We help $customer do $objective doing $product",
-        "example": "We help digital journalist discover people questions about specific topics doing powerful interviews"
+        "template": "Ayudamos $customer a lograr $objective mediante $product",
+        "example": "Ayudamos a periodistas digitales a descubrir preguntas de personas sobre temas específicos mediante poderosas entrevistas."
       },
       {
         "index": 3,
@@ -87,15 +87,15 @@
         "hasLabels": false,
         "formFields": [
           {
-            "placeholder": "Who your customer is",
+            "placeholder": "Tu cliente",
             "name": "customer"
           },
           {
-            "placeholder": "What problem you're solving for the customer",
+            "placeholder": "El problema que resuelves para el cliente",
             "name": "problem"
           },
           {
-            "placeholder": "What is your solution for the problem",
+            "placeholder": "Cuál es tu solución para el problema",
             "name": "solution"
           }
         ],
@@ -108,27 +108,27 @@
         "hasLabels": true,
         "formFields": [
           {
-            "placeholder": "Product/service name",
+            "placeholder": "Nombre del producto/servicio",
             "name": "product"
           },
           {
-            "label": "is",
-            "placeholder": "first adjective",
+            "label": "es",
+            "placeholder": "primer adjetivo",
             "name": "firstAdjective"
           },
           {
-            "label": "and",
-            "placeholder": "second adjective",
+            "label": "y",
+            "placeholder": "segundo adjetivo",
             "name": "secondAdjective"
           },
           {
-            "label": "to",
-            "placeholder": "best attribute",
+            "label": "para",
+            "placeholder": "mejor atributo",
             "name": "attribute"
           }
         ],
-        "template": "$product is $firstAdjective and $secondAdjective to $attribute",
-        "example": "Jaskr is the powerful and human way to create public interviews"
+        "template": "$product es $firstAdjective y $secondAdjective para $attribute",
+        "example": "Jaskr es la forma poderosa y humana para crear entrevistas públicas."
       },
       {
         "index": 5,
@@ -137,24 +137,24 @@
         "hasLabels": false,
         "formFields": [
           {
-            "placeholder": "Highlight the enormity of the problem you are tackling",
+            "placeholder": "Resalta la inmensidad del problema que atacas",
             "name": "problem"
           },
           {
-            "placeholder": "Tell the audience up front what your company sells",
+            "placeholder": "Dile a la audencia de frente lo que tu compañía vende",
             "name": "product"
           },
           {
-            "placeholder": "Distill the differentiation down to one, easy-to-comprehend sentence",
+            "placeholder": "Destila la diferencia a una oración, fácil de comprender",
             "name": "differentiation"
           },
           {
-            "placeholder": "Establish credibility by sharing the pedigree of the entrepreneurs, customers, or the investors",
+            "placeholder": "Establece la genealogía de los clientes o inversionistas",
             "name": "pedigree"
           }
         ],
         "template": "$problem. $product. $differentiation. $pedigree",
-        "example": "Every day journalists spend hours finding which information people needs to know about Public Figures. We offer a publisher network to collect millions of questions and give to the journalist the popular ones with the best question recognition technology"
+        "example": "Todos los días, periodistas gastan muchas horas buscando la información que la gente necesita saber acerca de las figuras públicas. Ofrecemos una red editorial para recolectar miles de preguntas y darle a los periodistas las más populares con el mejor filtro tecnológico."
       },
       {
         "index": 6,
@@ -163,7 +163,7 @@
         "hasLabels": false,
         "formFields": [
           {
-            "placeholder": "Why choose this product",
+            "placeholder": "Por qué escoger este producto",
             "name": "why"
           }
         ],
@@ -176,7 +176,7 @@
         "hasLabels": false,
         "formFields": [
           {
-            "placeholder": "What is this product",
+            "placeholder": "Qué es el producto",
             "name": "what"
           }
         ],
@@ -202,7 +202,7 @@
           }
         ],
         "template": "$verb $action $identifier",
-        "example": "Publish the Personal Opinion Answers from the source"
+        "example": "Publicar las opiniones personales desde la fuente."
       },
       {
         "index": 9,
@@ -249,7 +249,7 @@
           }
         ],
         "template": "$situation. $issue. $question $answer",
-        "example": "Hoy en día, las redes sociales están llenas de información distorcionada acerca de las figuras públicas. Por lo tanto, la opinión publica está afectada. Cómo pueden las redes sociales recibir mejor contenido? Nuestra tecnología de publicaciones permite crear entrevistas para construir una opinión pública"
+        "example": "Hoy en día, las redes sociales están llenas de información distorcionada acerca de las figuras públicas. Por lo tanto, la opinión publica está afectada. Cómo pueden las redes sociales recibir mejor contenido? Nuestra tecnología de publicaciones permite crear entrevistas para construir una opinión pública."
       },
       {
         "index": 11,
@@ -296,7 +296,7 @@
         "hasLabels": true,
         "formFields": [
           {
-            "label": "Nuestro(a)",
+            "label": "Nuestro",
             "placeholder": "Categoría de producto o marca",
             "name": "category"
           },
@@ -307,7 +307,7 @@
           }
         ],
         "template": "Nuestro(a) $category es la/el única/único $attribute",
-        "example": "Nuestra red editorial es la única que ayuda a periodistas digitales a crear entrevistas públicas"
+        "example": "Nuestra red editorial es la única que ayuda a periodistas digitales a crear entrevistas públicas."
       },
       {
         "index": 13,
@@ -334,7 +334,7 @@
           }
         ],
         "template": "$word1, $word2 y $word3 $product",
-        "example": "Populares, únicas y verídicas Entrevistas"
+        "example": "Populares, únicas y verídicas Entrevistas."
       },
       {
         "index": 14,

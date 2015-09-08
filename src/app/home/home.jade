@@ -3,28 +3,24 @@
 
 .outer
   .middle.large-7.text-center
+
+    uvp-language-selector
+
     .row
       img.home-title(src="../../assets/images/logo.png")
 
     .row
-      h1 {{ 'home.header1' | i18n }}
-      h1 {{ 'home.header2' | i18n }}
+      h1 {{ 'header1' | translate }}
+      h1 {{ 'header2' | translate }}
 
       .row
         br
         a.tiny.button(ui-sref="method.form({ slug: 0 })")
-          h3 {{ 'home.tryIt' | i18n }}
-    
-    .row
-      button.button.tiny(
-        ng-disabled="ctrl.isActiveLanguage('EN')" 
-        ng-click="ctrl.setLanguage('EN')") English
-      button.button.tiny(
-        ng-disabled="ctrl.isActiveLanguage('ES')" 
-        ng-click="ctrl.setLanguage('ES')") Spanish
+          h3 {{ 'tryIt' | translate }}
+
     br
     br
-  
+
     .home-footer
       .row
         span {{ 'home.poweredBy' | i18n }}

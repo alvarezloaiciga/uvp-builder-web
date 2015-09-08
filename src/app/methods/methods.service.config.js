@@ -8,7 +8,7 @@
   setMethods.$inject = ['MethodsService'];
 
   function setMethods(MethodsService) {
-    MethodsService.setLanguage('EN');
+    MethodsService.setLanguage('English');
   }
 
 })();

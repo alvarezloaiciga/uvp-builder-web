@@ -47,7 +47,7 @@
     function setLanguage(Language){
       if(Language === '')
         throw new Error('Invalid Language');
-      var methodFileURL = '/app/methods/';
+      var methodFileURL = '/languages/';
       methodFileURL += Language;
       methodFileURL += '_methods.json';
       requestForMethods(methodFileURL);
@@ -57,8 +57,8 @@
       $http.get(fileURL)
         .success(function(data) {
           set(data.methods);
-        }).
-        error(function(data) {
+        })
+        .error(function(data) {
           throw new Error( data || 'Unknown/Unsupported language');
         });
     }

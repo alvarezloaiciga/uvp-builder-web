@@ -7,17 +7,17 @@ div(align="center")
         input(type="text", placeholder="{{ field.placeholder }}", ng-model="field.value", required=true)
     .row
       a._tooltip(title="{{form.method.example}}", ng-show="form.method.example")
-        span(title="") {{ 'common.example' | i18n }}
+        span(title="") {{ 'example' | translate }}
       br
-      button.button(ng-disabled="!uvpForm.$valid", ng-click="form.display()") {{ 'common.build' | i18n }}
+      button.button(ng-disabled="!uvpForm.$valid", ng-click="form.display()") {{ 'build' | translate }}
   .row(ng-show="form.showUVP")
     h1 {{ form.getUVPFromTemplate() }}
     br
     uvp-facebook-share-button
     br
     i.fa.fa-chevron-left.fa-2x(ng-click="form.back()")
-      .icon-subtitle {{ 'common.back' | i18n }}
+      .icon-subtitle {{ 'back' | translate }}
     = ' '
     i.fa.fa-chevron-right.fa-2x(ui-sref="method.form({ slug: form.method.index + 1 })" ng-hide="form.isLastMethod()")
-      .icon-subtitle {{ 'common.next' | i18n }}
+      .icon-subtitle {{ 'next' | translate }}
 .footer # {{ form.method.index+1 }} {{form.method.name}}

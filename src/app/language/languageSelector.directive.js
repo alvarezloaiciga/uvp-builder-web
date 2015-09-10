@@ -14,9 +14,9 @@
     };
   }
 
-  LanguageSelectorController.$inject = ['LanguageService'];
+  LanguageSelectorController.$inject = ['LanguageService', 'MethodsService', '$state'];
 
-  function LanguageSelectorController(LanguageService){
+  function LanguageSelectorController(LanguageService, MethodsService, $state){
     var vm = this;
 
     vm.currentLocaleDisplayName = LanguageService.getLocaleDisplayName();
@@ -24,9 +24,22 @@
     vm.visible = vm.localesDisplayNames && vm.localesDisplayNames.length > 1;
 
     vm.changeLanguage = changeLanguage;
+    vm.isActive = isActive;
 
     function changeLanguage(locale){
       LanguageService.setLocaleByDisplayName(locale);
+      MethodsService.setLanguage(LanguageService.getCurrentLocale());
+      $state.reload();
+    }
+
+    function isActive(language){
+      setLocaleIfUndefined();
+      return vm.currentLocaleDisplayName === language;
+    }
+
+    function setLocaleIfUndefined(){
+      if(!vm.currentLocaleDisplayName)
+        vm.currentLocaleDisplayName = 'English';
     }
   }
 })();

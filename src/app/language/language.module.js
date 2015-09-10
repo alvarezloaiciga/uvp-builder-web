@@ -5,12 +5,12 @@
       .module('uvpBuilderWeb.language', [
         'ui.router',
         'pascalprecht.translate',
-        'tmh.dynamicLocale',
+        'tmh.dynamicLocale'
         ])
       .constant('LOCALES', {
         'locales': {
-          'es_CR': 'Español',
-          'en_US': 'English'
+          'en_US': 'English',
+          'es_CR': 'Español'
         },
         'preferredLocale': 'en_US'
       })
@@ -20,7 +20,7 @@
           suffix: '.json'
         });
         $translateProvider.preferredLanguage('en_US');
-        //$translateProvider.useLocalStorage();
+        $translateProvider.useSanitizeValueStrategy('escape');
       })
       .config(function (tmhDynamicLocaleProvider) {
         tmhDynamicLocaleProvider.localeLocationPattern('bower_components/angular-i18n/angular-locale_{{locale}}.js');

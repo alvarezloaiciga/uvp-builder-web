@@ -1,5 +1,6 @@
 .lang-header
-  div(ng-repeat="myLocale in LSCtrl.localesDisplayNames")
-    button.tiny.left(ng-click="LSCtrl.changeLanguage(myLocale)") {{ myLocale }}
+  div(ng-init="LSCtrl.initLanguage()" ng-repeat="myLocale in LSCtrl.localesDisplayNames")
+    button.tiny.left(ng-disabled="LSCtrl.isActive(myLocale)"
+                     ng-click="LSCtrl.changeLanguage(myLocale)") {{ myLocale }}
 
 

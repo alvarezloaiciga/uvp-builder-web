@@ -49,7 +49,7 @@
         throw new Error('Invalid Language');
       var methodFileURL = '/languages/';
       methodFileURL += Language;
-      methodFileURL += '_methods.json';
+      methodFileURL += '-methods.json';
       requestForMethods(methodFileURL);
     }
 

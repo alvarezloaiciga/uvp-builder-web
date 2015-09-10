@@ -5,10 +5,10 @@
     .module('uvpBuilderWeb.methods')
     .run(setMethods);
 
-  setMethods.$inject = ['MethodsService'];
+  setMethods.$inject = ['MethodsService','$translate'];
 
-  function setMethods(MethodsService) {
-    MethodsService.setLanguage('English');
+  function setMethods(MethodsService, $translate) {
+    MethodsService.setLanguage($translate.proposedLanguage());
   }
 
 })();

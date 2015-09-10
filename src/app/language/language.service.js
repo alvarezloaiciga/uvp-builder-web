@@ -7,21 +7,22 @@
   LanguageService.$inject = ['$translate', 'LOCALES', '$rootScope', 'tmhDynamicLocale'];
 
   function LanguageService($translate, LOCALES, $rootScope, tmhDynamicLocale){
-    var localesObj = LOCALES.locales;
+    var ls = this;
+    ls.localesObj = LOCALES.locales;
 
-    var _LOCALES = Object.keys(localesObj);
-    if (!_LOCALES || _LOCALES.length === 0) {
-      console.error('There are no _LOCALES provided');
+    ls.locales = Object.keys(ls.localesObj);
+    if (!ls.locales || ls.locales.length === 0) {
+      console.error('There are no locales provided');
     }
-    var _LOCALES_DISPLAY_NAMES = [];
-    _LOCALES.forEach(function (locale) {
-      _LOCALES_DISPLAY_NAMES.push(localesObj[locale]);
+    ls.localesNames = [];
+    ls.locales.forEach(function (locale) {
+      ls.localesNames.push(ls.localesObj[locale]);
     });
 
-    var currentLocale = $translate.proposedLanguage();
+    ls.currentLocale = $translate.proposedLanguage();
 
     var checkLocaleIsValid = function (locale) {
-      return _LOCALES.indexOf(locale) !== -1;
+      return ls.locales.indexOf(locale) !== -1;
     };
 
     var setLocale = function (locale) {
@@ -29,7 +30,7 @@
         console.error('Locale name "' + locale + '" is invalid');
         return;
       }
-      currentLocale = locale;
+      ls.currentLocale = locale;
       $translate.use(locale);
     };
 
@@ -40,18 +41,21 @@
     });
 
     return {
+      getCurrentLocale: function() {
+        return ls.currentLocale;
+      },
       getLocaleDisplayName: function () {
-        return localesObj[currentLocale];
+        return ls.localesObj[ls.currentLocale];
       },
       setLocaleByDisplayName: function (localeDisplayName) {
         setLocale(
-          _LOCALES[
-            _LOCALES_DISPLAY_NAMES.indexOf(localeDisplayName)
+          ls.locales[
+            ls.localesNames.indexOf(localeDisplayName)
             ]
         );
       },
       getLocalesDisplayNames: function () {
-        return _LOCALES_DISPLAY_NAMES;
+        return ls.localesNames;
       }
     };
   }

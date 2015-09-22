@@ -5,9 +5,9 @@
     .module('uvpBuilderWeb.methods')
     .factory('MethodsService', methodsService);
 
-  methodsService.$inject = ['$http'];
+  methodsService.$inject = ['$http', 'API_URL'];
 
-  function methodsService($http) {
+  function methodsService($http, API_URL) {
     var service = {
       methods: [],
       getMethod: getMethod,
@@ -45,18 +45,9 @@
     }
 
     function setLanguage(Language){
-      if(Language === '')
-        throw new Error('Invalid Language');
-      var methodFileURL = '/languages/';
-      methodFileURL += Language;
-      methodFileURL += '-methods.json';
-      requestForMethods(methodFileURL);
-    }
-
-    function requestForMethods(fileURL){
-      $http.get(fileURL)
+      $http.get(API_URL + Language + '/methods')
         .success(function(data) {
-          set(data.methods);
+          set(data);
         })
         .error(function(data) {
           throw new Error( data || 'Unknown/Unsupported language');

@@ -12,7 +12,7 @@
       methods: [],
       getMethod: getMethod,
       set: set,
-      setLanguage: setLanguage
+      setMethods: setMethods
     };
 
     return service;
@@ -44,7 +44,7 @@
       service.methods = methods;
     }
 
-    function setLanguage(Language){
+    function setMethods(Language){
       $http.get(API_URL + Language + '/methods')
         .success(function(data) {
           set(data);

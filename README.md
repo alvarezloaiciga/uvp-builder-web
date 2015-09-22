@@ -65,3 +65,5 @@ The folder src/languages keeps all translations used by ng-translate while the f
 The URL is located in the main module defintion under src/app/index.js.
 
 Just modify the `API_URL` constant with the new one.
+
+> **Note**: Be sure the server pointed by the `API_URL` is running. 

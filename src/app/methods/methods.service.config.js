@@ -8,7 +8,7 @@
   setMethods.$inject = ['MethodsService','$translate'];
 
   function setMethods(MethodsService, $translate) {
-    MethodsService.setLanguage($translate.proposedLanguage());
+    MethodsService.setMethods($translate.proposedLanguage());
   }
 
 })();

@@ -28,7 +28,7 @@
 
     function changeLanguage(locale){
       LanguageService.setLocaleByDisplayName(locale);
-      MethodsService.setLanguage(LanguageService.getCurrentLocale());
+      MethodsService.setMethods(LanguageService.getCurrentLocale());
       $state.reload();
     }
 

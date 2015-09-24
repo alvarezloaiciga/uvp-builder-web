@@ -14,7 +14,7 @@
     'uvpBuilderWeb.language',
     'uvpBuilderWeb.methods',
     'uvpBuilderWeb.home'])
-    .constant('API_URL', 'http://localhost:8000/')
+    .constant('API_URL', 'http://localhost:8000')
     .value('localeSupported', [
       'en-US',
       'es-CR'

@@ -1,9 +1,9 @@
 div(align="center")
   form(novalidate=true, name="uvpForm", ng-hide="form.showUVP")
-    .row(ng-repeat="field in form.method.formFields")
+    .row(ng-repeat="field in form.method.form_fields")
       .small-2.columns(ng-show="field.label")
         label.right.inline(for="{{ field.label }}") {{ field.label }}
-      .columns.right(ng-attr-id="{{ field.label }}", ng-class="{'small-10': form.method.hasLabels, 'small-12': !form.method.hasLabels}")
+      .columns.right(ng-attr-id="{{ field.label }}", ng-class="{'small-10': form.method.has_labels, 'small-12': !form.method.has_labels}")
         input(type="text", placeholder="{{ field.placeholder }}", ng-model="field.value", required=true)
     .row
       a._tooltip(title="{{form.method.example}}", ng-show="form.method.example")

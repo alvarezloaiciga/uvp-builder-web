@@ -45,7 +45,7 @@
     }
 
     function setMethods(Language){
-      $http.get(API_URL + Language + '/methods')
+      $http.get(API_URL + '/methods/lang/' + Language )
         .success(function(data) {
           set(data);
         })

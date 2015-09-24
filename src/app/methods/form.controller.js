@@ -25,7 +25,7 @@
     }
 
     function getUVPFromTemplate(){
-      var fields = vm.method.formFields;
+      var fields = vm.method.form_fields;
       var templateWords = vm.method.template.split(" ");
       return buildUVPFromFieldsAndTemplate(fields, templateWords);
     }

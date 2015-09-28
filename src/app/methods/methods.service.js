@@ -5,9 +5,9 @@
     .module('uvpBuilderWeb.methods')
     .factory('MethodsService', methodsService);
 
-  methodsService.$inject = ['$http', 'API_URL'];
+  methodsService.$inject = ['$http', 'environment'];
 
-  function methodsService($http, API_URL) {
+  function methodsService($http, environment) {
     var service = {
       methods: [],
       getMethod: getMethod,
@@ -45,7 +45,7 @@
     }
 
     function setMethods(Language){
-      $http.get(API_URL + '/methods/lang/' + Language )
+      $http.get(environment.api_url + '/methods/lang/' + Language )
         .success(function(data) {
           set(data);
         })

@@ -11,14 +11,16 @@
     "environment": {
       "name": "staging",
       "mixpanelApiKey": "4c1dca839b0f1649b6bf55390ee5436f",
-      "facebookAppId": "381662988624921"
+      "facebookAppId": "381662988624921",
+      "api_url": "https://uvp-builder-api.herokuapp.com"
     }
   },
   "production": {
     "environment": {
       "name": "production",
       "mixpanelApiKey": "d42f6a79df143684e61767c50175bb62",
-      "facebookAppId": "378031438988076"
+      "facebookAppId": "378031438988076",
+      "api_url": "https://uvp-builder-api.herokuapp.com"
     }
   }
 }
